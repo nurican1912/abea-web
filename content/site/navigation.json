@@ -1,0 +1,53 @@
+{
+  "logoMenu": [
+    { "label": { "tr": "Logomuzun Hikâyesi", "en": "The Story of Our Logo" }, "href": "/logomuz" }
+  ],
+  "main": [
+    {
+      "label": { "tr": "Hakkımızda", "en": "About Us" },
+      "href": "/hakkimizda",
+      "children": [
+        { "label": { "tr": "Biz Kimiz", "en": "Who We Are" }, "href": "/hakkimizda/biz-kimiz" },
+        { "label": { "tr": "Yolculuğumuz", "en": "Our Journey" }, "href": "/hakkimizda/yolculugumuz" },
+        { "label": { "tr": "Ekibimiz", "en": "Our Team" }, "href": "/hakkimizda/ekibimiz" },
+        { "label": { "tr": "Danışma Kurulumuz", "en": "Advisory Board" }, "href": "/hakkimizda/danisma-kurulumuz" },
+        { "label": { "tr": "Politika Belgelerimiz", "en": "Our Policies" }, "href": "/hakkimizda/politika-belgelerimiz" },
+        { "label": { "tr": "Tüzüğümüz", "en": "Our Bylaws" }, "href": "/hakkimizda/tuzugumuz" },
+        { "label": { "tr": "Değerlerimiz", "en": "Our Values" }, "href": "/hakkimizda/degerlerimiz" },
+        { "label": { "tr": "Üyelerimiz", "en": "Our Members" }, "href": "/hakkimizda/uyelerimiz" },
+        { "label": { "tr": "Üyelik & Gönüllülük", "en": "Membership & Volunteering" }, "href": "/hakkimizda/uyelik-ve-gonulluluk" }
+      ]
+    },
+    {
+      "label": { "tr": "Çalışmalarımız", "en": "Our Work" },
+      "href": "/calismalarimiz",
+      "children": [
+        { "label": { "tr": "Afet Risk Azaltma Farkındalık Çalışmaları", "en": "Disaster Risk Reduction Awareness" }, "href": "/calismalarimiz/afet-risk-azaltma" },
+        { "label": { "tr": "İş Dünyası Afet Farkındalık Çalışmaları", "en": "Disaster Awareness for Businesses" }, "href": "/calismalarimiz/is-dunyasi" },
+        { "label": { "tr": "Okul Öncesi Afet Farkındalık Çalışmaları", "en": "Disaster Awareness in Early Childhood" }, "href": "/calismalarimiz/okul-oncesi" },
+        { "label": { "tr": "Kurumsal Afet Gönüllülüğü Çalışmaları", "en": "Corporate Disaster Volunteering" }, "href": "/calismalarimiz/kurumsal-gonulluluk" }
+      ]
+    },
+    {
+      "label": { "tr": "Yayınlar", "en": "Publications" },
+      "href": "/yayinlar",
+      "children": [
+        { "label": { "tr": "Bilgi Notları", "en": "Briefs" }, "href": "/yayinlar/bilgi-notlari" },
+        { "label": { "tr": "Politika Notları", "en": "Policy Briefs" }, "href": "/yayinlar/politika-notlari" },
+        { "label": { "tr": "Raporlar", "en": "Reports" }, "href": "/yayinlar/raporlar" },
+        { "label": { "tr": "Kütüphane", "en": "Library" }, "href": "/yayinlar/kutuphane" }
+      ]
+    },
+    { "label": { "tr": "Hikâyeler", "en": "Stories" }, "href": "/hikayeler" },
+    {
+      "label": { "tr": "Paydaşlarımız", "en": "Our Partners" },
+      "href": "/paydaslarimiz",
+      "children": [
+        { "label": { "tr": "Kurumsal Paydaşlar", "en": "Institutional Partners" }, "href": "/paydaslarimiz/kurumsal" },
+        { "label": { "tr": "Medya Paydaşları", "en": "Media Partners" }, "href": "/paydaslarimiz/medya" },
+        { "label": { "tr": "Fon Sağlayıcılar", "en": "Funders" }, "href": "/paydaslarimiz/fon-saglayicilar" }
+      ]
+    }
+  ],
+  "cta": { "label": { "tr": "Üye / Gönüllü Ol", "en": "Join Us" }, "href": "/hakkimizda/uyelik-ve-gonulluluk" }
+}

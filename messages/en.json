@@ -1,0 +1,38 @@
+{
+  "Metadata": {
+    "siteName": "Afet Bilinci Eğitim Araştırma Derneği",
+    "description": "A non-profit working to reduce disaster risk through science-based education and research."
+  },
+  "Topbar": {
+    "skipToContent": "Skip to content",
+    "home": "Home",
+    "mainNav": "Main menu",
+    "logoMenu": "Logo menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "account": "My account",
+    "accountSoon": "Member login coming soon",
+    "language": "Language"
+  },
+  "Languages": {
+    "tr": "Türkçe",
+    "en": "English"
+  },
+  "Page": {
+    "breadcrumb": "You are here",
+    "home": "Home",
+    "comingSoon": "We're working on this page.",
+    "comingSoonNote": "Check back soon."
+  },
+  "Intro": {
+    "skipHint": "Tap to skip"
+  },
+  "LogoStory": {
+    "replay": "Play again"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "description": "The page you're looking for may have moved, or it never existed.",
+    "backHome": "Back to home"
+  }
+}

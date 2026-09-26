@@ -1,0 +1,41 @@
+@import 'tailwindcss';
+@import '../components/logo/logo.css';
+
+/*
+ * Tasarım değişkenleri — renkler ve yazı tipleri yalnızca burada tanımlanır.
+ * Kodda `#28ADE5` gibi değerler doğrudan yazılmaz; `text-brand`, `bg-surface-soft`
+ * gibi sınıflar kullanılır.
+ */
+@theme {
+  --color-brand: #28ade5;       /* logodan ölçülen kurumsal mavi — metin rengi olarak KULLANILMAZ (kontrast 2.2:1) */
+  --color-brand-deep: #1b7fab;  /* link, buton, metin vurgusu */
+  --color-ink: #0e2a38;         /* gövde metni */
+  --color-muted: #5b7787;       /* ikincil metin */
+  --color-surface: #ffffff;
+  --color-surface-soft: #f3fafd;
+  --color-line: #dcebf3;
+}
+
+@theme inline {
+  --font-sans: var(--font-barlow), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: var(--font-barlow-sc), var(--font-barlow), system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    scroll-padding-top: 5rem; /* çapa linklerinde başlık sabit topbar'ın altında kalmasın */
+  }
+
+  body {
+    @apply bg-surface font-sans text-ink antialiased;
+    font-size: 1.0625rem;
+    line-height: 1.65;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-deep);
+    outline-offset: 2px;
+  }
+}

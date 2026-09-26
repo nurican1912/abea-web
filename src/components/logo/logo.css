@@ -1,0 +1,88 @@
+/*
+ * ABEA logo animasyonu — stiller
+ * ------------------------------
+ * `.js` sınıfı <html>'e önyükleme betiğiyle eklenir: JS çalışmıyorsa logo
+ * gizlenmez, tam hâliyle görünür.
+ */
+
+/* ---- Çizilecek logonun başlangıç (gizli) durumu -------------------------- */
+
+/* pathLength=1 olduğundan 1 birim = yolun tamamı; "1 2" deseni ofset 1'de
+   yolu tümüyle boşluğa denk getirir. */
+.js .logo-draw [data-part='thin'],
+.js .logo-draw [data-part='thick'] {
+  stroke-dasharray: 1 2;
+  stroke-dashoffset: 1;
+}
+
+.logo-draw [data-part='dot'],
+.logo-draw [data-part='ripple'] {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.js .logo-draw [data-part='dot'] { transform: scale(0); }
+.logo-draw [data-part='ripple'] { opacity: 0; }
+
+.logo-draw [data-part='word-clip'] {
+  transform-box: fill-box;
+  transform-origin: left center;
+}
+
+.js .logo-draw [data-part='word-clip'] { transform: scaleX(0); }
+.js .logo-draw [data-part='word'] { opacity: 0; }
+
+/* ---- Açılış katmanı ------------------------------------------------------ */
+
+.logo-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  place-items: center;
+  cursor: pointer; /* dokununca geçilebildiğini hissettirir */
+}
+
+.intro-pending { overflow: hidden; }
+.intro-pending .logo-intro { display: grid; }
+
+/* Sembolün ineceği topbar logosu, iniş anına kadar gizli durur. */
+.intro-pending [data-intro-target] { visibility: hidden; }
+
+.logo-intro__bg {
+  position: absolute;
+  inset: 0;
+  background: var(--color-surface);
+}
+
+/* Genişlik hem ekran genişliğine hem yüksekliğine göre sınırlanır: logonun
+   oranı 458:332, yatay tutulan telefonda alttan kırpılmasın. */
+.logo-intro__stage {
+  position: relative;
+  width: min(560px, 82vw, 85vh);
+  width: min(560px, 82vw, 85svh);
+}
+
+.logo-intro__stage svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible; /* dalga halkası kutunun dışına taşabilsin */
+}
+
+.logo-intro__hint {
+  position: absolute;
+  inset-inline: 0;
+  bottom: max(1.5rem, env(safe-area-inset-bottom));
+  margin: 0;
+  text-align: center;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+  opacity: 0;
+  animation: logo-intro-hint 0.6s ease 1.2s forwards;
+}
+
+@keyframes logo-intro-hint {
+  to { opacity: 1; }
+}
