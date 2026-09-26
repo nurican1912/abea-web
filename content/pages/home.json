@@ -1,5 +1,8 @@
 {
-  "title": { "tr": "Ana sayfa", "en": "Home" },
+  "title": {
+    "tr": "Ana sayfa",
+    "en": "Home"
+  },
   "description": {
     "tr": "Afet riskini azaltmak için bilimsel ve kanıta dayalı eğitim ve araştırma çalışmaları yürüten sivil toplum kuruluşu.",
     "en": "A non-profit working to reduce disaster risk through science-based education and research."
@@ -12,6 +15,22 @@
     "lead": {
       "tr": "Okul öncesinden iş dünyasına, yerel yönetimlerden mahallelere kadar afet riskini azaltmak için bilimsel ve kanıta dayalı çalışmalar yürütüyoruz.",
       "en": "From preschools to businesses, from local governments to neighborhoods, we do science-based, evidence-driven work to reduce disaster risk."
+    },
+    "actions": {
+      "primary": {
+        "label": {
+          "tr": "Çalışmalarımızı Keşfet",
+          "en": "Explore Our Work"
+        },
+        "href": "/calismalarimiz"
+      },
+      "secondary": {
+        "label": {
+          "tr": "Bizi Tanıyın",
+          "en": "Get to Know Us"
+        },
+        "href": "/hakkimizda/biz-kimiz"
+      }
     }
   }
 }

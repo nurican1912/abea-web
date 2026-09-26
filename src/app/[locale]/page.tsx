@@ -17,5 +17,14 @@ export default async function HomePage({ params }: PageProps<'/[locale]'>) {
   const locale = await resolveLocale(params);
   const page = await getPage<HomePageContent>(PATH, locale);
 
-  return <HomeHero title={page.hero.title} lead={page.hero.lead} />;
+  const { hero } = page;
+
+  return (
+    <HomeHero
+      title={hero.title}
+      lead={hero.lead}
+      primaryAction={hero.actions.primary}
+      secondaryAction={hero.actions.secondary}
+    />
+  );
 }

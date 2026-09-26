@@ -18,7 +18,7 @@ export function LanguageSwitch({ className }: { className?: string }) {
       {routing.locales.map((code, i) => (
         <span key={code} className="flex items-center">
           {i > 0 && (
-            <span aria-hidden className="text-line">
+            <span aria-hidden className="px-0.5 text-line">
               |
             </span>
           )}
@@ -30,8 +30,9 @@ export function LanguageSwitch({ className }: { className?: string }) {
             aria-label={languages(code)}
             aria-current={code === locale ? 'true' : undefined}
             className={cn(
-              'inline-flex h-11 min-w-9 items-center justify-center rounded-md px-1.5 font-display tracking-[0.06em] uppercase transition-colors',
-              code === locale ? 'text-ink' : 'text-muted hover:text-ink',
+              'inline-flex size-11 items-center justify-center rounded-md font-display tracking-[0.04em] uppercase transition-colors',
+              // Aktif dil: açık mavi zemin + kalın yazı (renk tek başına yetmez; aria-current da var).
+              code === locale ? 'bg-surface-soft font-bold text-ink' : 'font-medium text-muted hover:text-ink',
             )}
           >
             {code}

@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 
 import { Container } from '@/components/ui/Container';
-import { ctaButton } from '@/components/ui/styles';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/cn';
 import type { NavigationView } from '@/lib/content';
@@ -110,13 +110,9 @@ export function MobileMenu({ open, navigation, onClose }: MobileMenuProps) {
         </nav>
 
         <div className="mt-auto pt-8">
-          <Link
-            href={navigation.cta.href}
-            onClick={onClose}
-            className={cn(ctaButton, 'flex min-h-12 w-full')}
-          >
+          <ButtonLink href={navigation.cta.href} variant="cta" onClick={onClose} className="flex w-full">
             {navigation.cta.label}
-          </Link>
+          </ButtonLink>
         </div>
       </Container>
     </div>

@@ -290,14 +290,16 @@ json-source.ts   payload-source.ts     api-source.ts
 Referans: `WhatsApp Image 2026-09-20 at 10.35.33.jpeg`
 
 ```
-[LOGO]   Hakkımızda   Çalışmalarımız   Yayınlar   Hikâyeler   Paydaşlarımız        TR | EN   [Üye / Gönüllü Ol]   (👤)
+[LOGO ▾]   HAKKIMIZDA ▾   ÇALIŞMALARIMIZ ▾   YAYINLAR ▾   HİKÂYELER   PAYDAŞLARIMIZ ▾        TR | EN   [Aramıza Katıl →]
   └ Logomuzun Hikâyesi
 ```
 
 - **Logo:** Tıklayınca ana sayfaya gider. Altında, diğer menüler gibi açılan tek bir alt öğe var: **Logomuzun Hikâyesi**.
 - **Menü davranışı:** Ana başlıklar (Hakkımızda, Çalışmalarımız, Yayınlar, Paydaşlarımız) ayrı bir sayfaya gitmez, tıklanınca alt menüyü açar. Masaüstünde fareyle üzerine gelince de açılır; mobilde hamburger ve akordeon. Alt menüsü olmayan Hikâyeler doğrudan sayfaya gider. `/hakkimizda` gibi ana adresler elle yazılırsa ilk alt sayfaya yönlendirilir.
 - **Hakkımızda › Biz Kimiz:** Topbar görselinde yok; öneri olarak en üste eklendi, istenmezse kaldırılır (bkz. `SORULAR.md` #4).
-- **(👤) hesap simgesi:** Aşama 1'de yeri ayrılır. Aşama 2'de "Giriş yap" / hesap menüsüne dönüşür.
+- **Hesap simgesi:** İşlevsiz kontrol gösterilmez; Aşama 2'de giriş sistemiyle birlikte "Giriş yap" / hesap menüsü olarak eklenir.
+- **Açılır paneller:** 6 ve üzeri öğeli menüler (Hakkımızda) masaüstünde iki sütun, diğerleri tek sütun. Üstte bölüm etiketi; ekran dışına taşarsa panel içeri kayar.
+- **Dil seçici:** Aktif dil açık mavi zemin + kalın yazı + `aria-current`.
 - **Kaydırınca:** Topbar sabit kalır ve küçülür.
 - **Veri kaynağı:** `content/site/navigation.json`. İleride panelden düzenlenir.
 
@@ -391,7 +393,8 @@ Mobil uyum sona bırakılan bir düzeltme değildir, her bileşenin kuruluş kur
 | Değişken | Değer | Kullanım |
 |---|---|---|
 | `brand` | `#28ADE5` | Logonun turkuazı — vurgu çizgileri, dekor. Metin rengi olarak kullanılmaz |
-| `accent` | `#123B5D` | Koyu lacivert — çağrı butonları (Üye ol, Başvur). Üstüne beyaz yazı (kontrast ~11:1); üzerine gelince turkuaz alt çizgi |
+| `primary` | `#123B5D` | Koyu lacivert — birincil butonlar (Çalışmalarımızı Keşfet…). Üstüne beyaz yazı (~11:1) |
+| `cta` | `#F4B740` | Kehribar — YALNIZCA ana dönüşüm eylemi (Aramıza Katıl). Genel vurgu rengi değildir. Üstüne `ink` yazı (~8:1) |
 | `ink` | `#0E2A38` | Gövde metni ve linkler |
 | `muted` | `#5B7787` | İkincil metin |
 | `bg-soft` | `#F3FAFD` | Açık bölüm zemini |

@@ -1,5 +1,6 @@
 'use client';
 
+import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 import { stripeUnderline } from '@/components/ui/styles';
@@ -16,11 +17,9 @@ interface DesktopNavProps {
   menu: MenuState;
 }
 
-// Başlıklar: logonun yazı tipi, büyük harf. Üzerine gelince / açıkken / aktifken turkuaz alt çizgi.
-const itemClass = cn(
-  'inline-flex h-11 items-center font-display text-[0.9375rem] font-semibold tracking-[0.06em] whitespace-nowrap uppercase',
-  stripeUnderline,
-);
+// Başlıklar: logonun yazı tipi, büyük harf. En az 44×44 px tıklama alanı.
+const itemClass =
+  'group inline-flex h-11 min-w-11 items-center gap-1.5 font-display text-[0.9375rem] font-semibold tracking-[0.03em] whitespace-nowrap uppercase';
 
 /** Geniş ekran (lg ve üstü) yatay menü. Başlıklar sayfaya gitmez, alt menüyü açar. */
 export function DesktopNav({ items, menu }: DesktopNavProps) {
@@ -30,7 +29,7 @@ export function DesktopNav({ items, menu }: DesktopNavProps) {
 
   return (
     <nav aria-label={t('mainNav')} className="hidden lg:block">
-      <ul className="flex items-center gap-6 xl:gap-8">
+      <ul className="flex items-center gap-4 xl:gap-7">
         {items.map((item) => {
           const active = isActive(item.href);
 
@@ -43,7 +42,7 @@ export function DesktopNav({ items, menu }: DesktopNavProps) {
                   data-active={active}
                   className={itemClass}
                 >
-                  {item.label}
+                  <span className={stripeUnderline}>{item.label}</span>
                 </Link>
               </li>
             );
@@ -62,9 +61,13 @@ export function DesktopNav({ items, menu }: DesktopNavProps) {
                 data-active={active}
                 className={itemClass}
               >
-                {item.label}
+                <span className={stripeUnderline}>{item.label}</span>
+                <ChevronDown
+                  aria-hidden
+                  className={cn('size-3.5 shrink-0 text-muted transition-transform duration-200', open && 'rotate-180')}
+                />
               </button>
-              <MenuPanel id={id} open={open} links={item.children} onNavigate={menu.close} />
+              <MenuPanel id={id} title={item.label} open={open} links={item.children} onNavigate={menu.close} />
             </li>
           );
         })}

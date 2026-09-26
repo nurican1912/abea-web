@@ -1,13 +1,7 @@
 import 'server-only';
 
 import { isAppPathname, type AppPathname, type Locale } from '@/i18n/routing';
-import {
-  isNavGroup,
-  type Localized,
-  type NavLink,
-  type Navigation,
-  type PageContent,
-} from '@/types/content';
+import { isNavGroup, type Localized, type Navigation, type PageContent } from '@/types/content';
 
 import { readContent } from './json-source';
 import { localize } from './localize';
@@ -23,24 +17,25 @@ import { localize } from './localize';
 /* Menü                                                                       */
 /* -------------------------------------------------------------------------- */
 
-function assertPathname(href: string, where: string): void {
-  if (!isAppPathname(href)) {
-    throw new Error(`content/site/navigation.json → "${where}": "${href}" routing.ts içinde tanımlı değil.`);
+/**
+ * İçerikteki her `href` alanının `routing.ts`'te tanımlı bir sayfa olduğunu doğrular.
+ * JSON tip denetiminden geçmez; yanlış yazılmış bir adres böylece derleme sırasında yakalanır.
+ */
+function assertHrefs(value: unknown, file: string): void {
+  if (Array.isArray(value)) return value.forEach((item) => assertHrefs(item, file));
+  if (typeof value !== 'object' || value === null) return;
+
+  for (const [key, item] of Object.entries(value)) {
+    if (key === 'href' && typeof item === 'string' && !isAppPathname(item)) {
+      throw new Error(`content/${file}.json → "${item}" routing.ts içinde tanımlı değil.`);
+    }
+    assertHrefs(item, file);
   }
 }
 
 async function loadNavigation(): Promise<Navigation> {
   const navigation = await readContent<Navigation>('site/navigation');
-
-  // JSON tip denetiminden geçmez; yanlış yazılmış bir adres derleme sırasında yakalanır.
-  const check = (link: NavLink) => assertPathname(link.href, link.label.tr);
-  navigation.logoMenu.forEach(check);
-  navigation.main.forEach((item) => {
-    check(item);
-    if (isNavGroup(item)) item.children.forEach(check);
-  });
-  check(navigation.cta);
-
+  assertHrefs(navigation, 'site/navigation');
   return navigation;
 }
 
@@ -86,5 +81,8 @@ export async function getPage<T extends PageContent = PageContent>(
   path: AppPathname,
   locale: Locale,
 ): Promise<Localized<T>> {
-  return localize(await readContent<T>(pageFile(path)), locale);
+  const file = pageFile(path);
+  const page = await readContent<T>(file);
+  assertHrefs(page, file);
+  return localize(page, locale);
 }

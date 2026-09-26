@@ -65,6 +65,10 @@ export interface HomePageContent extends PageContent {
   hero: {
     title: LocalizedText;
     lead: LocalizedText;
+    actions: {
+      primary: NavLink;
+      secondary: NavLink;
+    };
   };
 }
 

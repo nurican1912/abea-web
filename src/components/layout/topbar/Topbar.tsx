@@ -5,12 +5,10 @@ import { useTranslations } from 'next-intl';
 import { useCallback, useState, useSyncExternalStore } from 'react';
 
 import { Container } from '@/components/ui/Container';
-import { ctaButton } from '@/components/ui/styles';
-import { Link } from '@/i18n/navigation';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 import { cn } from '@/lib/cn';
 import type { NavigationView } from '@/lib/content';
 
-import { AccountButton } from './AccountButton';
 import { DesktopNav } from './DesktopNav';
 import { LanguageSwitch } from './LanguageSwitch';
 import { LogoMenu } from './LogoMenu';
@@ -58,13 +56,9 @@ export function Topbar({ navigation }: { navigation: NavigationView }) {
 
         <div className="ml-auto flex items-center gap-1 xl:gap-3">
           <LanguageSwitch />
-          <Link
-            href={navigation.cta.href}
-            className={cn(ctaButton, 'hidden whitespace-nowrap xl:inline-flex')}
-          >
+          <ButtonLink href={navigation.cta.href} variant="cta" className="ml-2 hidden lg:inline-flex xl:ml-4">
             {navigation.cta.label}
-          </Link>
-          <AccountButton />
+          </ButtonLink>
           <button
             type="button"
             aria-expanded={mobileOpen}

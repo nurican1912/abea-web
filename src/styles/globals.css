@@ -8,8 +8,10 @@
  */
 @theme {
   --color-brand: #28ade5; /* logonun turkuazı — vurgu çizgisi, dekor. Metin rengi olarak KULLANILMAZ (kontrast 2.2:1) */
-  --color-accent: #123b5d; /* koyu lacivert — çağrı butonları (Üye ol, Başvur). Üstüne BEYAZ yazılır (kontrast ~11:1) */
-  --color-accent-strong: #1a4c75; /* çağrı butonu, üzerine gelince — bir ton açık */
+  --color-primary: #123b5d; /* koyu lacivert — birincil butonlar. Üstüne BEYAZ yazılır (kontrast ~11:1) */
+  --color-primary-strong: #1a4c75; /* birincil buton, üzerine gelince */
+  --color-cta: #f4b740; /* kehribar — YALNIZCA ana dönüşüm eylemi (Aramıza Katıl). Genel vurgu rengi değildir. Üstüne ink yazılır (~8:1) */
+  --color-cta-strong: #e7a72d; /* kehribar, üzerine gelince (~7:1) */
   --color-ink: #0e2a38; /* gövde metni ve linkler */
   --color-muted: #5b7787; /* ikincil metin */
   --color-surface: #ffffff;

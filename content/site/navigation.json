@@ -49,5 +49,5 @@
       ]
     }
   ],
-  "cta": { "label": { "tr": "Üye / Gönüllü Ol", "en": "Join Us" }, "href": "/hakkimizda/uyelik-ve-gonulluluk" }
+  "cta": { "label": { "tr": "Aramıza Katıl", "en": "Join Us" }, "href": "/hakkimizda/uyelik-ve-gonulluluk" }
 }
