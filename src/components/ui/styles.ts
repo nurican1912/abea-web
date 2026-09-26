@@ -4,12 +4,13 @@
  */
 
 /**
- * Çağrı butonu (Üye / Gönüllü Ol, Başvur…) — mercan zemin, koyu yazı.
+ * Çağrı butonu (Üye / Gönüllü Ol, Başvur…) — koyu lacivert zemin, beyaz yazı.
+ * Üzerine gelince bir ton açılır ve altında menüdeki gibi turkuaz çizgi belirir.
  * `display` içermez: kullanan yer `inline-flex` / `flex` / `hidden lg:inline-flex` ekler
  * (aynı öğede iki display sınıfı çakışır).
  */
 export const ctaButton =
-  'min-h-11 items-center justify-center rounded-md bg-accent px-5 font-display text-base font-semibold tracking-wide text-ink transition-colors hover:bg-accent-strong';
+  'min-h-11 items-center justify-center rounded-md bg-accent px-5 font-display text-base font-semibold tracking-wide text-white transition-[background-color,box-shadow] duration-200 hover:bg-accent-strong hover:shadow-[inset_0_-3px_0_var(--color-brand)]';
 
 /** İkincil buton — çerçeveli. */
 export const outlineButton =

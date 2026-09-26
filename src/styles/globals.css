@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import '../components/logo/logo.css';
+@import "tailwindcss";
+@import "../components/logo/logo.css";
 
 /*
  * Tasarım değişkenleri — renkler ve yazı tipleri yalnızca burada tanımlanır.
@@ -7,19 +7,21 @@
  * gibi sınıflar kullanılır.
  */
 @theme {
-  --color-brand: #28ade5;       /* logonun turkuazı — vurgu çizgisi, dekor. Metin rengi olarak KULLANILMAZ (kontrast 2.2:1) */
-  --color-accent: #ff7f50;      /* mercan — yalnızca çağrılar (Üye ol, Başvur). Üstüne beyaz değil, ink yazılır */
-  --color-accent-strong: #f5693a; /* mercan, üzerine gelince */
-  --color-ink: #0e2a38;         /* gövde metni ve linkler */
-  --color-muted: #5b7787;       /* ikincil metin */
+  --color-brand: #28ade5; /* logonun turkuazı — vurgu çizgisi, dekor. Metin rengi olarak KULLANILMAZ (kontrast 2.2:1) */
+  --color-accent: #123b5d; /* koyu lacivert — çağrı butonları (Üye ol, Başvur). Üstüne BEYAZ yazılır (kontrast ~11:1) */
+  --color-accent-strong: #1a4c75; /* çağrı butonu, üzerine gelince — bir ton açık */
+  --color-ink: #0e2a38; /* gövde metni ve linkler */
+  --color-muted: #5b7787; /* ikincil metin */
   --color-surface: #ffffff;
   --color-surface-soft: #f3fafd;
   --color-line: #dcebf3;
 }
 
 @theme inline {
-  --font-sans: var(--font-barlow), system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-display: var(--font-barlow-sc), var(--font-barlow), system-ui, sans-serif;
+  --font-sans:
+    var(--font-barlow), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display:
+    var(--font-barlow-sc), var(--font-barlow), system-ui, sans-serif;
 }
 
 @layer base {
