@@ -16,7 +16,7 @@ export async function Breadcrumb({ parents, current }: BreadcrumbProps) {
     <nav aria-label={t('breadcrumb')}>
       <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted">
         <li>
-          <Link href="/" className="rounded-sm text-brand-deep underline-offset-4 hover:underline">
+          <Link href="/" className="rounded-sm text-ink underline decoration-brand decoration-2 underline-offset-4 hover:decoration-ink">
             {t('home')}
           </Link>
         </li>

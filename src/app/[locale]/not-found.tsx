@@ -1,6 +1,7 @@
 import { useTranslations } from 'next-intl';
 
 import { Container } from '@/components/ui/Container';
+import { ctaButton } from '@/components/ui/styles';
 import { Link } from '@/i18n/navigation';
 
 export default function NotFound() {
@@ -13,7 +14,7 @@ export default function NotFound() {
       <p className="mt-3 max-w-xl text-muted">{t('description')}</p>
       <Link
         href="/"
-        className="mt-8 inline-flex min-h-11 items-center rounded-full bg-brand-deep px-6 font-semibold text-white transition-colors hover:bg-ink"
+        className={`${ctaButton} mt-8 inline-flex`}
       >
         {t('backHome')}
       </Link>

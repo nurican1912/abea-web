@@ -7,9 +7,10 @@
  * gibi sınıflar kullanılır.
  */
 @theme {
-  --color-brand: #28ade5;       /* logodan ölçülen kurumsal mavi — metin rengi olarak KULLANILMAZ (kontrast 2.2:1) */
-  --color-brand-deep: #1b7fab;  /* link, buton, metin vurgusu */
-  --color-ink: #0e2a38;         /* gövde metni */
+  --color-brand: #28ade5;       /* logonun turkuazı — vurgu çizgisi, dekor. Metin rengi olarak KULLANILMAZ (kontrast 2.2:1) */
+  --color-accent: #ff7f50;      /* mercan — yalnızca çağrılar (Üye ol, Başvur). Üstüne beyaz değil, ink yazılır */
+  --color-accent-strong: #f5693a; /* mercan, üzerine gelince */
+  --color-ink: #0e2a38;         /* gövde metni ve linkler */
   --color-muted: #5b7787;       /* ikincil metin */
   --color-surface: #ffffff;
   --color-surface-soft: #f3fafd;
@@ -35,7 +36,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-brand-deep);
+    outline: 2px solid var(--color-ink);
     outline-offset: 2px;
   }
 }

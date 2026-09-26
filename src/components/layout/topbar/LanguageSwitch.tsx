@@ -30,8 +30,8 @@ export function LanguageSwitch({ className }: { className?: string }) {
             aria-label={languages(code)}
             aria-current={code === locale ? 'true' : undefined}
             className={cn(
-              'inline-flex h-11 min-w-9 items-center justify-center rounded-md px-1.5 uppercase transition-colors',
-              code === locale ? 'text-ink' : 'text-muted hover:text-brand-deep',
+              'inline-flex h-11 min-w-9 items-center justify-center rounded-md px-1.5 font-display tracking-[0.06em] uppercase transition-colors',
+              code === locale ? 'text-ink' : 'text-muted hover:text-ink',
             )}
           >
             {code}

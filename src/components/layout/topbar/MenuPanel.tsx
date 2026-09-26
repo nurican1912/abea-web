@@ -31,7 +31,7 @@ export function MenuPanel({ id, open, links, align = 'center', onNavigate }: Men
         open ? 'visible opacity-100' : 'pointer-events-none invisible -translate-y-1 opacity-0',
       )}
     >
-      <ul className="w-72 rounded-2xl border border-line bg-surface p-2 shadow-xl shadow-ink/5">
+      <ul className="w-72 rounded-md border border-t-[3px] border-line border-t-brand bg-surface py-2 shadow-[0_16px_32px_-16px_rgb(14_42_56/0.22)]">
         {links.map((link) => {
           const active = pathname === link.href;
           return (
@@ -41,8 +41,9 @@ export function MenuPanel({ id, open, links, align = 'center', onNavigate }: Men
                 onClick={onNavigate}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'block rounded-xl px-3 py-2.5 text-[0.9375rem] leading-snug transition-colors hover:bg-surface-soft hover:text-brand-deep',
-                  active && 'bg-surface-soft font-semibold text-brand-deep',
+                  // Soldaki ince turkuaz çizgi: üzerine gelince ve aktif sayfada görünür.
+                  'block border-l-[3px] px-4 py-2.5 text-[0.9375rem] leading-snug transition-colors hover:bg-surface-soft',
+                  active ? 'border-l-brand bg-surface-soft font-semibold' : 'border-l-transparent hover:border-l-brand',
                 )}
               >
                 {link.label}

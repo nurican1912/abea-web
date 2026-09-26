@@ -42,7 +42,7 @@ export function LogoMenu({ links, menu }: LogoMenuProps) {
         aria-expanded={open}
         aria-controls={panelId(MENU_ID)}
         onClick={() => menu.toggle(MENU_ID)}
-        className="hidden size-8 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface-soft hover:text-brand-deep lg:inline-flex"
+        className="hidden size-8 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface-soft hover:text-ink lg:inline-flex"
       >
         <ChevronDown aria-hidden className={cn('size-4 transition-transform', open && 'rotate-180')} />
       </button>

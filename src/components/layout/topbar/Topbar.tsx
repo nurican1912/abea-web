@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { useCallback, useState, useSyncExternalStore } from 'react';
 
 import { Container } from '@/components/ui/Container';
+import { ctaButton } from '@/components/ui/styles';
 import { Link } from '@/i18n/navigation';
 import { cn } from '@/lib/cn';
 import type { NavigationView } from '@/lib/content';
@@ -59,7 +60,7 @@ export function Topbar({ navigation }: { navigation: NavigationView }) {
           <LanguageSwitch />
           <Link
             href={navigation.cta.href}
-            className="hidden min-h-11 items-center rounded-full bg-brand-deep px-5 text-[0.9375rem] font-semibold whitespace-nowrap text-white transition-colors hover:bg-ink xl:inline-flex"
+            className={cn(ctaButton, 'hidden whitespace-nowrap xl:inline-flex')}
           >
             {navigation.cta.label}
           </Link>

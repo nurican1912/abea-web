@@ -383,16 +383,16 @@ Mobil uyum sona bırakılan bir düzeltme değildir, her bileşenin kuruluş kur
   - Anlamlı HTML etiketleri
   - Klavyeyle gezilebilen menü
   - Görsellerde `alt` metni
-  - Kontrast kuralı: `#28ADE5` metin rengi olarak kullanılmaz, metinde `#1B7FAB` kullanılır
+  - Kontrast kuralı: `#28ADE5` (turkuaz) ve `#FF7F50` (mercan) metin rengi olarak kullanılmaz; metin her zaman `ink`
 - **Yorumlar "neden"i anlatır, "ne"yi değil.**
 
 ### Tasarım değişkenleri (eski demodan)
 
 | Değişken | Değer | Kullanım |
 |---|---|---|
-| `brand` | `#28ADE5` | Logo, vurgu, dekor |
-| `brand-deep` | `#1B7FAB` | Link, buton, metin vurgusu |
-| `ink` | `#0E2A38` | Gövde metni |
+| `brand` | `#28ADE5` | Logonun turkuazı — vurgu çizgileri, dekor. Metin rengi olarak kullanılmaz |
+| `accent` | `#FF7F50` | Mercan — yalnızca çağrı butonları (Üye ol, Başvur). Üstüne beyaz değil koyu yazı (kontrast ~6:1) |
+| `ink` | `#0E2A38` | Gövde metni ve linkler |
 | `muted` | `#5B7787` | İkincil metin |
 | `bg-soft` | `#F3FAFD` | Açık bölüm zemini |
 | `line` | `#DCEBF3` | Ayraç, kenarlık |
