@@ -298,7 +298,8 @@ Referans: `WhatsApp Image 2026-09-20 at 10.35.33.jpeg`
 - **Menü davranışı:** Ana başlıklar (Hakkımızda, Çalışmalarımız, Yayınlar, Paydaşlarımız) ayrı bir sayfaya gitmez, tıklanınca alt menüyü açar. Masaüstünde fareyle üzerine gelince de açılır; mobilde hamburger ve akordeon. Alt menüsü olmayan Hikâyeler doğrudan sayfaya gider. `/hakkimizda` gibi ana adresler elle yazılırsa ilk alt sayfaya yönlendirilir.
 - **Hakkımızda › Biz Kimiz:** Topbar görselinde yok; öneri olarak en üste eklendi, istenmezse kaldırılır (bkz. `SORULAR.md` #4).
 - **Hesap simgesi:** İşlevsiz kontrol gösterilmez; Aşama 2'de giriş sistemiyle birlikte "Giriş yap" / hesap menüsü olarak eklenir.
-- **Açılır paneller:** 6 ve üzeri öğeli menüler (Hakkımızda) masaüstünde iki sütun, diğerleri tek sütun. Üstte bölüm etiketi; ekran dışına taşarsa panel içeri kayar.
+- **Alt çizgi:** Topbar'ın altında 2 px turkuaz çizgi. Menü başlıklarında ok yok (yalnızca logoda); aktif / açık başlığın altında turkuaz çizgi.
+- **Açılır paneller:** Topbar çizgisinden sarkar (kendi üst şeridi yok). 6 ve üzeri öğeli menüler (Hakkımızda) masaüstünde iki sütun, diğerleri tek sütun; ekran dışına taşarsa panel içeri kayar.
 - **Dil seçici:** Aktif dil açık mavi zemin + kalın yazı + `aria-current`.
 - **Kaydırınca:** Topbar sabit kalır ve küçülür.
 - **Veri kaynağı:** `content/site/navigation.json`. İleride panelden düzenlenir.

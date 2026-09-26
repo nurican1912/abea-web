@@ -46,8 +46,9 @@ export function Topbar({ navigation }: { navigation: NavigationView }) {
     <header
       className={cn(
         // Not: backdrop-filter kullanılmaz — mobil menünün `fixed` konumunu bozar.
-        'sticky top-0 z-40 border-b bg-surface transition-shadow duration-200',
-        scrolled || mobileOpen ? 'border-line shadow-[0_2px_16px_-8px_rgb(14_42_56/0.18)]' : 'border-transparent',
+        // Alttaki turkuaz çizgi `after` ile çizilir: yükseklik değişmez, açılır paneller ona yapışık açılır.
+        'sticky top-0 z-40 bg-surface transition-shadow duration-200 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brand',
+        (scrolled || mobileOpen) && 'shadow-[0_2px_16px_-8px_rgb(14_42_56/0.18)]',
       )}
     >
       <Container className="flex h-16 items-center gap-2 lg:h-20 lg:gap-4 xl:gap-8">

@@ -19,13 +19,11 @@ interface MenuPanelProps {
   id: string;
   open: boolean;
   links: NavLinkView[];
-  /** Panelin üstündeki küçük bölüm etiketi (ör. "HAKKIMIZDA"). */
-  title?: string;
   onNavigate: () => void;
 }
 
 /** Masaüstünde bir menü başlığının altında açılan bağlantı paneli. */
-export function MenuPanel({ id, open, links, title, onNavigate }: MenuPanelProps) {
+export function MenuPanel({ id, open, links, onNavigate }: MenuPanelProps) {
   const pathname = usePathname();
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -50,8 +48,10 @@ export function MenuPanel({ id, open, links, title, onNavigate }: MenuPanelProps
     <div
       id={panelId(id)}
       className={cn(
-        // pt-3: başlık ile panel arasındaki boşluk da fareyle "içeride" sayılsın
-        'absolute top-full left-0 z-50 pt-3 transition duration-150 ease-out',
+        // Tetikleyici (başlık / logo grubu) topbar yüksekliği kadar uzar; panel bu yüzden
+        // hangi başlıktan açılırsa açılsın topbar'ın turkuaz alt çizgisinden sarkar
+        // (panelin kendi üst şeridi yok — iki çizgi üst üste binip kalınlaşmasın).
+        'absolute top-full left-0 z-50 transition duration-150 ease-out',
         open ? 'visible opacity-100' : 'pointer-events-none invisible -translate-y-1 opacity-0',
       )}
     >
@@ -60,16 +60,13 @@ export function MenuPanel({ id, open, links, title, onNavigate }: MenuPanelProps
         role="group"
         aria-labelledby={triggerId(id)}
         className={cn(
-          'max-w-[calc(100vw-2rem)] rounded-xl border border-line bg-surface p-2 shadow-[0_18px_40px_-20px_rgb(14_42_56/0.3)]',
-          twoColumns ? 'w-[28rem]' : 'w-80',
+          'max-w-[calc(100vw-2rem)] rounded-b-md border border-t-0 border-line bg-surface py-2 shadow-[0_16px_32px_-16px_rgb(14_42_56/0.22)]',
+          twoColumns ? 'w-[30rem]' : 'w-80',
         )}
       >
-        {title && (
-          <p className="px-3 pt-1 pb-0.5 font-display text-xs font-semibold tracking-[0.1em] text-muted uppercase">{title}</p>
-        )}
-        <div className={cn(twoColumns && 'grid grid-cols-2 gap-2')}>
+        <div className={cn(twoColumns && 'grid grid-cols-2')}>
           {columns.map((column, i) => (
-            <ul key={i} className={cn(i > 0 && 'border-l border-line pl-2')}>
+            <ul key={i} className={cn(i > 0 && 'border-l border-line')}>
               {column.map((link) => {
                 const active = pathname === link.href;
                 return (
@@ -80,7 +77,7 @@ export function MenuPanel({ id, open, links, title, onNavigate }: MenuPanelProps
                       aria-current={active ? 'page' : undefined}
                       className={cn(
                         // Soldaki ince turkuaz çizgi: üzerine gelince, klavye odağında ve aktif sayfada.
-                        'flex min-h-11 items-center rounded-r-md border-l-[3px] px-3 py-2 text-[0.9375rem] leading-snug transition-colors hover:bg-surface-soft focus-visible:bg-surface-soft',
+                        'flex min-h-11 items-center border-l-[3px] px-4 py-2 text-[0.9375rem] leading-snug transition-colors hover:bg-surface-soft focus-visible:bg-surface-soft',
                         active
                           ? 'border-l-brand bg-surface-soft font-semibold'
                           : 'border-l-transparent hover:border-l-brand focus-visible:border-l-brand',

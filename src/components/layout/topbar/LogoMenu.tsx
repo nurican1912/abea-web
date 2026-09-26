@@ -29,7 +29,7 @@ export function LogoMenu({ links, menu }: LogoMenuProps) {
   return (
     // Logo bağlantısı (→ ana sayfa) ve menü düğmesi (→ Logomuzun Hikâyesi) iki ayrı kontrol;
     // görsel olarak tek grup: ok logoya yapışık durur.
-    <div className="group/logo relative flex shrink-0 items-center" {...menu.bind(MENU_ID)}>
+    <div className="group/logo relative flex h-full shrink-0 items-center" {...menu.bind(MENU_ID)}>
       <Link href="/" aria-label={t('home')} className="inline-flex min-w-11 justify-center rounded-md p-1">
         {/* Kutunun oranı sembolünkiyle aynı (241.5 : 315) — animasyon tam bu kutuya iner. */}
         <span data-intro-target className="block aspect-[241.5/315] h-11 lg:h-14">
