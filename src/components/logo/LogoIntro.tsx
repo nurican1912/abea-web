@@ -11,7 +11,7 @@ import { playIntro } from './logo-animation';
 /**
  * Site açılış animasyonu. Katman her zaman sunucudan gelir ama yalnızca
  * önyükleme betiği <html>'e `intro-pending` eklediyse görünür (bkz. IntroBootScript).
- * Sembol, `data-intro-target` işaretli topbar logosuna uçar.
+ * Logo (sembol + yazı), `data-intro-target` işaretli topbar logosuna uçar.
  */
 export function LogoIntro() {
   const t = useTranslations('Intro');

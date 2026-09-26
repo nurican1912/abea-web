@@ -1,7 +1,7 @@
 import 'server-only';
 
 import { isAppPathname, type AppPathname, type Locale } from '@/i18n/routing';
-import { isNavGroup, type Localized, type Navigation, type PageContent } from '@/types/content';
+import { isNavGroup, type FooterContent, type Localized, type Navigation, type PageContent } from '@/types/content';
 
 import { readContent } from './json-source';
 import { localize } from './localize';
@@ -12,10 +12,6 @@ import { localize } from './localize';
  * Sayfa ve bileşenlerin veri istediği tek yer. Hiçbir sayfa `content/`
  * klasörünü doğrudan okumaz; panel geldiğinde yalnızca bu klasör değişir.
  */
-
-/* -------------------------------------------------------------------------- */
-/* Menü                                                                       */
-/* -------------------------------------------------------------------------- */
 
 /**
  * İçerikteki her `href` alanının `routing.ts`'te tanımlı bir sayfa olduğunu doğrular.
@@ -33,6 +29,10 @@ function assertHrefs(value: unknown, file: string): void {
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/* Menü                                                                       */
+/* -------------------------------------------------------------------------- */
+
 async function loadNavigation(): Promise<Navigation> {
   const navigation = await readContent<Navigation>('site/navigation');
   assertHrefs(navigation, 'site/navigation');
@@ -40,32 +40,46 @@ async function loadNavigation(): Promise<Navigation> {
 }
 
 export type NavigationView = Localized<Navigation>;
+export type NavLinkView = NavigationView['cta'];
 
 export async function getNavigation(locale: Locale): Promise<NavigationView> {
   return localize(await loadNavigation(), locale);
 }
 
-/** Bir sayfanın menüdeki üst başlıkları — ör. Ekibimiz için ["Hakkımızda"]. */
-export async function getParentLabels(path: AppPathname, locale: Locale): Promise<string[]> {
+/** Bir sayfanın menüdeki üst başlıkları — ör. Ekibimiz için [Hakkımızda]. Yol satırında kullanılır. */
+export async function getParents(path: AppPathname, locale: Locale): Promise<NavLinkView[]> {
   const navigation = await getNavigation(locale);
 
   for (const item of navigation.main) {
     if (isNavGroup(item) && item.children.some((child) => child.href === path)) {
-      return [item.label];
+      return [{ label: item.label, href: item.href }];
     }
   }
   return [];
 }
 
-/** Menü başlığının ilk alt sayfası — `/hakkimizda` gibi adresler buraya yönlenir. */
-export async function getFirstChildPath(groupPath: AppPathname): Promise<AppPathname> {
-  const navigation = await loadNavigation();
+export interface SectionView {
+  label: string;
+  href: AppPathname;
+  children: (NavLinkView & { description?: string })[];
+}
+
+/** Menü başlığı + alt sayfaları (açıklamalarıyla) — başlıkların genel bakış sayfaları için. */
+export async function getSection(groupPath: AppPathname, locale: Locale): Promise<SectionView> {
+  const navigation = await getNavigation(locale);
   const group = navigation.main.find((item) => item.href === groupPath);
 
-  if (!group || !isNavGroup(group) || group.children.length === 0) {
+  if (!group || !isNavGroup(group)) {
     throw new Error(`"${groupPath}" alt menüsü olan bir başlık değil.`);
   }
-  return group.children[0].href;
+
+  const children = await Promise.all(
+    group.children.map(async (child) => ({
+      ...child,
+      description: (await getPage(child.href, locale)).description,
+    })),
+  );
+  return { label: group.label, href: group.href, children };
 }
 
 /* -------------------------------------------------------------------------- */
@@ -85,4 +99,20 @@ export async function getPage<T extends PageContent = PageContent>(
   const page = await readContent<T>(file);
   assertHrefs(page, file);
   return localize(page, locale);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Koleksiyonlar ve site geneli                                               */
+/* -------------------------------------------------------------------------- */
+
+/** `content/collections/<name>.json` — tek dile indirgenmiş liste. */
+export async function getCollection<T>(name: string, locale: Locale): Promise<Localized<T>[]> {
+  const file = `collections/${name}`;
+  const items = await readContent<T[]>(file);
+  assertHrefs(items, file);
+  return localize(items, locale);
+}
+
+export async function getFooter(locale: Locale): Promise<Localized<FooterContent>> {
+  return localize(await readContent<FooterContent>('site/footer'), locale);
 }

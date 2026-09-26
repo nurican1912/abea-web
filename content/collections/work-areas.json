@@ -1,0 +1,44 @@
+[
+  {
+    "id": "01",
+    "title": {
+      "tr": "İş Dünyası ve Kurumsal Dayanıklılık",
+      "en": "Business and Organizational Resilience"
+    }
+  },
+  {
+    "id": "02",
+    "title": {
+      "tr": "Okul Güvenliği ve Afet Eğitimi",
+      "en": "School Safety and Disaster Education"
+    }
+  },
+  {
+    "id": "03",
+    "title": {
+      "tr": "İklim ve Afet Riskleri",
+      "en": "Climate and Disaster Risks"
+    }
+  },
+  {
+    "id": "04",
+    "title": {
+      "tr": "Yerel ve Toplumsal Dayanıklılık",
+      "en": "Local and Community Resilience"
+    }
+  },
+  {
+    "id": "05",
+    "title": {
+      "tr": "Araştırma, Politika ve Savunuculuk",
+      "en": "Research, Policy and Advocacy"
+    }
+  },
+  {
+    "id": "06",
+    "title": {
+      "tr": "Acil Durum Hazırlığı ve İyileşme",
+      "en": "Emergency Preparedness and Recovery"
+    }
+  }
+]

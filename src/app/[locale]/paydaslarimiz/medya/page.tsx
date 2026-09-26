@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 
-import { PlaceholderPage } from '@/components/layout/PlaceholderPage';
+import { MediaAndPress } from '@/components/sections/paydaslarimiz/MediaAndPress';
+import { getPartnersData } from '@/components/sections/paydaslarimiz/partners-data';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { resolveLocale } from '@/i18n/locale';
-import { getPage } from '@/lib/content';
+import { getPage, getParents } from '@/lib/content';
 import { pageMetadata } from '@/lib/seo';
 
-// Medya Paydaşları
+// Paydaşlarımız › Medya Paydaşları
 const PATH = '/paydaslarimiz/medya';
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/paydaslarimiz/medya'>): Promise<Metadata> {
@@ -14,7 +16,18 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/paydasla
 
 export default async function MediaPartnersPage({ params }: PageProps<'/[locale]/paydaslarimiz/medya'>) {
   const locale = await resolveLocale(params);
-  const page = await getPage(PATH, locale);
+  const [page, parents, { content, mediaPartners, press }] = await Promise.all([
+    getPage(PATH, locale),
+    getParents(PATH, locale),
+    getPartnersData(locale),
+  ]);
 
-  return <PlaceholderPage path={PATH} locale={locale} page={page} />;
+  return (
+    <>
+      <PageHeader title={page.title} description={page.description} parents={parents} />
+      <div className="bg-surface-soft">
+        <MediaAndPress content={content} mediaPartners={mediaPartners} press={press} />
+      </div>
+    </>
+  );
 }

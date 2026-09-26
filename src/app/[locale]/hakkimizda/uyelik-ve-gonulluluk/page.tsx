@@ -1,11 +1,15 @@
 import type { Metadata } from 'next';
 
-import { PlaceholderPage } from '@/components/layout/PlaceholderPage';
+import { ApplicationForm } from '@/components/sections/uyelik-ve-gonulluluk/ApplicationForm';
+import { Faq } from '@/components/sections/uyelik-ve-gonulluluk/Faq';
+import { ParticipationPaths } from '@/components/sections/uyelik-ve-gonulluluk/ParticipationPaths';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { resolveLocale } from '@/i18n/locale';
-import { getPage } from '@/lib/content';
+import { getPage, getParents } from '@/lib/content';
 import { pageMetadata } from '@/lib/seo';
+import type { MembershipPageContent } from '@/types/content';
 
-// Üyelik & Gönüllülük
+// Hakkımızda › Üyelik & Gönüllülük
 const PATH = '/hakkimizda/uyelik-ve-gonulluluk';
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/hakkimizda/uyelik-ve-gonulluluk'>): Promise<Metadata> {
@@ -14,7 +18,16 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/hakkimiz
 
 export default async function MembershipPage({ params }: PageProps<'/[locale]/hakkimizda/uyelik-ve-gonulluluk'>) {
   const locale = await resolveLocale(params);
-  const page = await getPage(PATH, locale);
+  const [page, parents] = await Promise.all([getPage<MembershipPageContent>(PATH, locale), getParents(PATH, locale)]);
 
-  return <PlaceholderPage path={PATH} locale={locale} page={page} />;
+  return (
+    <>
+      <PageHeader title={page.title} description={page.description} parents={parents} />
+      <div className="bg-surface-soft">
+        <ParticipationPaths paths={page.paths} />
+        <ApplicationForm content={page.form} />
+        <Faq content={page.faq} />
+      </div>
+    </>
+  );
 }

@@ -1,9 +1,20 @@
-import { redirect } from '@/i18n/navigation';
-import { resolveLocale } from '@/i18n/locale';
-import { getFirstChildPath } from '@/lib/content';
+import type { Metadata } from 'next';
 
-// Menü başlığı: kendi sayfası yok, ilk alt sayfaya yönlenir (sıra: navigation.json).
+import { SectionOverview } from '@/components/layout/SectionOverview';
+import { resolveLocale } from '@/i18n/locale';
+import { getPage } from '@/lib/content';
+import { pageMetadata } from '@/lib/seo';
+
+// Çalışmalarımız — genel bakış
+const PATH = '/calismalarimiz';
+
+export async function generateMetadata({ params }: PageProps<'/[locale]/calismalarimiz'>): Promise<Metadata> {
+  return pageMetadata(PATH, await resolveLocale(params));
+}
+
 export default async function OurWorkPage({ params }: PageProps<'/[locale]/calismalarimiz'>) {
   const locale = await resolveLocale(params);
-  redirect({ href: await getFirstChildPath('/calismalarimiz'), locale });
+  const page = await getPage(PATH, locale);
+
+  return <SectionOverview path={PATH} locale={locale} page={page} />;
 }

@@ -1,7 +1,7 @@
 import { ComingSoon } from '@/components/ui/ComingSoon';
 import { PageHeader } from '@/components/ui/PageHeader';
 import type { AppPathname, Locale } from '@/i18n/routing';
-import { getParentLabels } from '@/lib/content';
+import { getParents } from '@/lib/content';
 import type { Localized, PageContent } from '@/types/content';
 
 interface PlaceholderPageProps {
@@ -16,12 +16,14 @@ interface PlaceholderPageProps {
  * `PageHeader` + kendi bölümlerini (`components/sections/<sayfa>/`) kullanır.
  */
 export async function PlaceholderPage({ path, locale, page }: PlaceholderPageProps) {
-  const parents = await getParentLabels(path, locale);
+  const parents = await getParents(path, locale);
 
   return (
     <>
       <PageHeader title={page.title} description={page.description} parents={parents} />
-      <ComingSoon />
+      <div className="bg-surface-soft">
+        <ComingSoon />
+      </div>
     </>
   );
 }

@@ -17,7 +17,6 @@ export const routing = defineRouting({
     '/logomuz': { tr: '/logomuz', en: '/our-logo' },
 
     '/hakkimizda': { tr: '/hakkimizda', en: '/about' },
-    '/hakkimizda/biz-kimiz': { tr: '/hakkimizda/biz-kimiz', en: '/about/who-we-are' },
     '/hakkimizda/yolculugumuz': { tr: '/hakkimizda/yolculugumuz', en: '/about/our-journey' },
     '/hakkimizda/ekibimiz': { tr: '/hakkimizda/ekibimiz', en: '/about/our-team' },
     '/hakkimizda/danisma-kurulumuz': { tr: '/hakkimizda/danisma-kurulumuz', en: '/about/advisory-board' },

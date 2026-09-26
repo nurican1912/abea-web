@@ -76,3 +76,129 @@ export interface LogoPageContent extends PageContent {
   /** Markdown. Boşsa "hazırlanıyor" gösterilir. */
   story: LocalizedText;
 }
+
+export interface PublicationsPageContent extends PageContent {
+  library: {
+    eyebrow: LocalizedText;
+    title: LocalizedText;
+    description: LocalizedText;
+  };
+}
+
+interface TitledText {
+  title: LocalizedText;
+  text: LocalizedText;
+}
+
+export interface PartnersPageContent extends PageContent {
+  institutional: { title: LocalizedText; note: LocalizedText };
+  funders: { title: LocalizedText; description: LocalizedText };
+  media: { title: LocalizedText };
+  press: { title: LocalizedText; kitLabel: LocalizedText };
+  join: { title: LocalizedText; contactLabel: LocalizedText; cards: TitledText[] };
+}
+
+export type ApplicationType = 'uyelik' | 'gonulluluk' | 'kurumsal';
+
+export interface MembershipPageContent extends PageContent {
+  paths: (TitledText & {
+    type: ApplicationType;
+    action: LocalizedText;
+    /** Verilirse buton bu sayfaya gider; verilmezse aşağıdaki forma iner ve türü seçer. */
+    href?: AppPathname;
+    featured?: boolean;
+  })[];
+  form: {
+    title: LocalizedText;
+    description: LocalizedText;
+    typeLabel: LocalizedText;
+    types: Record<ApplicationType, LocalizedText>;
+    fields: Record<
+      'name' | 'email' | 'phone' | 'city' | 'cityPlaceholder' | 'profession' | 'organization' | 'interests' | 'contribution',
+      LocalizedText
+    >;
+    interests: LocalizedText[];
+    consentBefore: LocalizedText;
+    consentLink: LocalizedText;
+    consentAfter: LocalizedText;
+    submit: LocalizedText;
+  };
+  faq: {
+    title: LocalizedText;
+    items: { q: LocalizedText; a: LocalizedText }[];
+  };
+}
+
+/* -------------------------------------------------------------------------- */
+/* Koleksiyonlar (content/collections/) — ileride CMS koleksiyonu / DB tablosu */
+/* -------------------------------------------------------------------------- */
+
+/** Çalışma alanları (WEB.docx: 01–06). Yayınlar bu alanlara göre etiketlenir. */
+export interface WorkArea {
+  id: string;
+  title: LocalizedText;
+}
+
+export type PublicationType = 'bilgi-notu' | 'politika-notu' | 'rapor';
+
+export interface Publication {
+  id: string;
+  type: PublicationType;
+  title: LocalizedText;
+  summary: LocalizedText | null;
+  /** ISO tarih (2026-05-01). Yoksa yer tutucu gösterilir. */
+  date: string | null;
+  /** WorkArea.id */
+  area: string;
+  cover: string | null;
+  file: string | null;
+  featured?: boolean;
+}
+
+/** Kütüphane: dışarıdaki seçilmiş kaynaklar. */
+export interface LibraryItem {
+  title: LocalizedText;
+  publisher: LocalizedText;
+  url: string;
+}
+
+export interface Partner {
+  name: string;
+  logo: string | null;
+  url: string | null;
+}
+
+export interface PartnerGroup {
+  id: string;
+  label: LocalizedText;
+  partners: Partner[];
+}
+
+export interface PressItem {
+  outlet: string;
+  date: string | null;
+  title: LocalizedText;
+  url: string | null;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Site geneli                                                                */
+/* -------------------------------------------------------------------------- */
+
+export interface FooterContent {
+  description: LocalizedText;
+  newsletter: {
+    title: LocalizedText;
+    text: LocalizedText;
+    label: LocalizedText;
+    placeholder: LocalizedText;
+    button: LocalizedText;
+  };
+  contact: {
+    address: LocalizedText;
+    email: string;
+    phone: LocalizedText;
+  };
+  /** `url` boşsa gösterilmez (hesap adresleri henüz belli değil). */
+  socials: { name: string; url: string }[];
+}

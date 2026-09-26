@@ -1,0 +1,97 @@
+[
+  {
+    "id": "ornek-rapor",
+    "type": "rapor",
+    "featured": true,
+    "title": {
+      "tr": "[Öne çıkan rapor başlığı]",
+      "en": "[Featured report title]"
+    },
+    "summary": {
+      "tr": "[Raporun iki-üç cümlelik özeti ve temel bulgusu]",
+      "en": "[Two or three sentences summing up the report and its key finding]"
+    },
+    "date": null,
+    "area": "05",
+    "cover": null,
+    "file": null
+  },
+  {
+    "id": "ornek-1",
+    "type": "bilgi-notu",
+    "title": {
+      "tr": "[Yayın başlığı]",
+      "en": "[Publication title]"
+    },
+    "summary": null,
+    "date": null,
+    "area": "02",
+    "cover": null,
+    "file": null
+  },
+  {
+    "id": "ornek-2",
+    "type": "politika-notu",
+    "title": {
+      "tr": "[Yayın başlığı]",
+      "en": "[Publication title]"
+    },
+    "summary": null,
+    "date": null,
+    "area": "04",
+    "cover": null,
+    "file": null
+  },
+  {
+    "id": "ornek-3",
+    "type": "rapor",
+    "title": {
+      "tr": "[Yayın başlığı]",
+      "en": "[Publication title]"
+    },
+    "summary": null,
+    "date": null,
+    "area": "06",
+    "cover": null,
+    "file": null
+  },
+  {
+    "id": "ornek-4",
+    "type": "bilgi-notu",
+    "title": {
+      "tr": "[Yayın başlığı]",
+      "en": "[Publication title]"
+    },
+    "summary": null,
+    "date": null,
+    "area": "03",
+    "cover": null,
+    "file": null
+  },
+  {
+    "id": "ornek-5",
+    "type": "bilgi-notu",
+    "title": {
+      "tr": "[Yayın başlığı]",
+      "en": "[Publication title]"
+    },
+    "summary": null,
+    "date": null,
+    "area": "01",
+    "cover": null,
+    "file": null
+  },
+  {
+    "id": "ornek-6",
+    "type": "politika-notu",
+    "title": {
+      "tr": "[Yayın başlığı]",
+      "en": "[Publication title]"
+    },
+    "summary": null,
+    "date": null,
+    "area": "06",
+    "cover": null,
+    "file": null
+  }
+]

@@ -19,7 +19,10 @@ interface DesktopNavProps {
 const itemClass =
   'group inline-flex h-11 min-w-11 items-center font-display text-[0.9375rem] font-semibold tracking-[0.03em] whitespace-nowrap uppercase';
 
-/** Geniş ekran (lg ve üstü) yatay menü. Başlıklar sayfaya gitmez, alt menüyü açar. */
+/**
+ * Geniş ekran (lg ve üstü) yatay menü. Her başlık kendi genel bakış sayfasına
+ * gider; alt menüsü olanlar ayrıca açılır panel açar (bkz. `linkTrigger`).
+ */
 export function DesktopNav({ items, menu }: DesktopNavProps) {
   const t = useTranslations('Topbar');
   const pathname = usePathname();
@@ -30,16 +33,12 @@ export function DesktopNav({ items, menu }: DesktopNavProps) {
       <ul className="flex h-full items-center gap-4 xl:gap-7">
         {items.map((item) => {
           const active = isActive(item.href);
+          const current = pathname === item.href ? 'page' : undefined;
 
           if (!isNavGroup(item)) {
             return (
               <li key={item.href} className="flex h-full items-center">
-                <Link
-                  href={item.href}
-                  aria-current={pathname === item.href ? 'page' : undefined}
-                  data-active={active}
-                  className={itemClass}
-                >
+                <Link href={item.href} aria-current={current} data-active={active} className={itemClass}>
                   <span className={stripeUnderline}>{item.label}</span>
                 </Link>
               </li>
@@ -50,18 +49,25 @@ export function DesktopNav({ items, menu }: DesktopNavProps) {
           const open = menu.openId === id;
           return (
             <li key={item.href} className="relative flex h-full items-center" {...menu.bind(id)}>
-              <button
-                type="button"
+              <Link
+                href={item.href}
                 id={triggerId(id)}
                 aria-expanded={open}
                 aria-controls={panelId(id)}
-                onClick={() => menu.toggle(id)}
+                aria-current={current}
                 data-active={active}
                 className={itemClass}
+                {...menu.linkTrigger(id)}
               >
                 <span className={stripeUnderline}>{item.label}</span>
-              </button>
-              <MenuPanel id={id} open={open} links={item.children} onNavigate={menu.close} />
+              </Link>
+              <MenuPanel
+                id={id}
+                open={open}
+                overview={{ label: item.label, href: item.href }}
+                links={item.children}
+                onNavigate={menu.close}
+              />
             </li>
           );
         })}

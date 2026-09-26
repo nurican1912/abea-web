@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
 
-import { PlaceholderPage } from '@/components/layout/PlaceholderPage';
+import { PublicationsView } from '@/components/sections/yayinlar/PublicationsView';
 import { resolveLocale } from '@/i18n/locale';
-import { getPage } from '@/lib/content';
 import { pageMetadata } from '@/lib/seo';
 
-// Kütüphane
+// Yayınlar › Kütüphane
 const PATH = '/yayinlar/kutuphane';
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/yayinlar/kutuphane'>): Promise<Metadata> {
@@ -14,7 +13,6 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/yayinlar
 
 export default async function LibraryPage({ params }: PageProps<'/[locale]/yayinlar/kutuphane'>) {
   const locale = await resolveLocale(params);
-  const page = await getPage(PATH, locale);
 
-  return <PlaceholderPage path={PATH} locale={locale} page={page} />;
+  return <PublicationsView path={PATH} locale={locale} />;
 }

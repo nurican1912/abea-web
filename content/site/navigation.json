@@ -1,45 +1,68 @@
 {
   "logoMenu": [
     {
-      "label": { "tr": "Logomuzun Hikâyesi", "en": "The Story of Our Logo" },
+      "label": {
+        "tr": "Logomuzun Hikâyesi",
+        "en": "The Story of Our Logo"
+      },
       "href": "/logomuz"
     }
   ],
   "main": [
     {
-      "label": { "tr": "Hakkımızda", "en": "About Us" },
+      "label": {
+        "tr": "Hakkımızda",
+        "en": "About Us"
+      },
       "href": "/hakkimizda",
       "children": [
         {
-          "label": { "tr": "Biz Kimiz", "en": "Who We Are" },
-          "href": "/hakkimizda/biz-kimiz"
-        },
-        {
-          "label": { "tr": "Yolculuğumuz", "en": "Our Journey" },
+          "label": {
+            "tr": "Yolculuğumuz",
+            "en": "Our Journey"
+          },
           "href": "/hakkimizda/yolculugumuz"
         },
         {
-          "label": { "tr": "Ekibimiz", "en": "Our Team" },
+          "label": {
+            "tr": "Ekibimiz",
+            "en": "Our Team"
+          },
           "href": "/hakkimizda/ekibimiz"
         },
         {
-          "label": { "tr": "Danışma Kurulumuz", "en": "Advisory Board" },
+          "label": {
+            "tr": "Danışma Kurulumuz",
+            "en": "Advisory Board"
+          },
           "href": "/hakkimizda/danisma-kurulumuz"
         },
         {
-          "label": { "tr": "Politika Belgelerimiz", "en": "Our Policies" },
+          "label": {
+            "tr": "Politika Belgelerimiz",
+            "en": "Our Policies"
+          },
           "href": "/hakkimizda/politika-belgelerimiz"
         },
         {
-          "label": { "tr": "Tüzüğümüz", "en": "Our Bylaws" },
+          "label": {
+            "tr": "Tüzüğümüz",
+            "en": "Our Bylaws"
+          },
           "href": "/hakkimizda/tuzugumuz"
         },
         {
-          "label": { "tr": "Değerlerimiz", "en": "Our Values" },
+          "label": {
+            "tr": "Değerlerimiz",
+            "en": "Our Values"
+          },
           "href": "/hakkimizda/degerlerimiz"
         },
         {
-          "label": { "tr": "Üyelerimiz", "en": "Our Members" },
+          "label": {
+            "tr": "Üyelerimiz",
+            "en": "Our Members"
+          },
           "href": "/hakkimizda/uyelerimiz"
         },
         {
@@ -52,7 +75,10 @@
       ]
     },
     {
-      "label": { "tr": "Çalışmalarımız", "en": "Our Work" },
+      "label": {
+        "tr": "Çalışmalarımız",
+        "en": "Our Work"
+      },
       "href": "/calismalarimiz",
       "children": [
         {
@@ -86,30 +112,54 @@
       ]
     },
     {
-      "label": { "tr": "Yayınlar", "en": "Publications" },
+      "label": {
+        "tr": "Yayınlar",
+        "en": "Publications"
+      },
       "href": "/yayinlar",
       "children": [
         {
-          "label": { "tr": "Bilgi Notları", "en": "Briefs" },
+          "label": {
+            "tr": "Bilgi Notları",
+            "en": "Briefs"
+          },
           "href": "/yayinlar/bilgi-notlari"
         },
         {
-          "label": { "tr": "Politika Notları", "en": "Policy Briefs" },
+          "label": {
+            "tr": "Politika Notları",
+            "en": "Policy Briefs"
+          },
           "href": "/yayinlar/politika-notlari"
         },
         {
-          "label": { "tr": "Raporlar", "en": "Reports" },
+          "label": {
+            "tr": "Raporlar",
+            "en": "Reports"
+          },
           "href": "/yayinlar/raporlar"
         },
         {
-          "label": { "tr": "Kütüphane", "en": "Library" },
+          "label": {
+            "tr": "Kütüphane",
+            "en": "Library"
+          },
           "href": "/yayinlar/kutuphane"
         }
       ]
     },
-    { "label": { "tr": "Hikâyeler", "en": "Stories" }, "href": "/hikayeler" },
     {
-      "label": { "tr": "Paydaşlarımız", "en": "Our Partners" },
+      "label": {
+        "tr": "Hikâyeler",
+        "en": "Stories"
+      },
+      "href": "/hikayeler"
+    },
+    {
+      "label": {
+        "tr": "Paydaşlarımız",
+        "en": "Our Partners"
+      },
       "href": "/paydaslarimiz",
       "children": [
         {
@@ -120,18 +170,27 @@
           "href": "/paydaslarimiz/kurumsal"
         },
         {
-          "label": { "tr": "Medya Paydaşları", "en": "Media Partners" },
+          "label": {
+            "tr": "Medya Paydaşları",
+            "en": "Media Partners"
+          },
           "href": "/paydaslarimiz/medya"
         },
         {
-          "label": { "tr": "Fon Sağlayıcılar", "en": "Funders" },
+          "label": {
+            "tr": "Fon Sağlayıcılar",
+            "en": "Funders"
+          },
           "href": "/paydaslarimiz/fon-saglayicilar"
         }
       ]
     }
   ],
   "cta": {
-    "label": { "tr": "Gönüllü Ol", "en": "Volunteer" },
+    "label": {
+      "tr": "Üye / Gönüllü Ol",
+      "en": "Join Us"
+    },
     "href": "/hakkimizda/uyelik-ve-gonulluluk"
   }
 }

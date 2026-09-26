@@ -1,16 +1,16 @@
 'use client';
 
+import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useLayoutEffect, useRef } from 'react';
 
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/cn';
-import type { NavigationView } from '@/lib/content';
+import type { NavLinkView } from '@/lib/content';
 
 import { panelId, triggerId } from './use-menu-state';
 
-type NavLinkView = NavigationView['logoMenu'][number];
-
-/** Bundan uzun menüler iki sütuna bölünür (ör. Hakkımızda: 9 öğe → 5 + 4). */
+/** Bundan uzun menüler iki sütuna bölünür (ör. Hakkımızda: 8 öğe → 4 + 4). */
 const TWO_COLUMN_MIN = 6;
 /** Panelin ekran kenarına en fazla yaklaşabileceği mesafe (px). */
 const VIEWPORT_GUTTER = 16;
@@ -19,11 +19,20 @@ interface MenuPanelProps {
   id: string;
   open: boolean;
   links: NavLinkView[];
+  /**
+   * Başlığın kendi sayfası — panelin en üstünde "Genel bakış →" satırı olur.
+   * Dokunmatik ekranda başlığa ilk dokunuş paneli açtığı için sayfaya buradan gidilir.
+   */
+  overview?: NavLinkView;
   onNavigate: () => void;
 }
 
+const rowClass =
+  'flex min-h-11 items-center border-l-[3px] px-4 py-2 text-[0.9375rem] leading-snug transition-colors hover:bg-surface-soft focus-visible:bg-surface-soft';
+
 /** Masaüstünde bir menü başlığının altında açılan bağlantı paneli. */
-export function MenuPanel({ id, open, links, onNavigate }: MenuPanelProps) {
+export function MenuPanel({ id, open, links, overview, onNavigate }: MenuPanelProps) {
+  const t = useTranslations('Topbar');
   const pathname = usePathname();
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -43,6 +52,15 @@ export function MenuPanel({ id, open, links, onNavigate }: MenuPanelProps) {
     const shift = overflowRight > 0 ? -overflowRight : overflowLeft > 0 ? overflowLeft : 0;
     card.style.marginLeft = `${shift}px`;
   }, [open]);
+
+  const linkClass = (href: string) => {
+    const active = pathname === href;
+    return cn(
+      // Soldaki ince turkuaz çizgi: üzerine gelince, klavye odağında ve aktif sayfada.
+      rowClass,
+      active ? 'border-l-brand bg-surface-soft font-semibold' : 'border-l-transparent hover:border-l-brand focus-visible:border-l-brand',
+    );
+  };
 
   return (
     <div
@@ -64,30 +82,35 @@ export function MenuPanel({ id, open, links, onNavigate }: MenuPanelProps) {
           twoColumns ? 'w-[30rem]' : 'w-80',
         )}
       >
+        {overview && (
+          <Link
+            href={overview.href}
+            onClick={onNavigate}
+            aria-current={pathname === overview.href ? 'page' : undefined}
+            className={cn(linkClass(overview.href), 'group/overview mb-1 justify-between border-b border-b-line font-semibold')}
+          >
+            {t('overview')}
+            <ArrowRight
+              aria-hidden
+              className="size-4 shrink-0 text-muted transition-transform group-hover/overview:translate-x-0.5 group-hover/overview:text-ink"
+            />
+          </Link>
+        )}
         <div className={cn(twoColumns && 'grid grid-cols-2')}>
           {columns.map((column, i) => (
             <ul key={i} className={cn(i > 0 && 'border-l border-line')}>
-              {column.map((link) => {
-                const active = pathname === link.href;
-                return (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      onClick={onNavigate}
-                      aria-current={active ? 'page' : undefined}
-                      className={cn(
-                        // Soldaki ince turkuaz çizgi: üzerine gelince, klavye odağında ve aktif sayfada.
-                        'flex min-h-11 items-center border-l-[3px] px-4 py-2 text-[0.9375rem] leading-snug transition-colors hover:bg-surface-soft focus-visible:bg-surface-soft',
-                        active
-                          ? 'border-l-brand bg-surface-soft font-semibold'
-                          : 'border-l-transparent hover:border-l-brand focus-visible:border-l-brand',
-                      )}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                );
-              })}
+              {column.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    onClick={onNavigate}
+                    aria-current={pathname === link.href ? 'page' : undefined}
+                    className={linkClass(link.href)}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           ))}
         </div>

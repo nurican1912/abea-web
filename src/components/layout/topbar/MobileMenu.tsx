@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 
@@ -71,6 +71,18 @@ export function MobileMenu({ open, navigation, onClose }: MobileMenuProps) {
                       <ChevronDown aria-hidden className="size-5 shrink-0 text-muted transition-transform group-open:rotate-180" />
                     </summary>
                     <ul className="pb-3">
+                      {/* Başlığın kendi sayfası — dokunmatikte başlık yalnızca listeyi açar. */}
+                      <li>
+                        <Link
+                          href={item.href}
+                          onClick={onClose}
+                          aria-current={pathname === item.href ? 'page' : undefined}
+                          className={cn(linkClass(item.href), 'justify-between font-semibold')}
+                        >
+                          {t('overview')}
+                          <ArrowRight aria-hidden className="size-4 shrink-0 text-muted" />
+                        </Link>
+                      </li>
                       {item.children.map((link) => (
                         <li key={link.href}>
                           <Link

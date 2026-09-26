@@ -108,8 +108,7 @@ big-site-1/
     │       ├── logomuz/page.tsx              # Logomuzun Hikâyesi
     │       │
     │       ├── hakkimizda/
-    │       │   ├── page.tsx                  # yalnızca ilk alt sayfaya yönlendirir
-    │       │   ├── biz-kimiz/page.tsx
+    │       │   ├── page.tsx                  # Hakkımızda — genel bakış (alt sayfa kartları)
     │       │   ├── yolculugumuz/page.tsx
     │       │   ├── ekibimiz/page.tsx
     │       │   ├── danisma-kurulumuz/page.tsx
@@ -206,7 +205,6 @@ Hocaya sorulacak açık konular `SORULAR.md` dosyasında tutulur.
 | Ana sayfa | `page.tsx` | `/tr` | `/en` |
 | Logo › Logomuzun Hikâyesi | `logomuz/` | `/tr/logomuz` | `/en/our-logo` |
 | **Hakkımızda** | `hakkimizda/` | `/tr/hakkimizda` | `/en/about` |
-| › Biz Kimiz | `biz-kimiz/` | `…/biz-kimiz` | `…/who-we-are` |
 | › Yolculuğumuz | `yolculugumuz/` | `…/yolculugumuz` | `…/our-journey` |
 | › Ekibimiz | `ekibimiz/` | `…/ekibimiz` | `…/our-team` |
 | › Danışma Kurulumuz | `danisma-kurulumuz/` | `…/danisma-kurulumuz` | `…/advisory-board` |
@@ -295,8 +293,12 @@ Referans: `WhatsApp Image 2026-09-20 at 10.35.33.jpeg`
 ```
 
 - **Logo:** Tıklayınca ana sayfaya gider. Altında, diğer menüler gibi açılan tek bir alt öğe var: **Logomuzun Hikâyesi**.
-- **Menü davranışı:** Ana başlıklar (Hakkımızda, Çalışmalarımız, Yayınlar, Paydaşlarımız) ayrı bir sayfaya gitmez, tıklanınca alt menüyü açar. Masaüstünde fareyle üzerine gelince de açılır; mobilde hamburger ve akordeon. Alt menüsü olmayan Hikâyeler doğrudan sayfaya gider. `/hakkimizda` gibi ana adresler elle yazılırsa ilk alt sayfaya yönlendirilir.
-- **Hakkımızda › Biz Kimiz:** Topbar görselinde yok; öneri olarak en üste eklendi, istenmezse kaldırılır (bkz. `SORULAR.md` #4).
+- **Menü davranışı:** Her başlık kendi **genel bakış sayfasına** gider (Hakkımızda, Çalışmalarımız: alt sayfa kartları; Yayınlar: "Tümü" sekmesi; Paydaşlarımız: tüm bölümler).
+  - Fare: üzerine gelince alt menü açılır, tıklayınca sayfaya gider.
+  - Dokunmatik: ilk dokunuş menüyü açar; menünün en üstündeki **"Genel bakış →"** satırı sayfaya götürür.
+  - Klavye: Enter sayfaya gider, ↓ menüyü açıp ilk bağlantıya odaklanır, Esc kapatır.
+  - Mobil: akordeon; açılınca ilk satır "Genel bakış".
+- **Biz Kimiz** kaldırıldı; işini Hakkımızda genel bakış sayfası görüyor.
 - **Hesap simgesi:** İşlevsiz kontrol gösterilmez; Aşama 2'de giriş sistemiyle birlikte "Giriş yap" / hesap menüsü olarak eklenir.
 - **Alt çizgi:** Topbar'ın altında 2 px turkuaz çizgi. Menü başlıklarında ok yok (yalnızca logoda); aktif / açık başlığın altında turkuaz çizgi.
 - **Açılır paneller:** Topbar çizgisinden sarkar (kendi üst şeridi yok). 6 ve üzeri öğeli menüler (Hakkımızda) masaüstünde iki sütun, diğerleri tek sütun; ekran dışına taşarsa panel içeri kayar.
@@ -311,13 +313,14 @@ PDF taslaklarındaki yapı:
 - Dernek açıklaması
 - Menü sütunları
 - Bülten aboneliği (Aşama 1'de görsel olarak var, form Aşama 2'de çalışır)
+- Zemin koyu lacivert (`ink`); menü sütunları `navigation.json`'dan, metinler `content/site/footer.json`'dan gelir.
 - İletişim bilgileri
 - Sosyal medya linkleri
 - KVKK ve Çerez linkleri
 
 ### 5.3 Sayfa şablonu
 
-Her alt sayfada şu sıra kullanılır: `PageHeader` (yol satırı + başlık + kısa giriş), sayfa bölümleri, varsa sayfa sonu çağrısı.
+Her alt sayfada şu sıra kullanılır: `PageHeader` (beyaz zemin; solda yol satırı + büyük başlık, sağda giriş metni), bej zemin üstünde sayfa bölümleri (beyaz kartlar), varsa sayfa sonu çağrısı.
 İçi henüz boş olan sayfalar da bu şablonla, "Bu sayfa hazırlanıyor" durumuyla gelir. Hiçbir menü linki 404 vermez.
 
 ---
@@ -398,8 +401,9 @@ Mobil uyum sona bırakılan bir düzeltme değildir, her bileşenin kuruluş kur
 | `cta` | `#F4B740` | Kehribar — YALNIZCA ana dönüşüm eylemi (Aramıza Katıl). Genel vurgu rengi değildir. Üstüne `ink` yazı (~8:1) |
 | `ink` | `#0E2A38` | Gövde metni ve linkler |
 | `muted` | `#5B7787` | İkincil metin |
-| `bg-soft` | `#F3FAFD` | Açık bölüm zemini |
-| `line` | `#DCEBF3` | Ayraç, kenarlık |
+| `surface-soft` | `#F4F2ED` | Sıcak bej — bölüm zeminleri, aktif satırlar |
+| `surface-muted` | `#E9E5DC` | Bejin koyusu — kapak / logo yer tutucuları |
+| `line` | `#E5E0D6` | Sıcak gri — ayraç, kenarlık |
 
 ---
 

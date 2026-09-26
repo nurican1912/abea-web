@@ -33,7 +33,7 @@ Node.js 20.9 veya üstü gerekir.
 
 ## Açılış animasyonu
 
-Logo ortada çizilir, yazı söner, sembol küçülerek topbar'daki yerine kayar.
+Logo ortada çizilir, ardından yazısıyla birlikte küçülerek topbar'daki yerine kayar.
 
 - Sekme başına bir kez oynar; yenilemede gelmez, yeni sekmede gelir.
 - Tıklama, dokunma ya da herhangi bir tuş animasyonu atlar.

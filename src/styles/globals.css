@@ -15,8 +15,9 @@
   --color-ink: #0e2a38; /* gövde metni ve linkler */
   --color-muted: #5b7787; /* ikincil metin */
   --color-surface: #ffffff;
-  --color-surface-soft: #f3fafd;
-  --color-line: #dcebf3;
+  --color-surface-soft: #f4f2ed; /* sıcak bej — bölüm zeminleri, aktif satırlar */
+  --color-surface-muted: #e9e5dc; /* bejin koyusu — kapak / logo yer tutucuları */
+  --color-line: #e5e0d6; /* sıcak gri — çizgi ve kart kenarları */
 }
 
 @theme inline {

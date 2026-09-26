@@ -46,7 +46,7 @@
 .intro-pending { overflow: hidden; }
 .intro-pending .logo-intro { display: grid; }
 
-/* Sembolün ineceği topbar logosu, iniş anına kadar gizli durur. */
+/* Logonun ineceği topbar logosu, iniş anına kadar gizli durur. */
 .intro-pending [data-intro-target] { visibility: hidden; }
 
 .logo-intro__bg {

@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 
-import { PlaceholderPage } from '@/components/layout/PlaceholderPage';
+import { InstitutionalPartners } from '@/components/sections/paydaslarimiz/InstitutionalPartners';
+import { PartnerWithUs } from '@/components/sections/paydaslarimiz/PartnerWithUs';
+import { getPartnersData } from '@/components/sections/paydaslarimiz/partners-data';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { resolveLocale } from '@/i18n/locale';
-import { getPage } from '@/lib/content';
+import { getPage, getParents } from '@/lib/content';
 import { pageMetadata } from '@/lib/seo';
 
-// Kurumsal Paydaşlar
+// Paydaşlarımız › Kurumsal Paydaşlar
 const PATH = '/paydaslarimiz/kurumsal';
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/paydaslarimiz/kurumsal'>): Promise<Metadata> {
@@ -14,7 +17,19 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/paydasla
 
 export default async function InstitutionalPartnersPage({ params }: PageProps<'/[locale]/paydaslarimiz/kurumsal'>) {
   const locale = await resolveLocale(params);
-  const page = await getPage(PATH, locale);
+  const [page, parents, { content, groups, email }] = await Promise.all([
+    getPage(PATH, locale),
+    getParents(PATH, locale),
+    getPartnersData(locale),
+  ]);
 
-  return <PlaceholderPage path={PATH} locale={locale} page={page} />;
+  return (
+    <>
+      <PageHeader title={page.title} description={page.description} parents={parents} />
+      <div className="bg-surface-soft">
+        <InstitutionalPartners content={content.institutional} groups={groups} />
+        <PartnerWithUs content={content.join} email={email} />
+      </div>
+    </>
+  );
 }

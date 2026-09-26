@@ -1,0 +1,57 @@
+{
+  "description": {
+    "tr": "Eğitim, araştırma ve işbirlikleriyle afet risklerini azaltmak için çalışan bir sivil toplum kuruluşu.",
+    "en": "A non-profit working to reduce disaster risk through education, research and partnerships."
+  },
+  "newsletter": {
+    "title": {
+      "tr": "Bülten",
+      "en": "Newsletter"
+    },
+    "text": {
+      "tr": "Yeni yayın, eğitim ve etkinliklerden haberdar olun.",
+      "en": "Hear about new publications, trainings and events."
+    },
+    "label": {
+      "tr": "E-posta adresiniz",
+      "en": "Your email address"
+    },
+    "placeholder": {
+      "tr": "ornek@kurum.org",
+      "en": "name@example.org"
+    },
+    "button": {
+      "tr": "Abone ol",
+      "en": "Subscribe"
+    }
+  },
+  "contact": {
+    "address": {
+      "tr": "[Adres], Ankara",
+      "en": "[Address], Ankara"
+    },
+    "email": "afetbilinci.ead@gmail.com",
+    "phone": {
+      "tr": "[telefon]",
+      "en": "[phone]"
+    }
+  },
+  "socials": [
+    {
+      "name": "LinkedIn",
+      "url": ""
+    },
+    {
+      "name": "Instagram",
+      "url": ""
+    },
+    {
+      "name": "X",
+      "url": ""
+    },
+    {
+      "name": "YouTube",
+      "url": ""
+    }
+  ]
+}

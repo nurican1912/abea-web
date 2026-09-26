@@ -6,17 +6,6 @@ Cevaplanan soru "Cevap" satırı doldurularak işaretlenir: `[x]`.
 
 ## Açık sorular
 
-### 1. [ ] Topbar'daki logo
-
-Açılış animasyonunda logo, sembol ve "Afet Bilinci Eğitim Araştırma" yazısıyla birlikte ekranın ortasında çizilir. Ardından sol üst köşeye kayarak yerine geçer.
-
-**Önerimiz:** Köşeye geçerken yazı söner, topbar'da **sadece sembol** kalır. Yazı sadece açılışta görünür.
-
-- A) Sadece sembol *(önerimiz)*
-- B) Sembol + yazı (tam logo, küçük boyutta)
-
-Cevap:
-
 ### 2. [ ] "Hikâyemiz" tarzı kaydırmalı zaman çizelgesi nereye?
 
 Hayata Destek'in [hikayemiz.hayatadestek.org](https://hikayemiz.hayatadestek.org/) sayfasındaki gibi yıl yıl ilerleyen bir sayfa. Kaydırırken yıl ekranın kenarında sabit durur, her yılda fotoğraf ve metin yer alır.
@@ -39,20 +28,6 @@ Eklemek istediğiniz başka yıllar var mı? Her yıl için fotoğraf paylaşabi
 
 Cevap:
 
-### 4. [ ] Hakkımızda menüsüne "Biz Kimiz" eklensin mi?
-
-"Hakkımızda"ya tıklanınca ayrı bir sayfa açılmayacak, sadece alt menü açılacak. Bu yüzden derneği tek sayfada özetleyen bir yer kalmıyor.
-
-**Önerimiz:** Alt menünün en üstüne **Biz Kimiz** sayfası eklemek. İçeriği:
-- kısa tanıtım
-- misyon ve vizyon
-- ne yapıyoruz (6 çalışma alanı)
-- kurucular
-
-Onaylanırsa **misyon ve vizyon metinleri** gerekecek.
-
-Cevap:
-
 ### 5. [ ] Eksik bilgiler
 
 Footer ve iletişim alanları için:
@@ -63,9 +38,40 @@ Footer ve iletişim alanları için:
 
 Cevap:
 
+### 6. [ ] Üyelik & Gönüllülük sayfası için metinler
+
+- Başvuru formundaki "ekibimiz **[süre]** içinde sizinle iletişime geçsin" ifadesindeki süre (ör. 5 iş günü)
+- Sık sorulan 4 sorunun cevapları
+- Kurumsal gönüllülük programının detayları (şimdilik "Program detayları" butonu Çalışmalarımız › Kurumsal Afet Gönüllülüğü sayfasına gidiyor)
+
+Cevap:
+
+### 7. [ ] Yayınlar ve paydaşlar için içerik
+
+- Yayınlar: her yayının başlığı, türü (bilgi notu / politika notu / rapor), tarihi, çalışma alanı, kapak görseli ve PDF'i. Hangisi "öne çıkan" olacak?
+- Paydaşlar: kurum logoları ve web siteleri (Kamu, Yerel Yönetimler, İş Dünyası, Akademi, Sivil Toplum, Uluslararası), fon sağlayıcılar, medya paydaşları
+- Basında Biz: haber / röportaj başlıkları, yayın organı, tarih, bağlantı
+- Basın kiti (logo dosyaları) paylaşılacak mı?
+
+Cevap:
+
+---
+
+## Cevaplananlar
+
+### 1. [x] Topbar'daki logo
+
+Cevap: **Sembol + yazı** (tam logo). Açılış animasyonunda da logo yazısıyla birlikte köşeye kayıyor.
+
+### 4. [x] Hakkımızda menüsüne "Biz Kimiz" eklensin mi?
+
+Cevap: **Hayır.** Menü başlıkları artık tıklanabilir; "Hakkımızda" kendi genel bakış sayfasına gidiyor, Biz Kimiz'in işini o sayfa görüyor.
+
 ---
 
 ## Bilgi (onay gerekmez)
 
 - Sitede derneğin adı **"Afet Bilinci Eğitim Araştırma Derneği"** olarak geçer. Arka plan metnindeki "Eğitim **ve** Araştırma" ifadesi buna göre düzeltildi.
 - İlk demo bir **öneri** niteliğindedir. Beğenilen ve beğenilmeyen yerler işaretlenerek ilerlenecek.
+- Paydaşlarımız sayfasına PDF taslağında olmayan **Fon Sağlayıcılar** bölümü eklendi (menüde yer aldığı için).
+- Başvuru formu ve bülten aboneliği şimdilik yalnızca görünüm; gönderim panel aşamasında bağlanacak.
