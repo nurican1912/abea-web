@@ -1,0 +1,24 @@
+{
+  "title": {
+    "tr": "Yayınlar",
+    "en": "Publications"
+  },
+  "description": {
+    "tr": "Bilgi notları, politika notları ve araştırma raporlarımız açık erişimlidir. Kütüphanede ise seçtiğimiz ulusal ve uluslararası kaynakları bulabilirsiniz.",
+    "en": "Our briefs, policy briefs and research reports are all open access. In the library you'll find national and international resources we've picked out."
+  },
+  "library": {
+    "eyebrow": {
+      "tr": "Kütüphane",
+      "en": "Library"
+    },
+    "title": {
+      "tr": "Seçilmiş kaynaklar",
+      "en": "Selected resources"
+    },
+    "description": {
+      "tr": "Afet risk azaltma alanında temel ulusal ve uluslararası belgeler.",
+      "en": "Key national and international documents on disaster risk reduction."
+    }
+  }
+}

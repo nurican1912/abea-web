@@ -34,15 +34,19 @@ export const LOGO = {
     { thin: 'M 143.70 78.47 A 120.00 120.00 0 1 0 143.70 315.53', thick: 'M 143.70 306.92 A 111.50 111.50 0 0 0 236.50 197.00 L 236.50 5.50' },
   ],
 
-  /** Dört satır da aynı genişliğe (192 birim) yaslanır — bkz. fitWordmark(). */
+  /**
+   * Dört satır da aynı genişliğe (192 birim) yaslanır. Puntolar Barlow Semi
+   * Condensed 600 ile tarayıcıda ölçülüp yazıldı; logo JS'siz de (topbar,
+   * footer) doğru görünür. Animasyonlu logoda fitWordmark() yine ölçüp düzeltir.
+   */
   wordmark: {
     x: 265.5,
     width: 192,
     lines: [
-      { text: 'Afet', y: 106.5, size: 143 },
-      { text: 'Bilinci', y: 183.5, size: 99 },
-      { text: 'Eğitim', y: 269.5, size: 111 },
-      { text: 'Araştırma', y: 317.5, size: 62 },
+      { text: 'Afet', y: 106.5, size: 115.8 },
+      { text: 'Bilinci', y: 183.5, size: 81.98 },
+      { text: 'Eğitim', y: 269.5, size: 77.17 },
+      { text: 'Araştırma', y: 317.5, size: 49.03 },
     ],
   },
 } as const;

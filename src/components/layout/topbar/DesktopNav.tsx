@@ -1,10 +1,9 @@
 'use client';
 
-import { ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
+import { stripeUnderline } from '@/components/ui/styles';
 import { Link, usePathname } from '@/i18n/navigation';
-import { cn } from '@/lib/cn';
 import type { NavigationView } from '@/lib/content';
 import { isNavGroup } from '@/types/content';
 
@@ -16,30 +15,31 @@ interface DesktopNavProps {
   menu: MenuState;
 }
 
+// Başlıklar: logonun yazı tipi, büyük harf. En az 44×44 px tıklama alanı.
 const itemClass =
-  'inline-flex h-11 items-center gap-1 rounded-lg px-2.5 text-[0.9375rem] font-medium whitespace-nowrap transition-colors hover:bg-surface-soft hover:text-brand-deep xl:px-3 xl:text-base';
+  'group inline-flex h-11 min-w-11 items-center font-display text-[0.9375rem] font-semibold tracking-[0.03em] whitespace-nowrap uppercase';
 
-/** Geniş ekran (lg ve üstü) yatay menü. Başlıklar sayfaya gitmez, alt menüyü açar. */
+/**
+ * Geniş ekran (lg ve üstü) yatay menü. Her başlık kendi genel bakış sayfasına
+ * gider; alt menüsü olanlar ayrıca açılır panel açar (bkz. `linkTrigger`).
+ */
 export function DesktopNav({ items, menu }: DesktopNavProps) {
   const t = useTranslations('Topbar');
   const pathname = usePathname();
   const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
 
   return (
-    <nav aria-label={t('mainNav')} className="hidden lg:block">
-      <ul className="flex items-center">
+    <nav aria-label={t('mainNav')} className="hidden h-full lg:block">
+      <ul className="flex h-full items-center gap-4 xl:gap-7">
         {items.map((item) => {
           const active = isActive(item.href);
+          const current = pathname === item.href ? 'page' : undefined;
 
           if (!isNavGroup(item)) {
             return (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  aria-current={pathname === item.href ? 'page' : undefined}
-                  className={cn(itemClass, active && 'text-brand-deep')}
-                >
-                  {item.label}
+              <li key={item.href} className="flex h-full items-center">
+                <Link href={item.href} aria-current={current} data-active={active} className={itemClass}>
+                  <span className={stripeUnderline}>{item.label}</span>
                 </Link>
               </li>
             );
@@ -48,19 +48,26 @@ export function DesktopNav({ items, menu }: DesktopNavProps) {
           const id = item.href.slice(1);
           const open = menu.openId === id;
           return (
-            <li key={item.href} className="relative" {...menu.bind(id)}>
-              <button
-                type="button"
+            <li key={item.href} className="relative flex h-full items-center" {...menu.bind(id)}>
+              <Link
+                href={item.href}
                 id={triggerId(id)}
                 aria-expanded={open}
                 aria-controls={panelId(id)}
-                onClick={() => menu.toggle(id)}
-                className={cn(itemClass, (active || open) && 'text-brand-deep')}
+                aria-current={current}
+                data-active={active}
+                className={itemClass}
+                {...menu.linkTrigger(id)}
               >
-                {item.label}
-                <ChevronDown aria-hidden className={cn('size-4 transition-transform', open && 'rotate-180')} />
-              </button>
-              <MenuPanel id={id} open={open} links={item.children} onNavigate={menu.close} />
+                <span className={stripeUnderline}>{item.label}</span>
+              </Link>
+              <MenuPanel
+                id={id}
+                open={open}
+                overview={{ label: item.label, href: item.href }}
+                links={item.children}
+                onNavigate={menu.close}
+              />
             </li>
           );
         })}

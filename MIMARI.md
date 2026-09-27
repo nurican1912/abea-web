@@ -108,8 +108,7 @@ big-site-1/
     │       ├── logomuz/page.tsx              # Logomuzun Hikâyesi
     │       │
     │       ├── hakkimizda/
-    │       │   ├── page.tsx                  # yalnızca ilk alt sayfaya yönlendirir
-    │       │   ├── biz-kimiz/page.tsx
+    │       │   ├── page.tsx                  # Hakkımızda — genel bakış (alt sayfa kartları)
     │       │   ├── yolculugumuz/page.tsx
     │       │   ├── ekibimiz/page.tsx
     │       │   ├── danisma-kurulumuz/page.tsx
@@ -206,7 +205,6 @@ Hocaya sorulacak açık konular `SORULAR.md` dosyasında tutulur.
 | Ana sayfa | `page.tsx` | `/tr` | `/en` |
 | Logo › Logomuzun Hikâyesi | `logomuz/` | `/tr/logomuz` | `/en/our-logo` |
 | **Hakkımızda** | `hakkimizda/` | `/tr/hakkimizda` | `/en/about` |
-| › Biz Kimiz | `biz-kimiz/` | `…/biz-kimiz` | `…/who-we-are` |
 | › Yolculuğumuz | `yolculugumuz/` | `…/yolculugumuz` | `…/our-journey` |
 | › Ekibimiz | `ekibimiz/` | `…/ekibimiz` | `…/our-team` |
 | › Danışma Kurulumuz | `danisma-kurulumuz/` | `…/danisma-kurulumuz` | `…/advisory-board` |
@@ -290,14 +288,21 @@ json-source.ts   payload-source.ts     api-source.ts
 Referans: `WhatsApp Image 2026-09-20 at 10.35.33.jpeg`
 
 ```
-[LOGO]   Hakkımızda   Çalışmalarımız   Yayınlar   Hikâyeler   Paydaşlarımız        TR | EN   [Üye / Gönüllü Ol]   (👤)
+[LOGO ▾]   HAKKIMIZDA ▾   ÇALIŞMALARIMIZ ▾   YAYINLAR ▾   HİKÂYELER   PAYDAŞLARIMIZ ▾        TR | EN   [Aramıza Katıl →]
   └ Logomuzun Hikâyesi
 ```
 
 - **Logo:** Tıklayınca ana sayfaya gider. Altında, diğer menüler gibi açılan tek bir alt öğe var: **Logomuzun Hikâyesi**.
-- **Menü davranışı:** Ana başlıklar (Hakkımızda, Çalışmalarımız, Yayınlar, Paydaşlarımız) ayrı bir sayfaya gitmez, tıklanınca alt menüyü açar. Masaüstünde fareyle üzerine gelince de açılır; mobilde hamburger ve akordeon. Alt menüsü olmayan Hikâyeler doğrudan sayfaya gider. `/hakkimizda` gibi ana adresler elle yazılırsa ilk alt sayfaya yönlendirilir.
-- **Hakkımızda › Biz Kimiz:** Topbar görselinde yok; öneri olarak en üste eklendi, istenmezse kaldırılır (bkz. `SORULAR.md` #4).
-- **(👤) hesap simgesi:** Aşama 1'de yeri ayrılır. Aşama 2'de "Giriş yap" / hesap menüsüne dönüşür.
+- **Menü davranışı:** Her başlık kendi **genel bakış sayfasına** gider (Hakkımızda, Çalışmalarımız: alt sayfa kartları; Yayınlar: "Tümü" sekmesi; Paydaşlarımız: tüm bölümler).
+  - Fare: üzerine gelince alt menü açılır, tıklayınca sayfaya gider.
+  - Dokunmatik: ilk dokunuş menüyü açar; menünün en üstündeki **"Genel bakış →"** satırı sayfaya götürür.
+  - Klavye: Enter sayfaya gider, ↓ menüyü açıp ilk bağlantıya odaklanır, Esc kapatır.
+  - Mobil: akordeon; açılınca ilk satır "Genel bakış".
+- **Biz Kimiz** kaldırıldı; işini Hakkımızda genel bakış sayfası görüyor.
+- **Hesap simgesi:** İşlevsiz kontrol gösterilmez; Aşama 2'de giriş sistemiyle birlikte "Giriş yap" / hesap menüsü olarak eklenir.
+- **Alt çizgi:** Topbar'ın altında 2 px turkuaz çizgi. Menü başlıklarında ok yok (yalnızca logoda); aktif / açık başlığın altında turkuaz çizgi.
+- **Açılır paneller:** Topbar çizgisinden sarkar (kendi üst şeridi yok). 6 ve üzeri öğeli menüler (Hakkımızda) masaüstünde iki sütun, diğerleri tek sütun; ekran dışına taşarsa panel içeri kayar.
+- **Dil seçici:** Aktif dil açık mavi zemin + kalın yazı + `aria-current`.
 - **Kaydırınca:** Topbar sabit kalır ve küçülür.
 - **Veri kaynağı:** `content/site/navigation.json`. İleride panelden düzenlenir.
 
@@ -308,14 +313,45 @@ PDF taslaklarındaki yapı:
 - Dernek açıklaması
 - Menü sütunları
 - Bülten aboneliği (Aşama 1'de görsel olarak var, form Aşama 2'de çalışır)
+- Zemin koyu lacivert (`ink`); menü sütunları `navigation.json`'dan, metinler `content/site/footer.json`'dan gelir.
 - İletişim bilgileri
 - Sosyal medya linkleri
 - KVKK ve Çerez linkleri
 
 ### 5.3 Sayfa şablonu
 
-Her alt sayfada şu sıra kullanılır: `PageHeader` (yol satırı + başlık + kısa giriş), sayfa bölümleri, varsa sayfa sonu çağrısı.
+Her alt sayfada şu sıra kullanılır: `PageHeader` (beyaz zemin; solda yol satırı + büyük başlık, sağda giriş metni), bej zemin üstünde sayfa bölümleri (beyaz kartlar), varsa sayfa sonu çağrısı.
 İçi henüz boş olan sayfalar da bu şablonla, "Bu sayfa hazırlanıyor" durumuyla gelir. Hiçbir menü linki 404 vermez.
+
+---
+
+### 5.4 Ana Sayfa
+
+**İlkeler**
+
+1. Her bölüm tek mesaj, en fazla bir çağrı. Ana sayfa her şeyi anlatmaz; doğru sayfaya yönlendirir.
+2. **Aynı ekranda aynı yere giden iki bağlantı olmaz.** (Sayfanın farklı yerlerindeki tekrar — bölüm sonu linki, footer — sorun değil.)
+3. İçeriği olmayan bölüm görünmez; içerik girilince kendiliğinden açılır.
+4. Zemin ritmi: beyaz → bej → beyaz… (Hero ile Biz kimiz ikisi de beyaz; aralarında ince çizgi var).
+5. Kehribar sarısı yalnızca "Üye / Gönüllü Ol"da.
+6. Tüm metinler `content/pages/home.json`'da (panelden düzenlenecek).
+
+**Bölümler (yukarıdan aşağıya)**
+
+| # | Bölüm | Zemin | İçerik | Çağrı | Durum |
+|---|---|---|---|---|---|
+| 1 | Hero | beyaz | Slogan, tanıtım (hocanın arka plan metninden), filigran | "Hakkımızda →" (turkuaz altı çizili metin bağlantısı) · altta ortada aşağı ok → Biz kimiz | ✅ |
+| 2 | Biz kimiz + rakamlar | beyaz | 2–3 cümle + 3 gerçek rakam (2007'den beri · 30+ danışman · 6 alan) | Yolculuğumuz → | ✅ |
+| 3 | Çalışma alanları | bej | 6 renklenen kart, animasyonlu ikonlar | Her kart → ilgili alan | ✅ (A/B demo) |
+| 4 | Öne çıkan proje | beyaz | "Geleceğimiz Sadece Salıncakta Sallansın" (2013) — görsel + kısa hikâye | Projeyi inceleyin → (Okul Öncesi) | ✅ (fotoğraf bekleniyor) |
+| 5 | Değerlerimiz | bej | 7 değer, numaralı | Değerlerimiz → | ✅ |
+| 6 | Son yayınlar | beyaz | En yeni 3 yayın kartı | Tüm yayınlar → | ✅ (yer tutucu) |
+| 7 | Paydaşlar | bej | Logo şeridi | Paydaşlarımız → | ✅ (yer tutucu) |
+| 8 | Katılın | lacivert | Üye · Gönüllü · Kurumsal | **Üye / Gönüllü Ol** | ✅ |
+
+**Olmayacaklar:** kayan slayt (carousel), otomatik video, haber akışı (içerik yok), sosyal medya gömme (hız + KVKK), tahmini/sahte rakam, açılır pencere, ayrı bülten bölümü (footer'da var).
+
+**Aşamalar:** Tüm bölümler kuruldu. İçeriği gelmemiş bölümler (4'ün fotoğrafı, 6, 8) demo süresince yer tutucuyla görünür; yayından önce `src/config/demo.ts` → `SHOW_EMPTY_SECTIONS = false` yapılınca 6 ve 8 içerik gelene kadar gizlenir.
 
 ---
 
@@ -383,19 +419,21 @@ Mobil uyum sona bırakılan bir düzeltme değildir, her bileşenin kuruluş kur
   - Anlamlı HTML etiketleri
   - Klavyeyle gezilebilen menü
   - Görsellerde `alt` metni
-  - Kontrast kuralı: `#28ADE5` metin rengi olarak kullanılmaz, metinde `#1B7FAB` kullanılır
+  - Kontrast kuralı: `#28ADE5` (turkuaz) metin rengi olarak kullanılmaz; metin `ink`, koyu lacivert butonların üstünde beyaz
 - **Yorumlar "neden"i anlatır, "ne"yi değil.**
 
 ### Tasarım değişkenleri (eski demodan)
 
 | Değişken | Değer | Kullanım |
 |---|---|---|
-| `brand` | `#28ADE5` | Logo, vurgu, dekor |
-| `brand-deep` | `#1B7FAB` | Link, buton, metin vurgusu |
-| `ink` | `#0E2A38` | Gövde metni |
+| `brand` | `#28ADE5` | Logonun turkuazı — vurgu çizgileri, dekor. Metin rengi olarak kullanılmaz |
+| `primary` | `#123B5D` | Koyu lacivert — birincil butonlar (Çalışmalarımızı Keşfet…). Üstüne beyaz yazı (~11:1) |
+| `cta` | `#F4B740` | Kehribar — YALNIZCA ana dönüşüm eylemi (Aramıza Katıl). Genel vurgu rengi değildir. Üstüne `ink` yazı (~8:1) |
+| `ink` | `#0E2A38` | Gövde metni ve linkler |
 | `muted` | `#5B7787` | İkincil metin |
-| `bg-soft` | `#F3FAFD` | Açık bölüm zemini |
-| `line` | `#DCEBF3` | Ayraç, kenarlık |
+| `surface-soft` | `#F4F2ED` | Sıcak bej — bölüm zeminleri, aktif satırlar |
+| `surface-muted` | `#E9E5DC` | Bejin koyusu — kapak / logo yer tutucuları |
+| `line` | `#E5E0D6` | Sıcak gri — ayraç, kenarlık |
 
 ---
 

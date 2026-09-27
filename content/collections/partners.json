@@ -1,0 +1,50 @@
+[
+  {
+    "id": "kamu",
+    "label": {
+      "tr": "Kamu Kurumları",
+      "en": "Public Institutions"
+    },
+    "partners": []
+  },
+  {
+    "id": "yerel",
+    "label": {
+      "tr": "Yerel Yönetimler",
+      "en": "Local Governments"
+    },
+    "partners": []
+  },
+  {
+    "id": "is-dunyasi",
+    "label": {
+      "tr": "İş Dünyası",
+      "en": "Business"
+    },
+    "partners": []
+  },
+  {
+    "id": "akademi",
+    "label": {
+      "tr": "Akademi",
+      "en": "Academia"
+    },
+    "partners": []
+  },
+  {
+    "id": "sivil",
+    "label": {
+      "tr": "Sivil Toplum",
+      "en": "Civil Society"
+    },
+    "partners": []
+  },
+  {
+    "id": "uluslararasi",
+    "label": {
+      "tr": "Uluslararası Kuruluşlar",
+      "en": "International Organizations"
+    },
+    "partners": []
+  }
+]

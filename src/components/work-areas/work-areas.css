@@ -1,0 +1,70 @@
+/*
+ * Çalışma alanı kartları — üzerine gelince (ya da klavye odağında):
+ *   1) kart renklenir
+ *   2) ikonun nesnesi logo gibi baştan çizilir
+ *   3) episantr belirir, şok halkası yayılır (logo açılışındaki gibi)
+ *   4) dalgalar episantrdan dışa doğru büyüyerek sırayla gelir
+ * Hareket azaltma tercihinde yalnızca renk değişir.
+ */
+
+/* pathLength=1: "1 2" deseniyle çizgi normalde tam görünür */
+.area-icon__draw {
+  stroke-dasharray: 1 2;
+  stroke-dashoffset: 0;
+}
+
+.area-icon__wave {
+  transform-box: view-box;
+  transform-origin: var(--ox) var(--oy);
+}
+
+.area-icon__dot,
+.area-icon__ripple {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.area-icon__ripple { opacity: 0; }
+
+.area-card:is(:hover, :focus-visible) .area-icon__draw {
+  animation: area-draw 0.9s cubic-bezier(0.33, 0, 0.12, 1) both;
+}
+
+.area-card:is(:hover, :focus-visible) .area-icon__dot {
+  animation: area-pop 0.45s cubic-bezier(0.2, 0.9, 0.25, 1.25) 0.3s both;
+}
+
+.area-card:is(:hover, :focus-visible) .area-icon__ripple {
+  animation: area-ripple 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+}
+
+.area-card:is(:hover, :focus-visible) .area-icon__wave {
+  animation: area-wave 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  animation-delay: calc(0.5s + var(--i) * 0.16s);
+}
+
+@keyframes area-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes area-pop {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+
+@keyframes area-ripple {
+  from { opacity: 0.8; transform: scale(1); }
+  to { opacity: 0; transform: scale(6); }
+}
+
+@keyframes area-wave {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .area-card:is(:hover, :focus-visible) .area-icon * {
+    animation: none;
+  }
+}

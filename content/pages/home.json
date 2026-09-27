@@ -1,5 +1,8 @@
 {
-  "title": { "tr": "Ana sayfa", "en": "Home" },
+  "title": {
+    "tr": "Ana sayfa",
+    "en": "Home"
+  },
   "description": {
     "tr": "Afet riskini azaltmak için bilimsel ve kanıta dayalı eğitim ve araştırma çalışmaları yürüten sivil toplum kuruluşu.",
     "en": "A non-profit working to reduce disaster risk through science-based education and research."
@@ -10,8 +13,177 @@
       "en": "Being ready for disasters isn't a favor. It's a right."
     },
     "lead": {
-      "tr": "Okul öncesinden iş dünyasına, yerel yönetimlerden mahallelere kadar afet riskini azaltmak için bilimsel ve kanıta dayalı çalışmalar yürütüyoruz.",
-      "en": "From preschools to businesses, from local governments to neighborhoods, we do science-based, evidence-driven work to reduce disaster risk."
+      "tr": "2007'de bir grup gönüllü üniversite öğrencisiyle başlayan yolculuğumuzu bugün eğitim ve araştırmayla sürdürüyoruz. Okul öncesinden iş dünyasına, yerel yönetimlerden mahallelere kadar afet riskini azaltmak için bilimsel ve kanıta dayalı çalışmalar yürütüyor; kadınlar, çocuklar, yaşlılar ve engelliler gibi afetlerden en çok etkilenenleri her zaman önceliklendiriyoruz.",
+      "en": "What started in 2007 with a group of volunteer university students continues today through education and research. From preschools to businesses, from local governments to neighborhoods, we do science-based, evidence-driven work to reduce disaster risk, always putting first the people hit hardest by disasters: women, children, older people and people with disabilities."
+    },
+    "aboutLink": {
+      "label": {
+        "tr": "Hakkımızda",
+        "en": "About us"
+      },
+      "href": "/hakkimizda"
+    },
+    "scrollHint": {
+      "tr": "Aşağı kaydır: Biz kimiz",
+      "en": "Scroll down: Who we are"
+    }
+  },
+  "about": {
+    "eyebrow": {
+      "tr": "Biz kimiz",
+      "en": "Who we are"
+    },
+    "title": {
+      "tr": "Bir öğrenci topluluğundan bir eğitim ve araştırma derneğine",
+      "en": "From a student club to an education and research association"
+    },
+    "text": {
+      "tr": "Afyon Kocatepe Üniversitesi'nde afet durumlarında resmî ekiplere destek olmak için kurulan Akademi Arama Kurtarma Topluluğu, 2013'te Afet Bilinci Derneği adıyla kurumsallaştı. Mayıs 2025'te risk azaltma odaklı eğitim ve araştırma misyonuyla yeniden yapılandık; bugün iş dünyasının afete hazırlığını güçlendiriyor, iyi uygulamaları uluslararası platformlara taşıyoruz.",
+      "en": "Akademi Search and Rescue Club was set up at Afyon Kocatepe University to support official teams during disasters, and in 2013 it became the Disaster Awareness Association. In May 2025 we restructured around a mission of education and research for risk reduction. Today we help businesses get ready for disasters and take good practice to international platforms."
+    },
+    "stats": [
+      {
+        "value": "2007",
+        "label": {
+          "tr": "yılından beri",
+          "en": "and counting"
+        }
+      },
+      {
+        "value": "30+",
+        "label": {
+          "tr": "danışma kurulu üyesi",
+          "en": "advisory board members"
+        }
+      },
+      {
+        "value": "6",
+        "label": {
+          "tr": "çalışma alanı",
+          "en": "areas of work"
+        }
+      }
+    ],
+    "link": {
+      "label": {
+        "tr": "Yolculuğumuz",
+        "en": "Our journey"
+      },
+      "href": "/hakkimizda/yolculugumuz"
+    }
+  },
+  "workAreas": {
+    "eyebrow": {
+      "tr": "Çalışma alanlarımız",
+      "en": "Our areas of work"
+    },
+    "title": {
+      "tr": "Afet riskini altı alanda azaltıyoruz",
+      "en": "We work to reduce disaster risk in six areas"
+    },
+    "description": {
+      "tr": "Eğitim, araştırma ve iş birlikleriyle afetlere hazırlığı ve dayanıklılığı altı alanda güçlendiriyoruz.",
+      "en": "Through education, research and partnerships, we build disaster preparedness and resilience in six areas."
+    },
+    "linkLabel": {
+      "tr": "Çalışmaları inceleyin",
+      "en": "Explore our work"
+    },
+    "demoVariants": {
+      "single": {
+        "tr": "Seçenek A — Tek renk",
+        "en": "Option A — Single color"
+      },
+      "area": {
+        "tr": "Seçenek B — Alan renkleri",
+        "en": "Option B — Area colors"
+      }
+    }
+  },
+  "featuredProject": {
+    "eyebrow": {
+      "tr": "Öne çıkan proje · 2013",
+      "en": "Featured project · 2013"
+    },
+    "title": {
+      "tr": "Geleceğimiz Sadece Salıncakta Sallansın",
+      "en": "Geleceğimiz Sadece Salıncakta Sallansın"
+    },
+    "text": {
+      "tr": "Okul öncesi çocukların afet farkındalığını artırmak için hayata geçirdiğimiz bu proje; oyunları, el kitapları, şarkısı ve etkinlik içerikleriyle derneğimizin öncü çalışmalarından biri oldu.",
+      "en": "The name is a play on words, roughly \"may the only thing that shakes our future be a swing.\" We launched the project to raise disaster awareness among preschool children, and with its games, handbooks, song and activities it became one of our association's pioneering pieces of work."
+    },
+    "imageLabel": {
+      "tr": "Proje fotoğrafı",
+      "en": "Project photo"
+    },
+    "link": {
+      "label": {
+        "tr": "Projeyi inceleyin",
+        "en": "Read about the project"
+      },
+      "href": "/calismalarimiz/okul-oncesi"
+    }
+  },
+  "values": {
+    "eyebrow": {
+      "tr": "Değerlerimiz",
+      "en": "Our values"
+    },
+    "title": {
+      "tr": "Çalışmalarımıza yön veren yedi değer",
+      "en": "Seven values that guide our work"
+    },
+    "link": {
+      "label": {
+        "tr": "Değerlerimiz",
+        "en": "Our values"
+      },
+      "href": "/hakkimizda/degerlerimiz"
+    }
+  },
+  "publications": {
+    "eyebrow": {
+      "tr": "Son yayınlar",
+      "en": "Latest publications"
+    },
+    "title": {
+      "tr": "Açık erişimli bilgi notları, politika notları ve raporlar",
+      "en": "Open-access briefs, policy briefs and reports"
+    },
+    "link": {
+      "label": {
+        "tr": "Tüm yayınlar",
+        "en": "All publications"
+      },
+      "href": "/yayinlar"
+    }
+  },
+  "join": {
+    "title": {
+      "tr": "Siz de aramıza katılın",
+      "en": "Come join us"
+    },
+    "text": {
+      "tr": "Bilginizi, zamanınızı ya da kurumunuzun gücünü afet risklerini azaltmak için paylaşın.",
+      "en": "Share your knowledge, your time or your organization's strength to help reduce disaster risk."
+    }
+  },
+  "partners": {
+    "eyebrow": {
+      "tr": "Paydaşlarımız",
+      "en": "Our partners"
+    },
+    "title": {
+      "tr": "Birlikte çalıştığımız kurumlar",
+      "en": "The organizations we work with"
+    },
+    "link": {
+      "label": {
+        "tr": "Paydaşlarımız",
+        "en": "Our partners"
+      },
+      "href": "/paydaslarimiz"
     }
   }
 }

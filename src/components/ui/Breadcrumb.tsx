@@ -2,12 +2,15 @@ import { ChevronRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
 
 import { Link } from '@/i18n/navigation';
+import type { NavLinkView } from '@/lib/content';
 
 interface BreadcrumbProps {
-  /** Ana sayfa ile mevcut sayfa arasındaki başlıklar (link değil — menü başlıklarının sayfası yok). */
-  parents: string[];
+  /** Ana sayfa ile mevcut sayfa arasındaki başlıklar — ör. Ekibimiz için [Hakkımızda]. */
+  parents: NavLinkView[];
   current: string;
 }
+
+const linkClass = 'rounded-sm text-ink underline decoration-brand decoration-2 underline-offset-4 hover:decoration-ink';
 
 export async function Breadcrumb({ parents, current }: BreadcrumbProps) {
   const t = await getTranslations('Page');
@@ -16,14 +19,16 @@ export async function Breadcrumb({ parents, current }: BreadcrumbProps) {
     <nav aria-label={t('breadcrumb')}>
       <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1 text-sm text-muted">
         <li>
-          <Link href="/" className="rounded-sm text-brand-deep underline-offset-4 hover:underline">
+          <Link href="/" className={linkClass}>
             {t('home')}
           </Link>
         </li>
-        {parents.map((label) => (
-          <li key={label} className="flex items-center gap-1.5">
+        {parents.map((parent) => (
+          <li key={parent.href} className="flex items-center gap-1.5">
             <ChevronRight aria-hidden className="size-3.5 shrink-0" />
-            {label}
+            <Link href={parent.href} className={linkClass}>
+              {parent.label}
+            </Link>
           </li>
         ))}
         <li className="flex items-center gap-1.5">

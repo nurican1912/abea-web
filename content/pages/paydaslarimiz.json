@@ -1,0 +1,88 @@
+{
+  "title": {
+    "tr": "Paydaşlarımız",
+    "en": "Our Partners"
+  },
+  "description": {
+    "tr": "Afet risk azaltma tek bir kurumun işi değil. Kamu kurumları, yerel yönetimler, iş dünyası, akademi, sivil toplum ve medyayla birlikte çalışıyoruz.",
+    "en": "Reducing disaster risk isn't a one-organization job. We work with public bodies, local governments, businesses, universities, civil society and the media."
+  },
+  "institutional": {
+    "title": {
+      "tr": "Kurumsal Paydaşlar",
+      "en": "Institutional Partners"
+    },
+    "note": {
+      "tr": "Logolar kurum sitelerine bağlantı verir",
+      "en": "Logos link to each organization's website"
+    }
+  },
+  "funders": {
+    "title": {
+      "tr": "Fon Sağlayıcılar",
+      "en": "Funders"
+    },
+    "description": {
+      "tr": "Çalışmalarımızı destekleyen kurumlar.",
+      "en": "The organizations that fund our work."
+    }
+  },
+  "media": {
+    "title": {
+      "tr": "Medya Paydaşları",
+      "en": "Media Partners"
+    }
+  },
+  "press": {
+    "title": {
+      "tr": "Basında Biz",
+      "en": "In the Press"
+    },
+    "kitLabel": {
+      "tr": "Basın kiti ve logo dosyaları",
+      "en": "Press kit and logo files"
+    }
+  },
+  "join": {
+    "title": {
+      "tr": "Paydaşımız olun",
+      "en": "Partner with us"
+    },
+    "contactLabel": {
+      "tr": "Bize ulaşın",
+      "en": "Get in touch"
+    },
+    "cards": [
+      {
+        "title": {
+          "tr": "Proje ortaklığı",
+          "en": "Project partnerships"
+        },
+        "text": {
+          "tr": "Araştırma, eğitim ve saha projelerinde birlikte çalışma",
+          "en": "Working together on research, training and field projects"
+        }
+      },
+      {
+        "title": {
+          "tr": "Kurumsal programlar",
+          "en": "Corporate programs"
+        },
+        "text": {
+          "tr": "Çalışanlarınız için eğitim ve kurumsal gönüllülük",
+          "en": "Training and corporate volunteering for your employees"
+        }
+      },
+      {
+        "title": {
+          "tr": "Destek ve bağış",
+          "en": "Support and donations"
+        },
+        "text": {
+          "tr": "Açık erişimli materyallerin üretimine katkı",
+          "en": "Help us produce open-access materials"
+        }
+      }
+    ]
+  }
+}

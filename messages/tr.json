@@ -10,9 +10,8 @@
     "logoMenu": "Logo menüsü",
     "openMenu": "Menüyü aç",
     "closeMenu": "Menüyü kapat",
-    "account": "Hesabım",
-    "accountSoon": "Üye girişi yakında",
-    "language": "Dil seçimi"
+    "language": "Dil seçimi",
+    "overview": "Genel bakış"
   },
   "Languages": {
     "tr": "Türkçe",
@@ -22,7 +21,49 @@
     "breadcrumb": "Sayfa konumu",
     "home": "Ana sayfa",
     "comingSoon": "Bu sayfa hazırlanıyor.",
-    "comingSoonNote": "İçerik çok yakında burada olacak."
+    "comingSoonNote": "İçerik çok yakında burada olacak.",
+    "learnMore": "Detaylı gör"
+  },
+  "Footer": {
+    "rights": "© {year} Afet Bilinci Eğitim Araştırma Derneği",
+    "privacy": "KVKK Aydınlatma Metni",
+    "cookies": "Çerez Politikası",
+    "home": "Ana sayfa",
+    "siteMap": "Site haritası"
+  },
+  "Publications": {
+    "tabs": "Yayın türleri",
+    "all": "Tümü",
+    "searchLabel": "Yayınlarda ara",
+    "searchPlaceholder": "Başlık, konu veya anahtar kelime",
+    "areaLabel": "Çalışma alanı",
+    "allAreas": "Tüm alanlar",
+    "yearLabel": "Yıl",
+    "allYears": "Tümü",
+    "featured": "Öne çıkan",
+    "downloadPdf": "PDF indir",
+    "readSummary": "Özeti oku",
+    "cover": "Kapak",
+    "reportCover": "Rapor kapağı",
+    "datePlaceholder": "[Tarih]",
+    "area": "Alan {id}",
+    "loadMore": "Daha fazla yayın yükle",
+    "noResults": "Aramanıza uygun yayın bulunamadı.",
+    "types": {
+      "bilgi-notu": "Bilgi Notu",
+      "politika-notu": "Politika Notu",
+      "rapor": "Rapor"
+    }
+  },
+  "Partners": {
+    "logo": "Logo",
+    "mediaLogo": "Medya logosu",
+    "outletPlaceholder": "[Yayın organı]",
+    "datePlaceholder": "[Tarih]",
+    "headlinePlaceholder": "[Haber / röportaj başlığı]"
+  },
+  "Team": {
+    "close": "Kapat"
   },
   "Intro": {
     "skipHint": "Geçmek için dokunun"

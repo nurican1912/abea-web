@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 
 import { Container } from '@/components/ui/Container';
-import { Link } from '@/i18n/navigation';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 
 export default function NotFound() {
   const t = useTranslations('NotFound');
@@ -11,12 +11,10 @@ export default function NotFound() {
       <p className="font-display text-7xl font-semibold text-brand">404</p>
       <h1 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">{t('title')}</h1>
       <p className="mt-3 max-w-xl text-muted">{t('description')}</p>
-      <Link
-        href="/"
-        className="mt-8 inline-flex min-h-11 items-center rounded-full bg-brand-deep px-6 font-semibold text-white transition-colors hover:bg-ink"
-      >
+      {/* Kehribar yalnızca "Aramıza Katıl" içindir; burada birincil (lacivert) buton. */}
+      <ButtonLink href="/" variant="primary" className="mt-8 inline-flex">
         {t('backHome')}
-      </Link>
+      </ButtonLink>
     </Container>
   );
 }

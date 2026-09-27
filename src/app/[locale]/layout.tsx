@@ -5,6 +5,7 @@ import { Barlow, Barlow_Semi_Condensed } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 
+import { Footer } from '@/components/layout/footer/Footer';
 import { Topbar } from '@/components/layout/topbar/Topbar';
 import { IntroBootScript } from '@/components/logo/IntroBootScript';
 import { LogoIntro } from '@/components/logo/LogoIntro';
@@ -66,6 +67,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<'/[
           <LogoIntro />
           <Topbar navigation={navigation} />
           <main id="main">{children}</main>
+          <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>
     </html>

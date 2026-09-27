@@ -10,9 +10,8 @@
     "logoMenu": "Logo menu",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "account": "My account",
-    "accountSoon": "Member login coming soon",
-    "language": "Language"
+    "language": "Language",
+    "overview": "Overview"
   },
   "Languages": {
     "tr": "Türkçe",
@@ -22,7 +21,49 @@
     "breadcrumb": "You are here",
     "home": "Home",
     "comingSoon": "We're working on this page.",
-    "comingSoonNote": "Check back soon."
+    "comingSoonNote": "Check back soon.",
+    "learnMore": "Learn more"
+  },
+  "Footer": {
+    "rights": "© {year} Afet Bilinci Eğitim Araştırma Derneği",
+    "privacy": "Privacy Notice",
+    "cookies": "Cookie Policy",
+    "home": "Home",
+    "siteMap": "Site map"
+  },
+  "Publications": {
+    "tabs": "Publication types",
+    "all": "All",
+    "searchLabel": "Search publications",
+    "searchPlaceholder": "Title, topic or keyword",
+    "areaLabel": "Area of work",
+    "allAreas": "All areas",
+    "yearLabel": "Year",
+    "allYears": "All",
+    "featured": "Featured",
+    "downloadPdf": "Download PDF",
+    "readSummary": "Read summary",
+    "cover": "Cover",
+    "reportCover": "Report cover",
+    "datePlaceholder": "[Date]",
+    "area": "Area {id}",
+    "loadMore": "Load more",
+    "noResults": "No publications match your search.",
+    "types": {
+      "bilgi-notu": "Brief",
+      "politika-notu": "Policy Brief",
+      "rapor": "Report"
+    }
+  },
+  "Partners": {
+    "logo": "Logo",
+    "mediaLogo": "Media logo",
+    "outletPlaceholder": "[Outlet]",
+    "datePlaceholder": "[Date]",
+    "headlinePlaceholder": "[Article / interview headline]"
+  },
+  "Team": {
+    "close": "Close"
   },
   "Intro": {
     "skipHint": "Tap to skip"

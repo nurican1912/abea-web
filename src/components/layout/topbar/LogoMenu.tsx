@@ -19,19 +19,21 @@ interface LogoMenuProps {
 }
 
 /**
- * Sol üstteki logo. Tıklayınca ana sayfaya gider; altında (masaüstünde)
- * "Logomuzun Hikâyesi" menüsü açılır. Açılış animasyonunun sembolü buraya iner.
+ * Sol üstteki logo (sembol + yazı). Tıklayınca ana sayfaya gider; altında
+ * (masaüstünde) "Logomuzun Hikâyesi" menüsü açılır. Açılış animasyonu buraya iner.
  */
 export function LogoMenu({ links, menu }: LogoMenuProps) {
   const t = useTranslations('Topbar');
   const open = menu.openId === MENU_ID;
 
   return (
-    <div className="relative flex shrink-0 items-center" {...menu.bind(MENU_ID)}>
-      <Link href="/" aria-label={t('home')} className="rounded-md p-1">
-        {/* Kutunun oranı sembolünkiyle aynı (241.5 : 315) — animasyon tam bu kutuya iner. */}
-        <span data-intro-target className="block aspect-[241.5/315] h-11 lg:h-14">
-          <AbeaLogo variant="mark" idPrefix="abea-topbar" className="block size-full text-brand" />
+    // Logo bağlantısı (→ ana sayfa) ve menü düğmesi (→ Logomuzun Hikâyesi) iki ayrı kontrol;
+    // görsel olarak tek grup: ok logoya yapışık durur.
+    <div className="group/logo relative flex h-full shrink-0 items-center" {...menu.bind(MENU_ID)}>
+      <Link href="/" aria-label={t('home')} className="inline-flex rounded-md p-1">
+        {/* Kutunun oranı logonunkiyle aynı (458 : 332) — animasyon tam bu kutuya iner. */}
+        <span data-intro-target className="block aspect-[458/332] h-11 lg:h-14">
+          <AbeaLogo variant="full" idPrefix="abea-topbar" className="block size-full text-brand" />
         </span>
       </Link>
 
@@ -42,12 +44,13 @@ export function LogoMenu({ links, menu }: LogoMenuProps) {
         aria-expanded={open}
         aria-controls={panelId(MENU_ID)}
         onClick={() => menu.toggle(MENU_ID)}
-        className="hidden size-8 items-center justify-center rounded-full text-muted transition-colors hover:bg-surface-soft hover:text-brand-deep lg:inline-flex"
+        // 44×44 dokunma alanı; negatif boşlukla ikon logoya yaklaşır.
+        className="-ml-2 hidden size-11 items-center justify-center rounded-md text-muted transition-colors group-hover/logo:text-ink hover:text-ink lg:inline-flex"
       >
-        <ChevronDown aria-hidden className={cn('size-4 transition-transform', open && 'rotate-180')} />
+        <ChevronDown aria-hidden className={cn('size-4 transition-transform duration-200', open && 'rotate-180')} />
       </button>
 
-      <MenuPanel id={MENU_ID} open={open} links={links} align="start" onNavigate={menu.close} />
+      <MenuPanel id={MENU_ID} open={open} links={links} onNavigate={menu.close} />
     </div>
   );
 }

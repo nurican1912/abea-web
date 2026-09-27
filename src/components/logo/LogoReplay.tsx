@@ -4,6 +4,7 @@ import { RotateCcw } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useRef } from 'react';
 
+import { outlineButton } from '@/components/ui/styles';
 import { INTRO } from '@/config/intro';
 
 import { AbeaLogo } from './AbeaLogo';
@@ -64,7 +65,7 @@ export function LogoReplay({ label }: { label: string }) {
       <button
         type="button"
         onClick={() => void play()}
-        className="inline-flex min-h-11 items-center gap-2 rounded-full border border-line bg-surface px-5 text-sm font-semibold text-brand-deep transition-colors hover:border-brand hover:bg-surface-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-deep"
+        className={outlineButton}
       >
         <RotateCcw aria-hidden className="size-4" />
         {t('replay')}

@@ -4,7 +4,212 @@
     "en": "Membership & Volunteering"
   },
   "description": {
-    "tr": "Üye olun, gönüllü olun ya da kurumunuzla katılın.",
-    "en": "Become a member, volunteer, or get your organization involved."
+    "tr": "Bilginizi, zamanınızı ya da kurumunuzun gücünü afet risklerini azaltmak için paylaşın. Size uygun katılım yolunu seçin.",
+    "en": "Share your knowledge, your time or your organization's strength to help reduce disaster risk. Pick the way to get involved that suits you."
+  },
+  "paths": [
+    {
+      "type": "uyelik",
+      "title": {
+        "tr": "Üye olun",
+        "en": "Become a member"
+      },
+      "text": {
+        "tr": "Genel kurula katılın, derneğin yönünü birlikte belirleyelim. Üyelik koşulları tüzüğümüzde yer alır.",
+        "en": "Join the general assembly and help shape where the association goes. Membership terms are in our bylaws."
+      },
+      "action": {
+        "tr": "Üyelik başvurusu",
+        "en": "Apply for membership"
+      }
+    },
+    {
+      "type": "gonulluluk",
+      "featured": true,
+      "title": {
+        "tr": "Gönüllü olun",
+        "en": "Volunteer"
+      },
+      "text": {
+        "tr": "Eğitimlerde, araştırmalarda, etkinliklerde ve iletişim çalışmalarında görev alın.",
+        "en": "Help out with training, research, events and communications."
+      },
+      "action": {
+        "tr": "Gönüllü başvurusu",
+        "en": "Apply to volunteer"
+      }
+    },
+    {
+      "type": "kurumsal",
+      "title": {
+        "tr": "Kurumsal gönüllülük",
+        "en": "Corporate volunteering"
+      },
+      "text": {
+        "tr": "Şirketinizin çalışan gönüllülüğü programını afet hazırlığına yönlendirelim.",
+        "en": "Let's point your company's employee volunteering program toward disaster preparedness."
+      },
+      "action": {
+        "tr": "Program detayları",
+        "en": "Program details"
+      },
+      "href": "/calismalarimiz/kurumsal-gonulluluk"
+    }
+  ],
+  "form": {
+    "title": {
+      "tr": "Başvuru formu",
+      "en": "Application form"
+    },
+    "description": {
+      "tr": "Formu doldurun, ekibimiz [süre] içinde sizinle iletişime geçsin.",
+      "en": "Fill in the form and our team will get back to you within [time]."
+    },
+    "typeLabel": {
+      "tr": "Başvuru türü",
+      "en": "Application type"
+    },
+    "types": {
+      "gonulluluk": {
+        "tr": "Gönüllülük",
+        "en": "Volunteering"
+      },
+      "uyelik": {
+        "tr": "Üyelik",
+        "en": "Membership"
+      },
+      "kurumsal": {
+        "tr": "Kurumsal",
+        "en": "Corporate"
+      }
+    },
+    "fields": {
+      "name": {
+        "tr": "Ad Soyad",
+        "en": "Full name"
+      },
+      "email": {
+        "tr": "E-posta",
+        "en": "Email"
+      },
+      "phone": {
+        "tr": "Telefon",
+        "en": "Phone"
+      },
+      "city": {
+        "tr": "İl",
+        "en": "Province"
+      },
+      "cityPlaceholder": {
+        "tr": "Seçiniz",
+        "en": "Select"
+      },
+      "profession": {
+        "tr": "Meslek / Uzmanlık",
+        "en": "Profession / Expertise"
+      },
+      "organization": {
+        "tr": "Kurum (isteğe bağlı)",
+        "en": "Organization (optional)"
+      },
+      "interests": {
+        "tr": "İlgilendiğiniz alanlar",
+        "en": "Areas you're interested in"
+      },
+      "contribution": {
+        "tr": "Nasıl katkı sunmak istersiniz?",
+        "en": "How would you like to contribute?"
+      }
+    },
+    "interests": [
+      {
+        "tr": "Afet Risk Azaltma ve Dayanıklılık",
+        "en": "Disaster Risk Reduction and Resilience"
+      },
+      {
+        "tr": "İş Dünyası ve Kurumsal Dayanıklılık",
+        "en": "Business and Organizational Resilience"
+      },
+      {
+        "tr": "Okul Güvenliği ve Afet Eğitimi",
+        "en": "School Safety and Disaster Education"
+      },
+      {
+        "tr": "Yerel Dayanıklılık",
+        "en": "Local Resilience"
+      },
+      {
+        "tr": "Hazırlık, Tatbikat ve İyileşme",
+        "en": "Preparedness, Drills and Recovery"
+      },
+      {
+        "tr": "Araştırma ve Politika",
+        "en": "Research and Policy"
+      }
+    ],
+    "consentBefore": {
+      "tr": "",
+      "en": "I have read the "
+    },
+    "consentLink": {
+      "tr": "KVKK Aydınlatma Metni",
+      "en": "Privacy Notice"
+    },
+    "consentAfter": {
+      "tr": "'ni okudum; kişisel verilerimin başvurumun değerlendirilmesi amacıyla işlenmesini kabul ediyorum.",
+      "en": " and agree that my personal data may be processed to review my application."
+    },
+    "submit": {
+      "tr": "Başvuruyu gönder",
+      "en": "Send application"
+    }
+  },
+  "faq": {
+    "title": {
+      "tr": "Sık sorulan sorular",
+      "en": "Frequently asked questions"
+    },
+    "items": [
+      {
+        "q": {
+          "tr": "Gönüllü olmak için uzman olmam gerekiyor mu?",
+          "en": "Do I need to be an expert to volunteer?"
+        },
+        "a": {
+          "tr": "[Cevap metni]",
+          "en": "[Answer]"
+        }
+      },
+      {
+        "q": {
+          "tr": "Üyelik aidatı var mı?",
+          "en": "Is there a membership fee?"
+        },
+        "a": {
+          "tr": "[Cevap metni]",
+          "en": "[Answer]"
+        }
+      },
+      {
+        "q": {
+          "tr": "Ankara dışında yaşıyorum, katılabilir miyim?",
+          "en": "I live outside Ankara. Can I still join?"
+        },
+        "a": {
+          "tr": "[Cevap metni]",
+          "en": "[Answer]"
+        }
+      },
+      {
+        "q": {
+          "tr": "Gönüllülere eğitim veriliyor mu?",
+          "en": "Do volunteers get training?"
+        },
+        "a": {
+          "tr": "[Cevap metni]",
+          "en": "[Answer]"
+        }
+      }
+    ]
   }
 }

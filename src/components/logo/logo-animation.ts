@@ -127,23 +127,20 @@ export function drawLogo(svg: SVGSVGElement, { speed = 1 } = {}): Animation[] {
 }
 
 /**
- * FLIP: ortadaki büyük logonun sembol kısmını `target`'ın tam üstüne taşıyıp
- * ölçekler. Hedef, aynı sembolü çizen topbar logosudur; iniş anında ikisi
- * piksel piksel üst üste gelir, bu yüzden katman kaldırıldığında sıçrama olmaz.
+ * FLIP: ortadaki büyük logoyu `target`'ın tam üstüne taşıyıp ölçekler. Hedef,
+ * aynı logoyu (sembol + yazı) çizen topbar logosudur; iniş anında ikisi piksel
+ * piksel üst üste gelir, bu yüzden katman kaldırıldığında sıçrama olmaz.
  */
-function flySymbolTo(svg: SVGSVGElement, target: Element, duration: number): Animation | null {
+function flyLogoTo(svg: SVGSVGElement, target: Element, duration: number): Animation | null {
   const from = svg.getBoundingClientRect();
   const to = target.getBoundingClientRect();
   if (!from.width || !to.width) return null;
 
-  const unit = from.width / LOGO.width; // 1 logo birimi kaç ekran pikseli
-  const originX = LOGO.mark.x * unit;
-  const originY = LOGO.mark.y * unit;
-  const scale = to.width / (LOGO.mark.width * unit);
-  const dx = to.left - (from.left + originX);
-  const dy = to.top - (from.top + originY);
+  const scale = to.width / from.width;
+  const dx = to.left - from.left;
+  const dy = to.top - from.top;
 
-  svg.style.transformOrigin = `${originX}px ${originY}px`;
+  svg.style.transformOrigin = '0 0';
   return svg.animate(
     [{ transform: 'translate(0px, 0px) scale(1)' }, { transform: `translate(${dx}px, ${dy}px) scale(${scale})` }],
     { duration, easing: EASE_FLY, fill: 'forwards' },
@@ -153,7 +150,7 @@ function flySymbolTo(svg: SVGSVGElement, target: Element, duration: number): Ani
 interface IntroOptions {
   /** Tam ekran katman: içinde `svg`, `[data-intro-bg]` ve `[data-intro-hint]` bulunur. */
   overlay: HTMLElement;
-  /** Sembolün ineceği yer (topbar logosu). Yoksa katman söner. */
+  /** Logonun ineceği yer (topbar logosu). Yoksa katman söner. */
   target: Element | null;
   speed?: number;
   /** Animasyon bittiğinde ya da atlandığında bir kez çağrılır. */
@@ -161,7 +158,7 @@ interface IntroOptions {
 }
 
 /**
- * Açılış animasyonu: çizim → yazı söner → sembol topbar'daki yerine uçar
+ * Açılış animasyonu: çizim → logo (sembol + yazı) topbar'daki yerine uçar
  * ve bu sırada zemin açılıp sayfa görünür. Tıklama / dokunma / herhangi bir
  * tuş animasyonu atlar.
  *
@@ -213,16 +210,13 @@ export function playIntro({ overlay, target, speed = 1, onFinish }: IntroOptions
     await wait(s(260));
     if (stopped) return;
 
-    // Yazı söner — köşeye yalnızca sembol gidecek.
-    const { wordmark } = getParts(svg);
-    const fading = [wordmark, hint]
-      .filter((el): el is SVGGElement | HTMLElement => Boolean(el))
-      .map((el) => track(el.animate([{ opacity: 1 }, { opacity: 0 }], { duration: s(320), easing: EASE_SOFT, fill: 'forwards' })));
-    await settle(fading);
-    if (stopped) return;
+    // "Geçmek için dokunun" ipucu söner.
+    if (hint) {
+      track(hint.animate([{ opacity: 1 }, { opacity: 0 }], { duration: s(240), easing: EASE_SOFT, fill: 'forwards' }));
+    }
 
-    // Sembol yerine uçar; zemin aynı anda açılır ve sayfa belirir.
-    const flight = target ? flySymbolTo(svg, target, s(900)) : null;
+    // Logo yerine uçar; zemin aynı anda açılır ve sayfa belirir.
+    const flight = target ? flyLogoTo(svg, target, s(900)) : null;
     if (!flight) {
       await fadeOverlay(s(400)).catch(() => {});
       return end();

@@ -5,11 +5,10 @@ import { useTranslations } from 'next-intl';
 import { useCallback, useState, useSyncExternalStore } from 'react';
 
 import { Container } from '@/components/ui/Container';
-import { Link } from '@/i18n/navigation';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 import { cn } from '@/lib/cn';
 import type { NavigationView } from '@/lib/content';
 
-import { AccountButton } from './AccountButton';
 import { DesktopNav } from './DesktopNav';
 import { LanguageSwitch } from './LanguageSwitch';
 import { LogoMenu } from './LogoMenu';
@@ -47,8 +46,9 @@ export function Topbar({ navigation }: { navigation: NavigationView }) {
     <header
       className={cn(
         // Not: backdrop-filter kullanılmaz — mobil menünün `fixed` konumunu bozar.
-        'sticky top-0 z-40 border-b bg-surface transition-shadow duration-200',
-        scrolled || mobileOpen ? 'border-line shadow-[0_2px_16px_-8px_rgb(14_42_56/0.18)]' : 'border-transparent',
+        // Alttaki turkuaz çizgi `after` ile çizilir: yükseklik değişmez, açılır paneller ona yapışık açılır.
+        'sticky top-0 z-40 bg-surface transition-shadow duration-200 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-brand',
+        (scrolled || mobileOpen) && 'shadow-[0_2px_16px_-8px_rgb(14_42_56/0.18)]',
       )}
     >
       <Container className="flex h-16 items-center gap-2 lg:h-20 lg:gap-4 xl:gap-8">
@@ -57,13 +57,9 @@ export function Topbar({ navigation }: { navigation: NavigationView }) {
 
         <div className="ml-auto flex items-center gap-1 xl:gap-3">
           <LanguageSwitch />
-          <Link
-            href={navigation.cta.href}
-            className="hidden min-h-11 items-center rounded-full bg-brand-deep px-5 text-[0.9375rem] font-semibold whitespace-nowrap text-white transition-colors hover:bg-ink xl:inline-flex"
-          >
+          <ButtonLink href={navigation.cta.href} variant="cta" className="ml-2 hidden lg:inline-flex xl:ml-4">
             {navigation.cta.label}
-          </Link>
-          <AccountButton />
+          </ButtonLink>
           <button
             type="button"
             aria-expanded={mobileOpen}

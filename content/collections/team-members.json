@@ -1,0 +1,30 @@
+[
+  {
+    "id": "murad-tiryakioglu",
+    "name": "Murad Tiryakioğlu",
+    "title": {
+      "tr": "Doç. Dr.",
+      "en": "Assoc. Prof."
+    },
+    "role": {
+      "tr": "Yönetim Kurulu Başkanı",
+      "en": "Chair of the Board"
+    },
+    "board": "yonetim",
+    "status": "asil",
+    "bio": {
+      "tr": "Afet Bilinci Derneği'nin kurucusu ve başkanı. 2001'den bu yana Afyon Kocatepe Üniversitesi İktisat Bölümü'nde görev yapıyor; 2013'te teknoloji transferi ve teknolojik yetenek üzerine doktorasını tamamladı, 2018'de doçent oldu. Çalışmaları yenilik ve yerli üretim ekonomisi ile afet ve göç ekonomisine odaklanıyor. \"Afetlerle Kalkınma: Tecrübeler, Politikalar ve Beklentiler\" (2016) kitabının editörü; Afetlerle Kalkınma Platformu ile Yerli Yeşil Yeni Platformu'nun koordinatörlüğünü yürütüyor.",
+      "en": "Founder and president of the Disaster Awareness Association. He has worked in the Department of Economics at Afyon Kocatepe University since 2001, finished his PhD on technology transfer and technological capability in 2013, and became an associate professor in 2018. His work focuses on innovation and domestic production economics, and on the economics of disasters and migration. He edited the book \"Afetlerle Kalkınma\" (Development Through Disasters, 2016) and coordinates the Development Through Disasters Platform and the Yerli Yeşil Yeni (Domestic Green New) Platform."
+    },
+    "photo": "/images/team/murad-tiryakioglu.jpg",
+    "links": [
+      {
+        "label": {
+          "tr": "Kişisel web sitesi",
+          "en": "Personal website"
+        },
+        "url": "http://tiryakioglu.org/"
+      }
+    ]
+  }
+]

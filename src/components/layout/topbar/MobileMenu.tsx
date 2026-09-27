@@ -1,10 +1,11 @@
 'use client';
 
-import { ChevronDown } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 
 import { Container } from '@/components/ui/Container';
+import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Link, usePathname } from '@/i18n/navigation';
 import { cn } from '@/lib/cn';
 import type { NavigationView } from '@/lib/content';
@@ -46,8 +47,8 @@ export function MobileMenu({ open, navigation, onClose }: MobileMenuProps) {
 
   const linkClass = (href: string) =>
     cn(
-      'flex min-h-11 items-center rounded-lg px-3 text-base transition-colors hover:bg-surface-soft',
-      pathname === href && 'bg-surface-soft font-semibold text-brand-deep',
+      'flex min-h-11 items-center border-l-[3px] px-3 text-base transition-colors hover:bg-surface-soft',
+      pathname === href ? 'border-l-brand bg-surface-soft font-semibold' : 'border-l-transparent',
     );
 
   return (
@@ -65,11 +66,23 @@ export function MobileMenu({ open, navigation, onClose }: MobileMenuProps) {
               isNavGroup(item) ? (
                 <li key={item.href}>
                   <details className="group">
-                    <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                    <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 font-display text-lg font-semibold tracking-[0.04em] uppercase [&::-webkit-details-marker]:hidden">
                       {item.label}
                       <ChevronDown aria-hidden className="size-5 shrink-0 text-muted transition-transform group-open:rotate-180" />
                     </summary>
                     <ul className="pb-3">
+                      {/* Başlığın kendi sayfası — dokunmatikte başlık yalnızca listeyi açar. */}
+                      <li>
+                        <Link
+                          href={item.href}
+                          onClick={onClose}
+                          aria-current={pathname === item.href ? 'page' : undefined}
+                          className={cn(linkClass(item.href), 'justify-between font-semibold')}
+                        >
+                          {t('overview')}
+                          <ArrowRight aria-hidden className="size-4 shrink-0 text-muted" />
+                        </Link>
+                      </li>
                       {item.children.map((link) => (
                         <li key={link.href}>
                           <Link
@@ -91,7 +104,7 @@ export function MobileMenu({ open, navigation, onClose }: MobileMenuProps) {
                     href={item.href}
                     onClick={onClose}
                     aria-current={pathname === item.href ? 'page' : undefined}
-                    className="flex min-h-14 items-center text-lg font-semibold"
+                    className="flex min-h-14 items-center font-display text-lg font-semibold tracking-[0.04em] uppercase"
                   >
                     {item.label}
                   </Link>
@@ -109,13 +122,9 @@ export function MobileMenu({ open, navigation, onClose }: MobileMenuProps) {
         </nav>
 
         <div className="mt-auto pt-8">
-          <Link
-            href={navigation.cta.href}
-            onClick={onClose}
-            className="flex min-h-12 w-full items-center justify-center rounded-full bg-brand-deep px-6 font-semibold text-white transition-colors hover:bg-ink"
-          >
+          <ButtonLink href={navigation.cta.href} variant="cta" onClick={onClose} className="flex w-full">
             {navigation.cta.label}
-          </Link>
+          </ButtonLink>
         </div>
       </Container>
     </div>
