@@ -108,6 +108,20 @@
             "en": "Corporate Disaster Volunteering"
           },
           "href": "/calismalarimiz/kurumsal-gonulluluk"
+        },
+        {
+          "label": {
+            "tr": "Araştırma, Politika ve Savunuculuk",
+            "en": "Research, Policy and Advocacy"
+          },
+          "href": "/calismalarimiz/arastirma-politika-savunuculuk"
+        },
+        {
+          "label": {
+            "tr": "Acil Durum Hazırlığı ve İyileşme",
+            "en": "Emergency Preparedness and Recovery"
+          },
+          "href": "/calismalarimiz/acil-durum-hazirligi"
         }
       ]
     },

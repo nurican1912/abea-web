@@ -6,5 +6,29 @@
   "description": {
     "tr": "Yönetim, denetim ve etik kurullarımız.",
     "en": "Meet our executive, audit and ethics boards."
+  },
+  "boards": {
+    "yonetim": {
+      "tr": "Yönetim Kurulu",
+      "en": "Board of Directors"
+    },
+    "denetim": {
+      "tr": "Denetim Kurulu",
+      "en": "Audit Board"
+    },
+    "etik": {
+      "tr": "Etik Kurulu",
+      "en": "Ethics Board"
+    }
+  },
+  "demoVariants": {
+    "accordion": {
+      "tr": "Tasarım 1 — Yuvarlak portre, tıklayınca bilgi açılır",
+      "en": "Design 1 — Round portraits, click to open details"
+    },
+    "grid": {
+      "tr": "Tasarım 2 — Klasik ızgara",
+      "en": "Design 2 — Classic grid"
+    }
   }
 }

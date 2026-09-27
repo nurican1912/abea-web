@@ -62,6 +62,9 @@
     "datePlaceholder": "[Date]",
     "headlinePlaceholder": "[Article / interview headline]"
   },
+  "Team": {
+    "close": "Close"
+  },
   "Intro": {
     "skipHint": "Tap to skip"
   },

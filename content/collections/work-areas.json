@@ -1,44 +1,56 @@
 [
   {
     "id": "01",
+    "icon": "community",
     "title": {
-      "tr": "İş Dünyası ve Kurumsal Dayanıklılık",
-      "en": "Business and Organizational Resilience"
-    }
+      "tr": "Afet Risk Azaltma Farkındalık",
+      "en": "Disaster Risk Reduction Awareness"
+    },
+    "href": "/calismalarimiz/afet-risk-azaltma"
   },
   {
     "id": "02",
+    "icon": "skyscraper",
     "title": {
-      "tr": "Okul Güvenliği ve Afet Eğitimi",
-      "en": "School Safety and Disaster Education"
-    }
+      "tr": "İş Dünyası Afet Farkındalık",
+      "en": "Disaster Awareness for Businesses"
+    },
+    "href": "/calismalarimiz/is-dunyasi"
   },
   {
     "id": "03",
+    "icon": "school",
     "title": {
-      "tr": "İklim ve Afet Riskleri",
-      "en": "Climate and Disaster Risks"
-    }
+      "tr": "Okul Öncesi Afet Farkındalık",
+      "en": "Disaster Awareness in Early Childhood"
+    },
+    "href": "/calismalarimiz/okul-oncesi"
   },
   {
     "id": "04",
+    "icon": "volunteering",
     "title": {
-      "tr": "Yerel ve Toplumsal Dayanıklılık",
-      "en": "Local and Community Resilience"
-    }
+      "tr": "Kurumsal Afet Gönüllülüğü",
+      "en": "Corporate Disaster Volunteering"
+    },
+    "href": "/calismalarimiz/kurumsal-gonulluluk"
   },
   {
     "id": "05",
+    "icon": "research",
     "title": {
       "tr": "Araştırma, Politika ve Savunuculuk",
       "en": "Research, Policy and Advocacy"
-    }
+    },
+    "href": "/calismalarimiz/arastirma-politika-savunuculuk"
   },
   {
     "id": "06",
+    "icon": "shield",
     "title": {
       "tr": "Acil Durum Hazırlığı ve İyileşme",
       "en": "Emergency Preparedness and Recovery"
-    }
+    },
+    "href": "/calismalarimiz/acil-durum-hazirligi"
   }
 ]

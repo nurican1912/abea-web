@@ -62,6 +62,9 @@
     "datePlaceholder": "[Tarih]",
     "headlinePlaceholder": "[Haber / röportaj başlığı]"
   },
+  "Team": {
+    "close": "Kapat"
+  },
   "Intro": {
     "skipHint": "Geçmek için dokunun"
   },

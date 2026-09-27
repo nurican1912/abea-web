@@ -65,11 +65,69 @@ export interface HomePageContent extends PageContent {
   hero: {
     title: LocalizedText;
     lead: LocalizedText;
-    actions: {
-      primary: NavLink;
-      secondary: NavLink;
-    };
+    /** Hero'daki tek eylem: turkuaz altı çizili "Hakkımızda →" bağlantısı. */
+    aboutLink: NavLink;
+    /** Hero'nun altındaki aşağı okun ekran okuyucu etiketi (ok, Biz kimiz bölümüne kaydırır). */
+    scrollHint: LocalizedText;
   };
+  about: SectionIntro & {
+    text: LocalizedText;
+    stats: { value: string; label: LocalizedText }[];
+    link: NavLink;
+  };
+  workAreas: {
+    eyebrow: LocalizedText;
+    title: LocalizedText;
+    description: LocalizedText;
+    linkLabel: LocalizedText;
+    /** DEMO: iki kart stili yan yana gösterilir; hoca seçince bu alan ve bir stil kalkar. */
+    demoVariants: Record<'single' | 'area', LocalizedText>;
+  };
+  featuredProject: SectionIntro & {
+    text: LocalizedText;
+    imageLabel: LocalizedText;
+    link: NavLink;
+  };
+  values: SectionIntro & { link: NavLink };
+  publications: SectionIntro & { link: NavLink };
+  join: { title: LocalizedText; text: LocalizedText };
+  partners: SectionIntro & { link: NavLink };
+}
+
+/** Ana sayfa bölümlerinin ortak başı: küçük üst etiket + başlık. */
+interface SectionIntro {
+  eyebrow: LocalizedText;
+  title: LocalizedText;
+}
+
+export type Board = 'yonetim' | 'denetim' | 'etik';
+
+/** Kurul üyesi (WEB.docx → Ekibimiz). */
+export interface TeamMember {
+  id: string;
+  name: string;
+  /** Akademik unvan (Doç. Dr.…) — isteğe bağlı. */
+  title?: LocalizedText;
+  role: LocalizedText;
+  board: Board;
+  status: 'asil' | 'yedek';
+  bio?: LocalizedText;
+  /** Kare kırpılmış portre; yoksa baş harfler gösterilir. */
+  photo?: string;
+  links?: { label: LocalizedText; url: string }[];
+}
+
+export interface TeamPageContent extends PageContent {
+  boards: Record<Board, LocalizedText>;
+  /** DEMO: iki tasarım alt alta; hoca seçince bu alan ve bir tasarım kalkar. */
+  demoVariants: Record<'accordion' | 'grid', LocalizedText>;
+}
+
+/** Değerlerimiz (WEB.docx) — ana sayfada ve Değerlerimiz sayfasında kullanılır. */
+export interface Value {
+  number: string;
+  title: LocalizedText;
+  text: LocalizedText;
 }
 
 export interface LogoPageContent extends PageContent {
@@ -133,10 +191,18 @@ export interface MembershipPageContent extends PageContent {
 /* Koleksiyonlar (content/collections/) — ileride CMS koleksiyonu / DB tablosu */
 /* -------------------------------------------------------------------------- */
 
-/** Çalışma alanları (WEB.docx: 01–06). Yayınlar bu alanlara göre etiketlenir. */
+export type WorkAreaIconName = 'community' | 'skyscraper' | 'school' | 'volunteering' | 'research' | 'shield';
+
+/**
+ * Çalışma alanı = Çalışmalarımız alt sayfası. Başlık menüdeki adın sondaki
+ * "Çalışmaları" kelimesi atılmış hâlidir (o kelime kartın bağlantısında ortak).
+ */
 export interface WorkArea {
   id: string;
+  icon: WorkAreaIconName;
   title: LocalizedText;
+  /** Kartın ("Çalışmaları inceleyin") gideceği Çalışmalarımız alt sayfası. */
+  href: AppPathname;
 }
 
 export type PublicationType = 'bilgi-notu' | 'politika-notu' | 'rapor';

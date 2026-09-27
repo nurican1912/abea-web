@@ -325,6 +325,36 @@ Her alt sayfada şu sıra kullanılır: `PageHeader` (beyaz zemin; solda yol sat
 
 ---
 
+### 5.4 Ana Sayfa
+
+**İlkeler**
+
+1. Her bölüm tek mesaj, en fazla bir çağrı. Ana sayfa her şeyi anlatmaz; doğru sayfaya yönlendirir.
+2. **Aynı ekranda aynı yere giden iki bağlantı olmaz.** (Sayfanın farklı yerlerindeki tekrar — bölüm sonu linki, footer — sorun değil.)
+3. İçeriği olmayan bölüm görünmez; içerik girilince kendiliğinden açılır.
+4. Zemin ritmi: beyaz → bej → beyaz… (Hero ile Biz kimiz ikisi de beyaz; aralarında ince çizgi var).
+5. Kehribar sarısı yalnızca "Üye / Gönüllü Ol"da.
+6. Tüm metinler `content/pages/home.json`'da (panelden düzenlenecek).
+
+**Bölümler (yukarıdan aşağıya)**
+
+| # | Bölüm | Zemin | İçerik | Çağrı | Durum |
+|---|---|---|---|---|---|
+| 1 | Hero | beyaz | Slogan, tanıtım (hocanın arka plan metninden), filigran | "Hakkımızda →" (turkuaz altı çizili metin bağlantısı) · altta ortada aşağı ok → Biz kimiz | ✅ |
+| 2 | Biz kimiz + rakamlar | beyaz | 2–3 cümle + 3 gerçek rakam (2007'den beri · 30+ danışman · 6 alan) | Yolculuğumuz → | ✅ |
+| 3 | Çalışma alanları | bej | 6 renklenen kart, animasyonlu ikonlar | Her kart → ilgili alan | ✅ (A/B demo) |
+| 4 | Öne çıkan proje | beyaz | "Geleceğimiz Sadece Salıncakta Sallansın" (2013) — görsel + kısa hikâye | Projeyi inceleyin → (Okul Öncesi) | ✅ (fotoğraf bekleniyor) |
+| 5 | Değerlerimiz | bej | 7 değer, numaralı | Değerlerimiz → | ✅ |
+| 6 | Son yayınlar | beyaz | En yeni 3 yayın kartı | Tüm yayınlar → | ✅ (yer tutucu) |
+| 7 | Paydaşlar | bej | Logo şeridi | Paydaşlarımız → | ✅ (yer tutucu) |
+| 8 | Katılın | lacivert | Üye · Gönüllü · Kurumsal | **Üye / Gönüllü Ol** | ✅ |
+
+**Olmayacaklar:** kayan slayt (carousel), otomatik video, haber akışı (içerik yok), sosyal medya gömme (hız + KVKK), tahmini/sahte rakam, açılır pencere, ayrı bülten bölümü (footer'da var).
+
+**Aşamalar:** Tüm bölümler kuruldu. İçeriği gelmemiş bölümler (4'ün fotoğrafı, 6, 8) demo süresince yer tutucuyla görünür; yayından önce `src/config/demo.ts` → `SHOW_EMPTY_SECTIONS = false` yapılınca 6 ve 8 içerik gelene kadar gizlenir.
+
+---
+
 ## 6. Logo Animasyonu
 
 Eski demodaki çalışan kod (`abea-logo.js`, `abea-intro.js`) TypeScript'e taşınır.

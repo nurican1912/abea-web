@@ -1,0 +1,79 @@
+[
+  {
+    "number": "01",
+    "title": {
+      "tr": "Bilimsellik ve Kanıta Dayalılık",
+      "en": "Science and Evidence"
+    },
+    "text": {
+      "tr": "Çalışmalarımızı bilimsel yöntemlere, güvenilir verilere ve saha deneyimine dayandırırız. Önerilerimizi ölçülebilir kanıtlarla destekleriz.",
+      "en": "We base our work on scientific methods, reliable data and field experience, and we back our recommendations with measurable evidence."
+    }
+  },
+  {
+    "number": "02",
+    "title": {
+      "tr": "Hak Temelli Yaklaşım",
+      "en": "A Rights-Based Approach"
+    },
+    "text": {
+      "tr": "Afetlere hazırlığı ve afetlerden korunmayı bir yardım konusu olarak değil, herkesin sahip olduğu bir hak olarak görürüz. Bu yaklaşımı benimser, geliştirir ve savunuruz.",
+      "en": "We see being prepared for and protected from disasters not as charity, but as a right everyone has. We embrace this approach, build on it and stand up for it."
+    }
+  },
+  {
+    "number": "03",
+    "title": {
+      "tr": "İnsan Onuru ve Adalet",
+      "en": "Human Dignity and Justice"
+    },
+    "text": {
+      "tr": "Afetlerden etkilenen her bireyin onurunu korur, desteğe ve bilgiye adil erişimi gözetiriz.",
+      "en": "We protect the dignity of everyone affected by disasters and make sure support and information reach people fairly."
+    }
+  },
+  {
+    "number": "04",
+    "title": {
+      "tr": "Kapsayıcılık ve Toplumsal Cinsiyet Eşitliği",
+      "en": "Inclusion and Gender Equality"
+    },
+    "text": {
+      "tr": "Kadınlar, çocuklar, yaşlılar, engelliler ve göçmenler gibi afet risklerine karşı daha kırılgan grupların ihtiyaçlarını tüm çalışmalarımızın merkezine alırız.",
+      "en": "We put the needs of the people most exposed to disaster risk, including women, children, older people, people with disabilities and migrants, at the heart of everything we do."
+    }
+  },
+  {
+    "number": "05",
+    "title": {
+      "tr": "Şeffaflık ve Hesap Verebilirlik",
+      "en": "Transparency and Accountability"
+    },
+    "text": {
+      "tr": "Kaynaklarımızı, kararlarımızı ve sonuçlarımızı açıkça paylaşır, üyelerimize, paydaşlarımıza ve kamuoyuna hesap veririz.",
+      "en": "We share our resources, decisions and results openly, and we answer to our members, our partners and the public."
+    }
+  },
+  {
+    "number": "06",
+    "title": {
+      "tr": "Tüm Canlıların Haklarına Saygı ve Sürdürülebilirlik",
+      "en": "Respect for All Living Things and Sustainability"
+    },
+    "text": {
+      "tr": "Doğayı ve tüm canlıları afet risk azaltımının ayrılmaz bir parçası olarak görür, ekolojik sürdürülebilirliği gözetiriz.",
+      "en": "We see nature and every living thing as an essential part of reducing disaster risk, and we care about ecological sustainability."
+    }
+  },
+  {
+    "number": "07",
+    "title": {
+      "tr": "İş Birliği ve Gönüllülük",
+      "en": "Collaboration and Volunteering"
+    },
+    "text": {
+      "tr": "Dirençli bir toplumun ancak kamu, yerel yönetimler, üniversiteler, özel sektör, sivil toplum ve gönüllülerle birlikte kurulabileceğine inanırız.",
+      "en": "We believe a resilient society can only be built together with government, local authorities, universities, the private sector, civil society and volunteers."
+    }
+  }
+]

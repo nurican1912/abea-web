@@ -55,6 +55,60 @@ Cevap:
 
 Cevap:
 
+### 8. [ ] Ana sayfadaki çalışma alanı kartları: A mı, B mi?
+
+Ana sayfada 6 çalışma alanı kartı iki seçenekle alt alta duruyor. Kartların üzerine gelince kart renklenir, ikon logo gibi çizilerek belirir, dalgalar yayılır.
+
+- A) **Tek renk:** hepsi logo turkuazıyla dolar
+- B) **Alan renkleri:** her alan kendi canlı rengiyle dolar (TEMA'daki gibi)
+
+İkonlar hakkında da görüşünüzü bekliyoruz (bina, okul, termometre, mahalle, belge + büyüteç, kalkan).
+
+Cevap:
+
+### 9. [ ] Çalışmalarımız menüsü: 4 mü, 6 mı?
+
+Topbar görselinde Çalışmalarımız altında 4 başlık vardı. WEB.docx'teki çalışma alanlarından ikisi daha menüye eklendi; **şu an 6 başlık var:**
+
+1. Afet Risk Azaltma Farkındalık Çalışmaları
+2. İş Dünyası Afet Farkındalık Çalışmaları
+3. Okul Öncesi Afet Farkındalık Çalışmaları
+4. Kurumsal Afet Gönüllülüğü Çalışmaları
+5. **Araştırma, Politika ve Savunuculuk** *(yeni)*
+6. **Acil Durum Hazırlığı ve İyileşme** *(yeni)*
+
+- A) **6 başlık kalsın**
+- B) **İlk 4'e dönülsün** (topbar görselindeki gibi)
+
+Ana sayfadaki 6 çalışma kartı bu başlıkların aynısını taşıyor (sondaki "Çalışmaları" kelimesi olmadan) ve her biri kendi sayfasına gidiyor. 4'e dönülürse kartlar da 4'e iner.
+
+Cevap:
+
+### 10. [ ] Ana sayfa
+
+- Bölüm sırası uygun mu? *(Hero → Biz kimiz ve rakamlar → Çalışma alanları → Öne çıkan proje → Değerlerimiz → Son yayınlar → Katılın → Paydaşlar)*
+- Öne çıkan proje olarak **"Geleceğimiz Sadece Salıncakta Sallansın"** (2013) uygun mu? Proje sürüyor mu, fotoğrafı var mı?
+- Rakamlar için daha güçlü veriler var mı? (ör. eğitim verilen kişi, proje, kurum sayısı) Şimdilik: 2007'den beri · 30+ danışma kurulu üyesi · 6 çalışma alanı.
+- Hero'daki tanıtım metni (arka plan metninizden derlendi) uygun mu?
+
+Cevap:
+
+### 11. [ ] Ekibimiz sayfası
+
+Sayfada iki tasarım alt alta duruyor (şimdilik yalnızca Murad Tiryakioğlu girildi):
+
+- **Tasarım 1:** Yuvarlak portre; ad ve görev her zaman görünür, portreye tıklayınca altında biyografi paneli açılır.
+- **Tasarım 2:** Klasik ızgara (TOG gibi), kare portre, ad ve görev.
+
+Hangisi? Ayrıca her kurul üyesi için:
+
+- **Fotoğraf:** aynı stilde (siyah-beyaz, aynı kadraj, düz arka plan), en az 800×800 px, **kırpılmamış özgün hâli** (Tasarım 2 kare fotoğraf ister)
+- **Görev:** Başkan, Başkan Yardımcısı, Sayman, Genel Sekreter, Üye…
+- **Kısa biyografi** (3–4 cümle) ve isteğe bağlı bağlantı (LinkedIn / kişisel site) — kişilerin onayıyla
+- Murad Tiryakioğlu'nun biyografisi internetteki kaynaklardan (İletişim Yayınları, STGM) derlendi; kendisinin onayı alınmalı. Görevi "Yönetim Kurulu Başkanı" olarak yazıldı, doğru mu?
+
+Cevap:
+
 ---
 
 ## Cevaplananlar

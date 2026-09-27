@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "../components/logo/logo.css";
+@import "../components/work-areas/work-areas.css";
 
 /*
  * Tasarım değişkenleri — renkler ve yazı tipleri yalnızca burada tanımlanır.
@@ -12,12 +13,42 @@
   --color-primary-strong: #1a4c75; /* birincil buton, üzerine gelince */
   --color-cta: #f4b740; /* kehribar — YALNIZCA ana dönüşüm eylemi (Aramıza Katıl). Genel vurgu rengi değildir. Üstüne ink yazılır (~8:1) */
   --color-cta-strong: #e7a72d; /* kehribar, üzerine gelince (~7:1) */
+  /* Çalışma alanı kartları (DEMO: hoca "tek renk" ile "alan renkleri" arasında seçecek).
+     Canlı ama açık tonlar — hepsinin üstünde ink yazı en az 4.5:1 kontrast verir. */
+  --color-area-01: #40c057; /* Afet Risk Azaltma Farkındalık — yeşil */
+  --color-area-02: #748ffc; /* İş Dünyası — çivit */
+  --color-area-03: #fab005; /* Okul Öncesi — sarı */
+  --color-area-04: #ff922b; /* Kurumsal Gönüllülük — turuncu */
+  --color-area-05: #b197fc; /* Araştırma, Politika ve Savunuculuk — mor */
+  --color-area-06: #ff6b6b; /* Acil Durum — kırmızı */
   --color-ink: #0e2a38; /* gövde metni ve linkler */
   --color-muted: #5b7787; /* ikincil metin */
   --color-surface: #ffffff;
   --color-surface-soft: #f4f2ed; /* sıcak bej — bölüm zeminleri, aktif satırlar */
   --color-surface-muted: #e9e5dc; /* bejin koyusu — kapak / logo yer tutucuları */
   --color-line: #e5e0d6; /* sıcak gri — çizgi ve kart kenarları */
+}
+
+/* Ekibimiz akordeon paneli — yumuşakça iner (hareket azaltma tercihinde animasyon yok). */
+@theme {
+  --animate-panel-in: panel-in 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @keyframes panel-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Hero'daki aşağı ok: hafifçe aşağı iner ve döner. */
+  --animate-nudge: nudge 2s ease-in-out infinite;
+
+  @keyframes nudge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-panel-in { animation: none; }
 }
 
 @theme inline {
@@ -32,6 +63,11 @@
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
     scroll-padding-top: 5rem; /* çapa linklerinde başlık sabit topbar'ın altında kalmasın */
+  }
+
+  /* Sayfa içi bağlantılar (ör. hero → çalışma alanları) yumuşak kaysın — hareket azaltma tercihine saygılı. */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
   }
 
   body {
