@@ -111,13 +111,6 @@ export function MobileMenu({ open, navigation, onClose }: MobileMenuProps) {
                 </li>
               ),
             )}
-            {navigation.logoMenu.map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} onClick={onClose} className="flex min-h-14 items-center text-base text-muted">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
           </ul>
         </nav>
 

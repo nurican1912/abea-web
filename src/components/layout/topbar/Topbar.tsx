@@ -11,8 +11,8 @@ import type { NavigationView } from '@/lib/content';
 
 import { DesktopNav } from './DesktopNav';
 import { LanguageSwitch } from './LanguageSwitch';
-import { LogoMenu } from './LogoMenu';
 import { MOBILE_MENU_ID, MobileMenu } from './MobileMenu';
+import { TopbarLogo } from './TopbarLogo';
 import { useMenuState } from './use-menu-state';
 
 /** Sayfa biraz kaydırılınca topbar'ın altına ince bir gölge düşer. */
@@ -30,7 +30,7 @@ function useScrolled(threshold = 8) {
 /**
  * Sitenin üst çubuğu.
  *
- *   [logo ▾]  Hakkımızda ▾  Çalışmalarımız ▾  Yayınlar ▾  Hikâyeler  Paydaşlarımız ▾     TR|EN  [Üye / Gönüllü Ol]  (👤)
+ *   [logo]  Hakkımızda ▾  Çalışmalarımız ▾  Yayınlar ▾  Hikâyeler  Paydaşlarımız ▾     TR|EN  [Üye / Gönüllü Ol]  (👤)
  *
  * lg altında menü hamburger'e katlanır; "Üye / Gönüllü Ol" xl'den itibaren
  * çubukta, daha dar ekranlarda mobil menünün altında yer alır.
@@ -52,7 +52,7 @@ export function Topbar({ navigation }: { navigation: NavigationView }) {
       )}
     >
       <Container className="flex h-16 items-center gap-2 lg:h-20 lg:gap-4 xl:gap-8">
-        <LogoMenu links={navigation.logoMenu} menu={menu} />
+        <TopbarLogo />
         <DesktopNav items={navigation.main} menu={menu} />
 
         <div className="ml-auto flex items-center gap-1 xl:gap-3">

@@ -98,7 +98,6 @@ export function TeamAccordion({ members }: TeamAccordionProps) {
                     <MemberPhoto
                       name={member.name}
                       photo={member.photo}
-                      shape="circle"
                       sizes="(min-width: 1024px) 11rem, 40vw"
                       className={cn(
                         'max-w-44 transition-[box-shadow] duration-200',
@@ -132,7 +131,6 @@ export function TeamAccordion({ members }: TeamAccordionProps) {
                   <MemberPhoto
                     name={open.name}
                     photo={open.photo}
-                    shape="circle"
                     sizes="12rem"
                     className="mx-auto max-w-48 md:mx-0"
                   />

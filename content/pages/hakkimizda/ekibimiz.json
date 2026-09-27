@@ -20,15 +20,5 @@
       "tr": "Etik Kurulu",
       "en": "Ethics Board"
     }
-  },
-  "demoVariants": {
-    "accordion": {
-      "tr": "Tasarım 1 — Yuvarlak portre, tıklayınca bilgi açılır",
-      "en": "Design 1 — Round portraits, click to open details"
-    },
-    "grid": {
-      "tr": "Tasarım 2 — Klasik ızgara",
-      "en": "Design 2 — Classic grid"
-    }
   }
 }

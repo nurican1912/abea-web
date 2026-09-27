@@ -40,8 +40,6 @@ export interface NavGroup {
 export type NavItem = NavLink | NavGroup;
 
 export interface Navigation {
-  /** Logonun altındaki menü (Logomuzun Hikâyesi). */
-  logoMenu: NavLink[];
   main: NavItem[];
   cta: NavLink;
 }
@@ -80,8 +78,6 @@ export interface HomePageContent extends PageContent {
     title: LocalizedText;
     description: LocalizedText;
     linkLabel: LocalizedText;
-    /** DEMO: iki kart stili yan yana gösterilir; hoca seçince bu alan ve bir stil kalkar. */
-    demoVariants: Record<'single' | 'area', LocalizedText>;
   };
   featuredProject: SectionIntro & {
     text: LocalizedText;
@@ -119,8 +115,6 @@ export interface TeamMember {
 
 export interface TeamPageContent extends PageContent {
   boards: Record<Board, LocalizedText>;
-  /** DEMO: iki tasarım alt alta; hoca seçince bu alan ve bir tasarım kalkar. */
-  demoVariants: Record<'accordion' | 'grid', LocalizedText>;
 }
 
 /** Değerlerimiz (WEB.docx) — ana sayfada ve Değerlerimiz sayfasında kullanılır. */

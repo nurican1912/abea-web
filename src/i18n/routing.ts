@@ -14,7 +14,6 @@ export const routing = defineRouting({
   localePrefix: 'always',
   pathnames: {
     '/': '/',
-    '/logomuz': { tr: '/logomuz', en: '/our-logo' },
 
     '/hakkimizda': { tr: '/hakkimizda', en: '/about' },
     '/hakkimizda/yolculugumuz': { tr: '/hakkimizda/yolculugumuz', en: '/about/our-journey' },
@@ -23,7 +22,7 @@ export const routing = defineRouting({
     '/hakkimizda/politika-belgelerimiz': { tr: '/hakkimizda/politika-belgelerimiz', en: '/about/policies' },
     '/hakkimizda/tuzugumuz': { tr: '/hakkimizda/tuzugumuz', en: '/about/bylaws' },
     '/hakkimizda/degerlerimiz': { tr: '/hakkimizda/degerlerimiz', en: '/about/our-values' },
-    '/hakkimizda/uyelerimiz': { tr: '/hakkimizda/uyelerimiz', en: '/about/our-members' },
+    '/hakkimizda/logomuz': { tr: '/hakkimizda/logomuz', en: '/about/our-logo' },
     '/hakkimizda/uyelik-ve-gonulluluk': { tr: '/hakkimizda/uyelik-ve-gonulluluk', en: '/about/join-us' },
 
     '/calismalarimiz': { tr: '/calismalarimiz', en: '/our-work' },

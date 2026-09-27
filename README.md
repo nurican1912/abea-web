@@ -39,7 +39,7 @@ Logo ortada çizilir, ardından yazısıyla birlikte küçülerek topbar'daki ye
 - Tıklama, dokunma ya da herhangi bir tuş animasyonu atlar.
 - Adresin sonuna `?intro` eklenirse her seferinde oynar: `http://localhost:3000/tr?intro`
 - "Hareketi azalt" tercihi açık cihazlarda oynamaz.
-- Logo › Logomuzun Hikâyesi sayfasında "Tekrar oynat" ile her zaman izlenebilir.
+- Hakkımızda › Logomuzun Hikâyesi sayfasında "Tekrar oynat" ile her zaman izlenebilir.
 
 ## Depoya girmeyenler
 
