@@ -55,17 +55,6 @@ Cevap:
 
 Cevap:
 
-### 8. [ ] Ana sayfadaki çalışma alanı kartları: A mı, B mi?
-
-Ana sayfada 6 çalışma alanı kartı iki seçenekle alt alta duruyor. Kartların üzerine gelince kart renklenir, ikon logo gibi çizilerek belirir, dalgalar yayılır.
-
-- A) **Tek renk:** hepsi logo turkuazıyla dolar
-- B) **Alan renkleri:** her alan kendi canlı rengiyle dolar (TEMA'daki gibi)
-
-İkonlar hakkında da görüşünüzü bekliyoruz (bina, okul, termometre, mahalle, belge + büyüteç, kalkan).
-
-Cevap:
-
 ### 9. [ ] Çalışmalarımız menüsü: 4 mü, 6 mı?
 
 Topbar görselinde Çalışmalarımız altında 4 başlık vardı. WEB.docx'teki çalışma alanlarından ikisi daha menüye eklendi; **şu an 6 başlık var:**
@@ -93,16 +82,11 @@ Cevap:
 
 Cevap:
 
-### 11. [ ] Ekibimiz sayfası
+### 11. [ ] Ekibimiz sayfası — kurul üyelerinin bilgileri
 
-Sayfada iki tasarım alt alta duruyor (şimdilik yalnızca Murad Tiryakioğlu girildi):
+Tasarım seçildi (bkz. Cevaplananlar #11b). Şimdilik yalnızca Murad Tiryakioğlu girildi. Her kurul üyesi için:
 
-- **Tasarım 1:** Yuvarlak portre; ad ve görev her zaman görünür, portreye tıklayınca altında biyografi paneli açılır.
-- **Tasarım 2:** Klasik ızgara (TOG gibi), kare portre, ad ve görev.
-
-Hangisi? Ayrıca her kurul üyesi için:
-
-- **Fotoğraf:** aynı stilde (siyah-beyaz, aynı kadraj, düz arka plan), en az 800×800 px, **kırpılmamış özgün hâli** (Tasarım 2 kare fotoğraf ister)
+- **Fotoğraf:** aynı stilde (siyah-beyaz, aynı kadraj, düz arka plan), en az 800×800 px, **kırpılmamış özgün hâli**
 - **Görev:** Başkan, Başkan Yardımcısı, Sayman, Genel Sekreter, Üye…
 - **Kısa biyografi** (3–4 cümle) ve isteğe bağlı bağlantı (LinkedIn / kişisel site) — kişilerin onayıyla
 - Murad Tiryakioğlu'nun biyografisi internetteki kaynaklardan (İletişim Yayınları, STGM) derlendi; kendisinin onayı alınmalı. Görevi "Yönetim Kurulu Başkanı" olarak yazıldı, doğru mu?
@@ -120,6 +104,18 @@ Cevap: **Sembol + yazı** (tam logo). Açılış animasyonunda da logo yazısıy
 ### 4. [x] Hakkımızda menüsüne "Biz Kimiz" eklensin mi?
 
 Cevap: **Hayır.** Menü başlıkları artık tıklanabilir; "Hakkımızda" kendi genel bakış sayfasına gidiyor, Biz Kimiz'in işini o sayfa görüyor.
+
+### 8. [x] Ana sayfadaki çalışma alanı kartları: A mı, B mi?
+
+Cevap: **A — tek renk.** Kartlar üzerine gelince logo turkuazıyla doluyor; alan renkleri seçeneği kaldırıldı.
+
+### 11b. [x] Ekibimiz sayfasının tasarımı
+
+Cevap: **Tasarım 1** — yuvarlak portre, ad ve görev her zaman görünür, portreye tıklayınca biyografi paneli açılır. Klasik ızgara kaldırıldı.
+
+### 12. [x] Logonun yanındaki açılır menü ve "Üyelerimiz" sayfası
+
+Cevap: Logonun yanındaki ok kaldırıldı; **Logomuzun Hikâyesi** Hakkımızda menüsüne taşındı (`/tr/hakkimizda/logomuz`). **Üyelerimiz** sekmesine şimdilik gerek görülmedi, kaldırıldı.
 
 ---
 

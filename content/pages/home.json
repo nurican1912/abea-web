@@ -88,16 +88,6 @@
     "linkLabel": {
       "tr": "Çalışmaları inceleyin",
       "en": "Explore our work"
-    },
-    "demoVariants": {
-      "single": {
-        "tr": "Seçenek A — Tek renk",
-        "en": "Option A — Single color"
-      },
-      "area": {
-        "tr": "Seçenek B — Alan renkleri",
-        "en": "Option B — Area colors"
-      }
     }
   },
   "featuredProject": {

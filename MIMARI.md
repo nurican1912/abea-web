@@ -75,8 +75,8 @@ big-site-1/
 │   │   └── seo.json                  # varsayılan başlık/açıklama
 │   ├── pages/                        # app/ yapısının aynası
 │   │   ├── home.json
-│   │   ├── logomuz.json
 │   │   ├── hakkimizda/
+│   │   │   ├── logomuz.json
 │   │   │   ├── yolculugumuz.json
 │   │   │   ├── ekibimiz.json
 │   │   │   └── ...
@@ -105,8 +105,6 @@ big-site-1/
     │       ├── page.tsx                      # Ana sayfa
     │       ├── not-found.tsx
     │       │
-    │       ├── logomuz/page.tsx              # Logomuzun Hikâyesi
-    │       │
     │       ├── hakkimizda/
     │       │   ├── page.tsx                  # Hakkımızda — genel bakış (alt sayfa kartları)
     │       │   ├── yolculugumuz/page.tsx
@@ -115,7 +113,7 @@ big-site-1/
     │       │   ├── politika-belgelerimiz/page.tsx
     │       │   ├── tuzugumuz/page.tsx
     │       │   ├── degerlerimiz/page.tsx
-    │       │   ├── uyelerimiz/page.tsx
+    │       │   ├── logomuz/page.tsx          # Logomuzun Hikâyesi
     │       │   └── uyelik-ve-gonulluluk/page.tsx
     │       │
     │       ├── calismalarimiz/
@@ -148,7 +146,7 @@ big-site-1/
     │
     ├── components/
     │   ├── layout/
-    │   │   ├── topbar/               # Topbar, LogoMenu, DesktopNav, MenuPanel, MobileMenu,
+    │   │   ├── topbar/               # Topbar, TopbarLogo, DesktopNav, MenuPanel, MobileMenu,
     │   │   │                         # LanguageSwitch, AccountButton, use-menu-state.ts
     │   │   └── PlaceholderPage.tsx   # içeriği gelmemiş sayfaların ortak şablonu
     │   ├── logo/                     # AbeaLogo, LogoIntro, LogoReplay, IntroBootScript,
@@ -203,7 +201,6 @@ Hocaya sorulacak açık konular `SORULAR.md` dosyasında tutulur.
 | Menü | Klasör | TR URL | EN URL |
 |---|---|---|---|
 | Ana sayfa | `page.tsx` | `/tr` | `/en` |
-| Logo › Logomuzun Hikâyesi | `logomuz/` | `/tr/logomuz` | `/en/our-logo` |
 | **Hakkımızda** | `hakkimizda/` | `/tr/hakkimizda` | `/en/about` |
 | › Yolculuğumuz | `yolculugumuz/` | `…/yolculugumuz` | `…/our-journey` |
 | › Ekibimiz | `ekibimiz/` | `…/ekibimiz` | `…/our-team` |
@@ -211,7 +208,7 @@ Hocaya sorulacak açık konular `SORULAR.md` dosyasında tutulur.
 | › Politika Belgelerimiz | `politika-belgelerimiz/` | `…/politika-belgelerimiz` | `…/policies` |
 | › Tüzüğümüz | `tuzugumuz/` | `…/tuzugumuz` | `…/bylaws` |
 | › Değerlerimiz | `degerlerimiz/` | `…/degerlerimiz` | `…/our-values` |
-| › Üyelerimiz | `uyelerimiz/` | `…/uyelerimiz` | `…/our-members` |
+| › Logomuzun Hikâyesi | `logomuz/` | `…/logomuz` | `…/our-logo` |
 | › Üyelik & Gönüllülük | `uyelik-ve-gonulluluk/` | `…/uyelik-ve-gonulluluk` | `…/join-us` |
 | **Çalışmalarımız** | `calismalarimiz/` | `/tr/calismalarimiz` | `/en/our-work` |
 | › Afet Risk Azaltma Farkındalık Çalışmaları | `afet-risk-azaltma/` | | `…/disaster-risk-reduction` |
@@ -288,11 +285,10 @@ json-source.ts   payload-source.ts     api-source.ts
 Referans: `WhatsApp Image 2026-09-20 at 10.35.33.jpeg`
 
 ```
-[LOGO ▾]   HAKKIMIZDA ▾   ÇALIŞMALARIMIZ ▾   YAYINLAR ▾   HİKÂYELER   PAYDAŞLARIMIZ ▾        TR | EN   [Aramıza Katıl →]
-  └ Logomuzun Hikâyesi
+[LOGO]   HAKKIMIZDA ▾   ÇALIŞMALARIMIZ ▾   YAYINLAR ▾   HİKÂYELER   PAYDAŞLARIMIZ ▾        TR | EN   [Aramıza Katıl →]
 ```
 
-- **Logo:** Tıklayınca ana sayfaya gider. Altında, diğer menüler gibi açılan tek bir alt öğe var: **Logomuzun Hikâyesi**.
+- **Logo:** Tıklayınca ana sayfaya gider; açılır menüsü yoktur. (Logomuzun Hikâyesi, hocanın kararıyla Hakkımızda menüsüne taşındı.)
 - **Menü davranışı:** Her başlık kendi **genel bakış sayfasına** gider (Hakkımızda, Çalışmalarımız: alt sayfa kartları; Yayınlar: "Tümü" sekmesi; Paydaşlarımız: tüm bölümler).
   - Fare: üzerine gelince alt menü açılır, tıklayınca sayfaya gider.
   - Dokunmatik: ilk dokunuş menüyü açar; menünün en üstündeki **"Genel bakış →"** satırı sayfaya götürür.
@@ -342,7 +338,7 @@ Her alt sayfada şu sıra kullanılır: `PageHeader` (beyaz zemin; solda yol sat
 |---|---|---|---|---|---|
 | 1 | Hero | beyaz | Slogan, tanıtım (hocanın arka plan metninden), filigran | "Hakkımızda →" (turkuaz altı çizili metin bağlantısı) · altta ortada aşağı ok → Biz kimiz | ✅ |
 | 2 | Biz kimiz + rakamlar | beyaz | 2–3 cümle + 3 gerçek rakam (2007'den beri · 30+ danışman · 6 alan) | Yolculuğumuz → | ✅ |
-| 3 | Çalışma alanları | bej | 6 renklenen kart, animasyonlu ikonlar | Her kart → ilgili alan | ✅ (A/B demo) |
+| 3 | Çalışma alanları | bej | 6 kart, üzerine gelince turkuazla dolar; animasyonlu ikonlar | Her kart → ilgili alan | ✅ (A: tek renk seçildi) |
 | 4 | Öne çıkan proje | beyaz | "Geleceğimiz Sadece Salıncakta Sallansın" (2013) — görsel + kısa hikâye | Projeyi inceleyin → (Okul Öncesi) | ✅ (fotoğraf bekleniyor) |
 | 5 | Değerlerimiz | bej | 7 değer, numaralı | Değerlerimiz → | ✅ |
 | 6 | Son yayınlar | beyaz | En yeni 3 yayın kartı | Tüm yayınlar → | ✅ (yer tutucu) |
@@ -383,10 +379,10 @@ Kurallar:
 - "Hareketi azalt" tercihi açık olan kullanıcıda animasyon atlanır.
 - Sayfa ilk karede sunucudan hazır gelir, animasyon sadece üstüne katman olarak biner. SEO etkilenmez.
 
-### 6.2 Logomuzun Hikâyesi sayfası (`/logomuz`)
+### 6.2 Logomuzun Hikâyesi sayfası (`/hakkimizda/logomuz`)
 
 - **Üstte:** Animasyon sayfa içinde, büyük boyutta ve uçmadan oynar. Yanında "Tekrar oynat" butonu olur.
-- **Altında:** Logonun hikâyesi. Aşama 1'de boş şablon, metin gelince `content/pages/logomuz.json`'a eklenir.
+- **Altında:** Logonun hikâyesi. Aşama 1'de boş şablon, metin gelince `content/pages/hakkimizda/logomuz.json`'a eklenir.
 
 ---
 
@@ -443,12 +439,12 @@ Mobil uyum sona bırakılan bir düzeltme değildir, her bileşenin kuruluş kur
 
 1. Next.js + TS + Tailwind + next-intl kurulumu, klasör yapısı, tema değişkenleri, fontlar
 2. Veri katmanı ve `navigation.json`
-3. **Topbar:** tüm menüler ve alt menüler, logo altında "Logomuzun Hikâyesi", dil seçici, mobil menü
+3. **Topbar:** tüm menüler ve alt menüler, Hakkımızda altında "Logomuzun Hikâyesi", dil seçici, mobil menü
 4. **Footer**
 5. **Logo animasyonunun taşınması:** açılış → küçülerek sol köşeye oturma
 6. **Ana sayfa:** ilk sürüm
 7. **Menüdeki tüm sayfalar:** `PageHeader` ile boş şablon. Tüm linkler çalışır, TR/EN.
-8. **`/logomuz` sayfası:** animasyon + altında boş hikâye alanı
+8. **`/hakkimizda/logomuz` sayfası:** animasyon + altında boş hikâye alanı
 9. Vercel'e önizleme yayını
 
 ### Adım 2 — İçerikli sayfalar

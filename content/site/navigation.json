@@ -1,13 +1,4 @@
 {
-  "logoMenu": [
-    {
-      "label": {
-        "tr": "Logomuzun Hikâyesi",
-        "en": "The Story of Our Logo"
-      },
-      "href": "/logomuz"
-    }
-  ],
   "main": [
     {
       "label": {
@@ -60,10 +51,10 @@
         },
         {
           "label": {
-            "tr": "Üyelerimiz",
-            "en": "Our Members"
+            "tr": "Logomuzun Hikâyesi",
+            "en": "The Story of Our Logo"
           },
-          "href": "/hakkimizda/uyelerimiz"
+          "href": "/hakkimizda/logomuz"
         },
         {
           "label": {

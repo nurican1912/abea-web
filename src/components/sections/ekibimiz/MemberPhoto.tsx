@@ -5,7 +5,6 @@ import { cn } from '@/lib/cn';
 interface MemberPhotoProps {
   name: string;
   photo?: string;
-  shape: 'circle' | 'square';
   /** next/image için yaklaşık görüntülenme genişliği. */
   sizes: string;
   className?: string;
@@ -18,17 +17,13 @@ function initials(name: string) {
 }
 
 /**
- * Üye portresi. Fotoğraf yoksa bej zemin üstünde baş harfler (yer tutucu gibi
+ * Yuvarlak üye portresi. Fotoğraf yoksa bej zemin üstünde baş harfler (yer tutucu gibi
  * değil, bilinçli bir varsayılan). Fotoğraflar siyah-beyaz ve aynı kadrajda olmalı.
  */
-export function MemberPhoto({ name, photo, shape, sizes, className }: MemberPhotoProps) {
+export function MemberPhoto({ name, photo, sizes, className }: MemberPhotoProps) {
   return (
     <div
-      className={cn(
-        'relative aspect-square w-full overflow-hidden bg-surface-muted',
-        shape === 'circle' ? 'rounded-full' : 'rounded-sm',
-        className,
-      )}
+      className={cn('relative aspect-square w-full overflow-hidden rounded-full bg-surface-muted', className)}
     >
       {photo ? (
         <Image src={photo} alt={name} fill sizes={sizes} className="object-cover" />

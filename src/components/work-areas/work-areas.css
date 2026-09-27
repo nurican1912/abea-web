@@ -4,7 +4,7 @@
  *   2) ikonun nesnesi logo gibi baştan çizilir
  *   3) episantr belirir, şok halkası yayılır (logo açılışındaki gibi)
  *   4) dalgalar episantrdan dışa doğru büyüyerek sırayla gelir
- * Hareket azaltma tercihinde yalnızca renk değişir.
+ * Hareket azaltma tercihinde ve dokunmatik ekranda yalnızca renk değişir (dokunmatikte basınca).
  */
 
 /* pathLength=1: "1 2" deseniyle çizgi normalde tam görünür */
@@ -63,7 +63,11 @@
   to { opacity: 1; transform: scale(1); }
 }
 
-@media (prefers-reduced-motion: reduce) {
+/*
+ * Hareket azaltma tercihinde ve dokunmatik ekranlarda animasyon yok. Telefonda
+ * dokunuş ":hover"ı tetikler; ikon silinip yeniden çizilmesin, kart yalnızca maviye döner.
+ */
+@media (prefers-reduced-motion: reduce), (hover: none) {
   .area-card:is(:hover, :focus-visible) .area-icon * {
     animation: none;
   }
