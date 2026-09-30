@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 
 import { LogoStorySection } from '@/components/sections/logomuz/LogoStorySection';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { resolveLocale } from '@/i18n/locale';
 import { getPage, getParents } from '@/lib/content';
 import { pageMetadata } from '@/lib/seo';
@@ -23,12 +24,9 @@ export default async function LogoStoryPage({ params }: PageProps<'/[locale]/hak
   ]);
 
   return (
-    <LogoStorySection
-      title={page.title}
-      description={page.description}
-      story={page.story}
-      parents={parents}
-      logoLabel={t('siteName')}
-    />
+    <>
+      <PageHeader title={page.title} description={page.description} parents={parents} />
+      <LogoStorySection sections={page.sections} logoLabel={t('siteName')} />
+    </>
   );
 }

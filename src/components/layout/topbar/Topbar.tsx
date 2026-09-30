@@ -30,7 +30,7 @@ function useScrolled(threshold = 8) {
 /**
  * Sitenin üst çubuğu.
  *
- *   [logo]  Hakkımızda ▾  Çalışmalarımız ▾  Yayınlar ▾  Hikâyeler  Paydaşlarımız ▾     TR|EN  [Üye / Gönüllü Ol]  (👤)
+ *   [logo]  Hakkımızda ▾  Hikâyemiz  Çalışmalarımız ▾  Yayınlar ▾  Paydaşlarımız ▾     TR|EN  [Üye / Gönüllü Ol]  (👤)
  *
  * lg altında menü hamburger'e katlanır; "Üye / Gönüllü Ol" xl'den itibaren
  * çubukta, daha dar ekranlarda mobil menünün altında yer alır.

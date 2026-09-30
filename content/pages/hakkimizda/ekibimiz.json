@@ -4,8 +4,8 @@
     "en": "Our Team"
   },
   "description": {
-    "tr": "Yönetim, denetim ve etik kurullarımız.",
-    "en": "Meet our executive, audit and ethics boards."
+    "tr": "Yönetim, denetim ve etik kurullarımız ile üyelerimiz.",
+    "en": "Meet our executive, audit and ethics boards, and our members."
   },
   "boards": {
     "yonetim": {
@@ -19,6 +19,10 @@
     "etik": {
       "tr": "Etik Kurulu",
       "en": "Ethics Board"
+    },
+    "uyeler": {
+      "tr": "Üyelerimiz",
+      "en": "Our Members"
     }
   }
 }

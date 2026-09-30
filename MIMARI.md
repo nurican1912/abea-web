@@ -52,7 +52,7 @@ Her iki seçenekte ortak olanlar:
 
 Kural: **URL'deki her sayfa, `app/` altında kendi klasöründe, kendi `page.tsx` dosyasıyla durur.**
 Klasör adları menüdeki Türkçe adların aynısıdır. Kodu açan kişi menüdeki yeri anında bulur:
-`hakkimizda/yolculugumuz/page.tsx` → *Hakkımızda › Yolculuğumuz*.
+`hakkimizda/ekibimiz/page.tsx` → *Hakkımızda › Ekibimiz*.
 
 Kod içindeki isimler (bileşen, fonksiyon, tip) İngilizcedir; URL ve klasörler Türkçedir.
 
@@ -77,12 +77,11 @@ big-site-1/
 │   │   ├── home.json
 │   │   ├── hakkimizda/
 │   │   │   ├── logomuz.json
-│   │   │   ├── yolculugumuz.json
 │   │   │   ├── ekibimiz.json
 │   │   │   └── ...
 │   │   ├── calismalarimiz/...
 │   │   ├── yayinlar/...
-│   │   ├── hikayeler.json
+│   │   ├── hikayemiz.json
 │   │   └── paydaslarimiz/...
 │   └── collections/                  # tekrar eden kayıtlar (ileride DB tabloları)
 │       ├── team-members.json
@@ -107,7 +106,6 @@ big-site-1/
     │       │
     │       ├── hakkimizda/
     │       │   ├── page.tsx                  # Hakkımızda — genel bakış (alt sayfa kartları)
-    │       │   ├── yolculugumuz/page.tsx
     │       │   ├── ekibimiz/page.tsx
     │       │   ├── danisma-kurulumuz/page.tsx
     │       │   ├── politika-belgelerimiz/page.tsx
@@ -130,7 +128,7 @@ big-site-1/
     │       │   ├── raporlar/page.tsx
     │       │   └── kutuphane/page.tsx
     │       │
-    │       ├── hikayeler/page.tsx
+    │       ├── hikayemiz/page.tsx
     │       │
     │       ├── paydaslarimiz/
     │       │   ├── page.tsx
@@ -153,7 +151,10 @@ big-site-1/
     │   │                             # logo-geometry.ts, logo-animation.ts, logo.css
     │   ├── sections/                 # sayfaya özel bölümler, sayfa adıyla gruplanır
     │   │   ├── home/                 # HomeHero, ...
-    │   │   ├── logomuz/              # LogoStorySection
+    │   │   ├── ekibimiz/             # TeamAccordion, MemberPhoto
+    │   │   ├── hikayemiz/            # StoryTimeline (yıl yıl kaydırmalı zaman çizelgesi)
+    │   │   ├── logomuz/              # LogoStorySection (okunan bölüme göre logonun parçası öne çıkar)
+    │   │   ├── tuzugumuz/            # BylawsText, BylawsToc
     │   │   └── ...
     │   └── ui/                       # Container, PageHeader, Breadcrumb, ComingSoon, ...
     │
@@ -202,7 +203,6 @@ Hocaya sorulacak açık konular `SORULAR.md` dosyasında tutulur.
 |---|---|---|---|
 | Ana sayfa | `page.tsx` | `/tr` | `/en` |
 | **Hakkımızda** | `hakkimizda/` | `/tr/hakkimizda` | `/en/about` |
-| › Yolculuğumuz | `yolculugumuz/` | `…/yolculugumuz` | `…/our-journey` |
 | › Ekibimiz | `ekibimiz/` | `…/ekibimiz` | `…/our-team` |
 | › Danışma Kurulumuz | `danisma-kurulumuz/` | `…/danisma-kurulumuz` | `…/advisory-board` |
 | › Politika Belgelerimiz | `politika-belgelerimiz/` | `…/politika-belgelerimiz` | `…/policies` |
@@ -220,7 +220,7 @@ Hocaya sorulacak açık konular `SORULAR.md` dosyasında tutulur.
 | › Politika Notları | `politika-notlari/` | | `…/policy-briefs` |
 | › Raporlar | `raporlar/` | | `…/reports` |
 | › Kütüphane | `kutuphane/` | | `…/library` |
-| **Hikâyeler** | `hikayeler/` | `/tr/hikayeler` | `/en/stories` |
+| **Hikâyemiz** | `hikayemiz/` | `/tr/hikayemiz` | `/en/our-story` |
 | **Paydaşlarımız** | `paydaslarimiz/` | `/tr/paydaslarimiz` | `/en/partners` |
 | › Kurumsal Paydaşlar | `kurumsal/` | | `…/institutional` |
 | › Medya Paydaşları | `medya/` | | `…/media` |
@@ -285,7 +285,7 @@ json-source.ts   payload-source.ts     api-source.ts
 Referans: `WhatsApp Image 2026-09-20 at 10.35.33.jpeg`
 
 ```
-[LOGO]   HAKKIMIZDA ▾   ÇALIŞMALARIMIZ ▾   YAYINLAR ▾   HİKÂYELER   PAYDAŞLARIMIZ ▾        TR | EN   [Aramıza Katıl →]
+[LOGO]   HAKKIMIZDA ▾   HİKÂYEMİZ   ÇALIŞMALARIMIZ ▾   YAYINLAR ▾   PAYDAŞLARIMIZ ▾        TR | EN   [Aramıza Katıl →]
 ```
 
 - **Logo:** Tıklayınca ana sayfaya gider; açılır menüsü yoktur. (Logomuzun Hikâyesi, hocanın kararıyla Hakkımızda menüsüne taşındı.)
@@ -337,7 +337,7 @@ Her alt sayfada şu sıra kullanılır: `PageHeader` (beyaz zemin; solda yol sat
 | # | Bölüm | Zemin | İçerik | Çağrı | Durum |
 |---|---|---|---|---|---|
 | 1 | Hero | beyaz | Slogan, tanıtım (hocanın arka plan metninden), filigran | "Hakkımızda →" (turkuaz altı çizili metin bağlantısı) · altta ortada aşağı ok → Biz kimiz | ✅ |
-| 2 | Biz kimiz + rakamlar | beyaz | 2–3 cümle + 3 gerçek rakam (2007'den beri · 30+ danışman · 6 alan) | Yolculuğumuz → | ✅ |
+| 2 | Biz kimiz + rakamlar | beyaz | 2–3 cümle + 3 gerçek rakam (2007'den beri · 30+ danışman · 6 alan) | Hikâyemiz → | ✅ |
 | 3 | Çalışma alanları | bej | 6 kart, üzerine gelince turkuazla dolar; animasyonlu ikonlar | Her kart → ilgili alan | ✅ (A: tek renk seçildi) |
 | 4 | Öne çıkan proje | beyaz | "Geleceğimiz Sadece Salıncakta Sallansın" (2013) — görsel + kısa hikâye | Projeyi inceleyin → (Okul Öncesi) | ✅ (fotoğraf bekleniyor) |
 | 5 | Değerlerimiz | bej | 7 değer, numaralı | Değerlerimiz → | ✅ |
@@ -381,8 +381,8 @@ Kurallar:
 
 ### 6.2 Logomuzun Hikâyesi sayfası (`/hakkimizda/logomuz`)
 
-- **Üstte:** Animasyon sayfa içinde, büyük boyutta ve uçmadan oynar. Yanında "Tekrar oynat" butonu olur.
-- **Altında:** Logonun hikâyesi. Aşama 1'de boş şablon, metin gelince `content/pages/hakkimizda/logomuz.json`'a eklenir.
+- **Solda (telefonda üstte) sabit logo:** Animasyon sayfa içinde, uçmadan oynar; altında "Tekrar oynat" butonu.
+- **Sağda hikâye:** `content/pages/hakkimizda/logomuz.json` → `sections`. Her bölüm logonun bir parçasını anlatır (`part`: nokta, halkalar, dikey çizgiler, "d", yazı); o bölüm okunurken logoda yalnızca o parça belirgin kalır (`logo.css` → `.logo-focus`). Beğenilmezse düz metne çevrilebilir.
 
 ---
 
@@ -453,7 +453,9 @@ Sırasıyla:
 
 - Hakkımızda altı: Ekibimiz, Danışma Kurulu, Değerlerimiz, Politika Belgeleri. İçerikleri `WEB.docx`'te hazır.
 - Yayınlar, Paydaşlar, Üyelik & Gönüllülük. PDF taslakları hazır.
-- Çalışmalarımız, Hikâyeler, Yolculuğumuz, Tüzük (metin bekleniyor)
+- Tüzüğümüz (WEB-son.docx / Dernek Tüzük.docx): madde madde metin + `public/belgeler/afet-bilinci-tuzuk.pdf` (imzasız, içerikten üretildi)
+- Hikâyemiz: 6 dönüm noktası; metin ve fotoğraflar bekleniyor
+- Çalışmalarımız (hangi başlıkların kalacağı hocaya soruldu)
 
 ### Adım 3 — Cilalama
 

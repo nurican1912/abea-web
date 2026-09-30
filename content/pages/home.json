@@ -66,10 +66,10 @@
     ],
     "link": {
       "label": {
-        "tr": "Yolculuğumuz",
-        "en": "Our journey"
+        "tr": "Hikâyemiz",
+        "en": "Our story"
       },
-      "href": "/hakkimizda/yolculugumuz"
+      "href": "/hikayemiz"
     }
   },
   "workAreas": {

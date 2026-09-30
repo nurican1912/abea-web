@@ -16,7 +16,6 @@ export const routing = defineRouting({
     '/': '/',
 
     '/hakkimizda': { tr: '/hakkimizda', en: '/about' },
-    '/hakkimizda/yolculugumuz': { tr: '/hakkimizda/yolculugumuz', en: '/about/our-journey' },
     '/hakkimizda/ekibimiz': { tr: '/hakkimizda/ekibimiz', en: '/about/our-team' },
     '/hakkimizda/danisma-kurulumuz': { tr: '/hakkimizda/danisma-kurulumuz', en: '/about/advisory-board' },
     '/hakkimizda/politika-belgelerimiz': { tr: '/hakkimizda/politika-belgelerimiz', en: '/about/policies' },
@@ -24,6 +23,8 @@ export const routing = defineRouting({
     '/hakkimizda/degerlerimiz': { tr: '/hakkimizda/degerlerimiz', en: '/about/our-values' },
     '/hakkimizda/logomuz': { tr: '/hakkimizda/logomuz', en: '/about/our-logo' },
     '/hakkimizda/uyelik-ve-gonulluluk': { tr: '/hakkimizda/uyelik-ve-gonulluluk', en: '/about/join-us' },
+
+    '/hikayemiz': { tr: '/hikayemiz', en: '/our-story' },
 
     '/calismalarimiz': { tr: '/calismalarimiz', en: '/our-work' },
     '/calismalarimiz/afet-risk-azaltma': { tr: '/calismalarimiz/afet-risk-azaltma', en: '/our-work/disaster-risk-reduction' },
@@ -38,8 +39,6 @@ export const routing = defineRouting({
     '/yayinlar/politika-notlari': { tr: '/yayinlar/politika-notlari', en: '/publications/policy-briefs' },
     '/yayinlar/raporlar': { tr: '/yayinlar/raporlar', en: '/publications/reports' },
     '/yayinlar/kutuphane': { tr: '/yayinlar/kutuphane', en: '/publications/library' },
-
-    '/hikayeler': { tr: '/hikayeler', en: '/stories' },
 
     '/paydaslarimiz': { tr: '/paydaslarimiz', en: '/partners' },
     '/paydaslarimiz/kurumsal': { tr: '/paydaslarimiz/kurumsal', en: '/partners/institutional' },

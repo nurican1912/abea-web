@@ -6,6 +6,8 @@ import { useCallback, useEffect, useRef } from 'react';
 
 import { outlineButton } from '@/components/ui/styles';
 import { INTRO } from '@/config/intro';
+import { cn } from '@/lib/cn';
+import type { LogoPart } from '@/types/content';
 
 import { AbeaLogo } from './AbeaLogo';
 import { drawLogo, fitWordmark } from './logo-animation';
@@ -25,8 +27,17 @@ function whenIntroDone(): Promise<void> {
   });
 }
 
+interface LogoReplayProps {
+  label: string;
+  /** Okunan bölümün anlattığı parça öne çıkar, diğerleri soluklaşır (bkz. logo.css → .logo-focus). */
+  focus?: LogoPart;
+  /** Logonun genişliği / yüksekliği */
+  logoClassName?: string;
+  className?: string;
+}
+
 /** Logomuzun Hikâyesi sayfası: animasyonu yerinde (uçmadan) oynatır, tekrar oynatılabilir. */
-export function LogoReplay({ label }: { label: string }) {
+export function LogoReplay({ label, focus = 'all', logoClassName = 'w-[min(560px,82vw)]', className }: LogoReplayProps) {
   const t = useTranslations('LogoStory');
   const wrapRef = useRef<HTMLDivElement>(null);
   const animationsRef = useRef<Animation[]>([]);
@@ -58,8 +69,8 @@ export function LogoReplay({ label }: { label: string }) {
   }, [play, stop]);
 
   return (
-    <div className="flex flex-col items-center gap-6">
-      <div ref={wrapRef} className="logo-draw w-[min(560px,82vw)] text-brand">
+    <div className={cn('flex flex-col items-center gap-6', className)}>
+      <div ref={wrapRef} data-focus={focus} className={cn('logo-draw logo-focus text-brand', logoClassName)}>
         <AbeaLogo variant="full" animated idPrefix="abea-replay" label={label} className="h-auto w-full overflow-visible" />
       </div>
       <button

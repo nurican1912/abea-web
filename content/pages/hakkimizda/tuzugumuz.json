@@ -4,7 +4,975 @@
     "en": "Our Bylaws"
   },
   "description": {
-    "tr": "Derneğimizin tüzüğü.",
-    "en": "Our association's bylaws."
-  }
+    "tr": "Derneğimizin amacını, çalışma biçimini ve organlarını belirleyen tüzüğümüz.",
+    "en": "Our bylaws set out our purpose, how we work and how the association is run."
+  },
+  "approval": {
+    "tr": "Ankara İl Sivil Toplumla İlişkiler Müdürlüğünce incelenmiş, 26.08.2025 tarihinde tebliğ edilmiştir.",
+    "en": "Reviewed by the Ankara Provincial Directorate of Civil Society Relations and officially notified on 26 August 2025."
+  },
+  "languageNote": {
+    "tr": "",
+    "en": "Our bylaws are only available in Turkish. The official text is below, and you can also download it as a PDF."
+  },
+  "pdf": "/belgeler/afet-bilinci-tuzuk.pdf",
+  "pdfLabel": {
+    "tr": "Tüzüğü indir (PDF, 13 sayfa)",
+    "en": "Download the bylaws (PDF in Turkish, 13 pages)"
+  },
+  "closing": "Bu tüzük 28 (yirmi sekiz) madde ve 1 (bir) geçici maddeden ibarettir.",
+  "articles": [
+    {
+      "id": "madde-1",
+      "label": "Madde 1",
+      "title": "Derneğin Adı ve Merkezi",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Derneğin adı \"Afet Bilinci Eğitim ve Araştırma Derneği\"dir. Derneğin İngilizce karşılığı \"Disaster Awareness Education and Research Association\" olarak kullanılacaktır."
+        },
+        {
+          "type": "p",
+          "text": "Dernek merkezi Ankara'dadır. Şubesi açılmayacaktır."
+        }
+      ]
+    },
+    {
+      "id": "madde-2",
+      "label": "Madde 2",
+      "title": "Tanımlar",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bu Tüzükte geçen;"
+        },
+        {
+          "type": "p",
+          "text": "Dernek: Afet Bilinci Eğitim ve Araştırma Derneğini,"
+        },
+        {
+          "type": "p",
+          "text": "Tüzük: Afet Bilinci Eğitim ve Araştırma Derneği Tüzüğünü ifade eder."
+        }
+      ]
+    },
+    {
+      "id": "madde-3",
+      "label": "Madde 3",
+      "title": "Derneğin Amacı ve Temel İlkeler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Derneğin amacı, iklim, doğa ve insan temelli tüm afet risklerine karşı toplumsal düzeyde farkındalık çalışmaları planlamak, uygulamak, geliştirmek, yaygınlaştırmak, risk azaltma yönünde (bireysel, kurumsal ve toplumsal düzeyde) davranış değişikliği sağlayarak bu yönde bir kültür oluşumuna öncülük etmek ve dirençli bir toplumsal yapının oluşumuna katkı sağlamaktır. Dernek, aynı zamanda, afet hazırlık ve iklim uyum planları geliştirmek, iklim, afet ve göç odaklı bilimsel araştırmalar yapmak, farkındalık odaklı bireysel ve kurumsal eğitimler düzenlemek ve gerekli hallerde afetlere müdahale ile iyileştirme çalışmalarına katkı vermek gibi amaçlara da sahiptir."
+        },
+        {
+          "type": "p",
+          "text": "Dernek, bu amaçlara ulaşmak için, diğer sivil toplum kuruluşları, kamu kurumları, yerel yönetimler, üniversiteler, özel sektör firmaları, meslek örgütleri ve çatı kuruluşlarla iş birliği yapabilir, ulusal ve uluslararası fon kaynaklarına hibe başvurusunda bulunabilir ve gerektiğinde bu kaynakları amaçları doğrultusunda ve yasal çerçevede aktarabilir."
+        },
+        {
+          "type": "p",
+          "text": "Dernek, amaçları doğrultusunda yürüteceği tüm faaliyetlerde, bilimselliği, kanıta dayalı bilgiyi, şeffaflığı, hesap verilebilirliği, kapsayıcılığı, cinsiyet eşitliğini, adaleti, insan onurunu ve dahi tüm canlıların haklarını korumayı, hak temelli bir yaklaşımla odağına alır ve bu -hak temelli- yaklaşımı benimser, geliştirir, savunur ve yaygınlaştırır."
+        }
+      ]
+    },
+    {
+      "id": "madde-4",
+      "label": "Madde 4",
+      "title": "Derneğin Hedef Kitlesi",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Derneğin hedef kitlesi; iklim, doğa ve insan temelli tüm afet risklerine karşı kırılgan olan ve/veya bu konularda bilinçlenme, hazırlık yapma, müdahale etme ve iyileştirme süreçlerinde aktif rol alma ihtiyacı duyan tüm kişiler, kesimler ve kurumlardır. Sivil toplum kuruluşları, kamu kurumları, yerel yönetimler, üniversiteler, özel sektör firmaları, meslek örgütleri, çatı kuruluşlar ile beraber kuruluşlar ile faaliyet alanları çerçevesindeki potansiyel kilit paydaşlarıdır."
+        }
+      ]
+    },
+    {
+      "id": "madde-5",
+      "label": "Madde 5",
+      "title": "Derneğin Faaliyet Alanı",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Dernek, ekonomik, sosyal, yerel, bölgesel ve sürdürülebilir kalkınma odağında yurt içinde ve yurt dışında faaliyet gösterir. Bu kapsamda afet yönetimi ve yönetişimi, risk azaltma, bilinçlendirme, eğitim ve araştırma çalışmalarının yanı sıra, toplumsal ve ekonomik dayanıklılığı artırmaya yönelik projeler yürütür, kapasite geliştirme ve savunuculuk faaliyetleri gerçekleştirir."
+        }
+      ]
+    },
+    {
+      "id": "madde-6",
+      "label": "Madde 6",
+      "title": "Dernekçe Sürdürülecek Çalışma Konuları",
+      "blocks": [
+        {
+          "type": "item",
+          "label": "6.1",
+          "text": "Afet Yönetimi, Yönetişimi ve Risk Azaltma Odaklı Çalışmalar: Dernek, afetlere karşı dirençli toplumlar oluşturmak amacıyla afetlerin kapsayıcı yönetimi ve yönetişiminin sağlanması için araştırmalar yapar, projeler uygular ve tavsiyelerde bulunur. Afet öncesi hazırlık süreçlerini destekleyerek, toplumun afetlere karşı bilinçlenmesi ve dirençli olması için çalışmalar yapar. Risk analizi ve afet senaryoları üzerine çalışmalar yaparak, olası afet durumları için etkin müdahale mekanizmaları oluşturur. Sivil toplum kuruluşları, kamu kurumları, yerel yönetimler, üniversiteler, özel sektör firmaları, meslek örgütleri, çatı kuruluşlar ile iş birliği yaparak afet yönetim ve yönetişim kapasitesini geliştiren projeler yürütür."
+        },
+        {
+          "type": "item",
+          "label": "6.2",
+          "text": "Bilinçlendirme ve Eğitim: Dernek, bireysel, kurumsal ve toplumsal düzeyde afet bilinci oluşturmak, farkındalık artışı sağlamak ve her türlü afet risklerine karşı hazırlıklı ve dirençli olunmasını sağlamak amacıyla yüz yüze ve çevrimiçi eğitim programları, seminerler, atölye çalışmaları geliştirerek ve uygulayarak bireylerin ve kurumların afetlere karşı hazırlık kapasitelerinin gelişimine, bu yönde bilgi ve beceri kazanmalarına yardımcı olur. Bu alanlarda dijital içerik üretimi yaparak çevrimiçi platformlarda, aplikasyonlarda ve ilişkili alanlarda bilgiye erişimi kolaylaştırır ve geniş kitlelere ulaşmasını sağlayarak farkındalık çalışmaları yürütür."
+        },
+        {
+          "type": "item",
+          "label": "6.3",
+          "text": "Araştırma, Analiz ve Raporlama: Dernek, iklim, doğa ve insan temelli tüm afetler ve ekonomik, sosyal, yerel, bölgesel, sürdürülebilir insani kalkınma odağında bilimsel araştırmalar yürütür. Saha çalışmaları ve veri toplama süreçleri ile elde edilen bilgileri analiz ederek, politika yapıcılar, yerel yönetimler, kamu kurumları ve sivil toplum kuruluşları için rehber niteliğinde, bilimsel temelli öneriler geliştirir, sunar ve yaygınlaştırır. Ulusal ve uluslararası akademik işbirlikleri geliştirerek, afet farkındalığı, yönetimi ve yönetişimi alanındaki bilgi üretimini destekler, teşvik eder ve yaygınlaşmasına katkı verir. Bu alanlarda çalışan, çalışmak isteyen sivil toplum kuruluşları, kamu kurumları, yerel yönetimler, üniversiteler, özel sektör firmaları, meslek örgütleri, çatı kuruluşlar için, özel araştırmalar yapar, analiz eder ve raporlar."
+        },
+        {
+          "type": "item",
+          "label": "6.4",
+          "text": "Kalkınma ve Dayanıklılık Odaklı Çalışmalar: Çevresel, ekonomik ve toplumsal sürdürülebilirliği destekleyen projeler geliştirerek, toplumların iklim, doğa ve insan temelli tüm afetlere karşı dayanıklılığını artırır. Toplumsal ve ekonomik dirençliliği arttıran, ekolojik sürdürülebilirliği destekleyen faaliyetler ile doğal kaynakların korunmasını sağlarken, kalkınma projeleriyle yerel toplulukların ekonomik olarak güçlenmesine katkıda bulunur. Bu doğrultuda, yenilikçi çözümler sunarak ve yerel iş birliklerini güçlendirerek her türlü kalkınma süreçlerini destekler."
+        },
+        {
+          "type": "item",
+          "label": "6.5",
+          "text": "Savunuculuk ve Kamu Politikaları: Afet yönetimi, yönetişimi, risk azaltma ve dayanıklılık odaklı etkin ve uygulanabilir kamu politikalarının oluşturulması ve uygulanması için savunuculuk faaliyetleri yürütür. Sivil toplum ağları ve platformlarda aktif rol alarak, karar alma süreçlerine katılım sağlar ve toplumsal düzeyde savunuculuk faaliyetleri yürütür. Kamu kurumları ve ilgili diğer paydaşlar ile iş birlikleri geliştirerek afet yönetimi, yönetişimi, risk azaltma ve sürdürülebilir insani kalkınma konularında politika önerileri sunar."
+        }
+      ]
+    },
+    {
+      "id": "madde-7",
+      "label": "Madde 7",
+      "title": "Dernek Çalışma Biçimi",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Dernek amaç ve faaliyetleri kapsamında ve yukarıda belirtilen çalışma konularında,"
+        },
+        {
+          "type": "item",
+          "label": "7.1",
+          "text": "Bilinçlendirme ve farkındalık odaklı kurslar, eğitimler, seminerler, konferanslar, çalıştaylar ve paneller düzenleyebilir, kamuoyuna yönelik farkındalık artırıcı kampanyalar düzenleyebilir, medya çalışmaları yapabilir ve dijital içerikler üretebilir, eğitim materyalleri, el kitapları ve rehberler hazırlayarak basılı veya dijital olarak yayımlayabilir."
+        },
+        {
+          "type": "item",
+          "label": "7.2",
+          "text": "Savunuculuk ve kapasite geliştirme faaliyetleri gerçekleştirebilir, gerçekleştirilen faaliyetleri destekleyebilir. Yürüttüğü araştırmaları kamuoyuna duyurmak için her türlü iletişim çalışması yapabilir, bilgilendirme amaçlı bültenler, infografikler, görseller hazırlayabilir, yaygınlaştırabilir."
+        },
+        {
+          "type": "item",
+          "label": "7.3",
+          "text": "Sivil toplum kuruluşları, kamu kurumları, yerel yönetimler, üniversiteler, özel sektör firmaları, meslek örgütleri, çatı kuruluşlar ile protokoller yapabilir, ortak çalışmalar yürütebilir, kurumsal üye kabul eden derneklere, vakıflara ve platformlara üye olabilir, federasyonlara katılabilir."
+        },
+        {
+          "type": "item",
+          "label": "7.4",
+          "text": "Dernek, ulusal ve uluslararası fonlara başvurabilir; dernekler, vakıflar, sendikalar, kamu kurumları ve kuruluşlarıyla iş birliği yaparak ortak projeler yürütebilir."
+        },
+        {
+          "type": "item",
+          "label": "7.5",
+          "text": "Yurt içinde temsilcilik açabilir, kooperatif, federasyon ve platform kurabilir veya mevcut oluşumlara katılım sağlayabilir. İlgili üst düzey sivil toplum yapılarında yer alabilir, ortak projeler yürütebilir. Temsilciliklerin adresi, yönetim kurulu kararıyla temsilci olarak görevlendirilen kişi ve kişiler tarafından o yerin mülki idare amirliğine yazılı olarak bildirilir. Temsilcilikler Genel Kurulda temsil edilmez."
+        },
+        {
+          "type": "item",
+          "label": "7.6",
+          "text": "Gönüllülük odaklı eğitimler verebilir ve gönüllü çalışan ekipler oluşturabilir, bu gönüllüleri olası afet durumlarında resmi ekipleri desteklemek, afet öncesi, sırası ve sonrasında yapılabilecekler konusunda eğitebilir, çalışan gönüllülere ilişkin sistemler geliştirebilir."
+        },
+        {
+          "type": "item",
+          "label": "7.7",
+          "text": "Faaliyetler için ihtiyaç duyulan geliri temin etmek amacıyla iktisadi işletme kurabilir, ticari, sınaî, tarımsal ve hizmet odaklı faaliyetler yürütebilir. Dernek faaliyetleri için ihtiyaç duyulan taşınır, taşınmaz malları satın alabilir, satabilir, kiralayabilir, kiraya verebilir ve taşınmazlar üzerinde ayni hak tesis edebilir."
+        },
+        {
+          "type": "item",
+          "label": "7.8",
+          "text": "Gerekli yasal izinler alınmak şartıyla gerçek ve tüzel kişilerden nakdi ve ayni bağış kabul edebilir. Yurtiçinde ve yurtdışında bağış ve yardım kampanyaları organize edebilir. Dijital platformlar, mobil uygulamalar ve internet sitesi gibi online bağış sistemlerini aracılığıyla bağış toplayabilir. Yardım amaçlı konserler, açık artırmalar ve benzeri tüm etkinlikleri düzenleyebilir. Yerel ve uluslararası kurumlarla ortak projeler yürüterek yardım toplama faaliyetlerinde bulunabilir."
+        },
+        {
+          "type": "item",
+          "label": "7.9",
+          "text": "Her türlü bilgi, belge, doküman ve yayını temin edebilir, bilgi, belge, veri ve dokümantasyon merkezi oluşturabilir ve çalışmalarını duyurmak için web sitesi hazırlatabilir, gazete, dergi, kitap ve bülten gibi yayınları basılı ve/veya dijital olarak çıkarabilir. Faaliyetleri kapsamında Danışma Kurulu oluşturabilir, Çalışma Grupları kurarak faaliyetlerini destekleyebilir."
+        },
+        {
+          "type": "item",
+          "label": "7.10",
+          "text": "Dernek üyelerine, paydaşlarına ve hedef kitlesine yönelik sosyal ve kültürel etkinlikler (yemekli toplantılar, kermes, konser, balo, tiyatro, sergi, gezi ve eğlenceli etkinlikler vb.) düzenleyebilir veya bu tür etkinliklerden yaralanmalarını sağlayabilir. Belirlenen bir konumda ya da mobil olarak sosyal ve kültürel tesisler, merkezler ve atölyeler kurabilir, lokal açabilir."
+        }
+      ]
+    },
+    {
+      "id": "madde-8",
+      "label": "Madde 8",
+      "title": "Derneğe Üye Olma ve Üyelik İşlemleri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Fiil ehliyetine sahip bulunan ve derneğin amaç ve ilkelerini benimseyerek bu doğrultuda çalışmayı kabul eden ve mevzuatın öngördüğü koşullarını taşıyan her gerçek ve tüzel kişi bu derneğe üye olma hakkına sahiptir. Ancak, yabancı gerçek kişilerin üye olabilmesi için Türkiye'de yerleşme hakkına sahip olması gerekir. Onursal üyelik için bu koşul aranmaz."
+        },
+        {
+          "type": "p",
+          "text": "Dernek başkanlığına yazılı olarak yapılacak üyelik başvurusu, dernek Yönetim Kurulunca en çok otuz (30) gün içinde üyeliğe kabul veya isteğin reddi şeklinde karara bağlanır ve sonuç yazıyla başvuru sahibine bildirilir. Başvurusu kabul edilen üye, bu amaçla tutulacak deftere kaydedilir."
+        },
+        {
+          "type": "p",
+          "text": "Derneğin asıl üyeleri, derneğin kurucuları ile müracaatları üzerine Yönetim Kurulunca üyeliğe kabul edilen kişilerdir."
+        },
+        {
+          "type": "p",
+          "text": "Derneğe maddi ve manevi bakımdan önemli destek sağlamış bulunanlar Yönetim Kurulu kararı ile onursal üye olarak kabul edilebilir."
+        }
+      ]
+    },
+    {
+      "id": "madde-9",
+      "label": "Madde 9",
+      "title": "Üyelikten Çıkma",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Her üye yazılı olarak bildirmek kaydıyla, dernekten çıkma hakkına sahiptir. Üyenin istifa dilekçesi Yönetim Kuruluna ulaştığı anda çıkış işlemleri sonuçlanmış sayılır. Üyelikten ayrılma, üyenin derneğe olan birikmiş borçlarını sona erdirmez."
+        }
+      ]
+    },
+    {
+      "id": "madde-10",
+      "label": "Madde 10",
+      "title": "Üyelikten Çıkarılma",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Dernek üyeliğinden çıkarılmayı gerektiren haller şu şekilde belirlenmiştir:"
+        },
+        {
+          "type": "item",
+          "label": "10.1",
+          "text": "Dernek tüzüğüne aykırı davranışlarda bulunmak,"
+        },
+        {
+          "type": "item",
+          "label": "10.2",
+          "text": "Verilen görevlerden sürekli kaçınmak,"
+        },
+        {
+          "type": "item",
+          "label": "10.3",
+          "text": "Yazılı ikazlara rağmen üyelik aidatını altı ay içinde ödememek,"
+        },
+        {
+          "type": "item",
+          "label": "10.4",
+          "text": "Dernek organlarınca verilen kararlara uymamak."
+        },
+        {
+          "type": "item",
+          "label": "10.5",
+          "text": "Derneğin yazılı politikalarına, etik kural ve prensiplerine uygunsuz/aykırı davranış ve eylemlerde bulunmak,"
+        },
+        {
+          "type": "item",
+          "label": "10.6",
+          "text": "Üye olma şartlarını kaybetmiş olmak,"
+        },
+        {
+          "type": "item",
+          "label": "10.7",
+          "text": "Yukarıda sayılan durumlardan birinin tespiti halinde Yönetim Kurulu kararı ile üyelikten çıkarılır."
+        },
+        {
+          "type": "item",
+          "label": "10.8",
+          "text": "Dernekten çıkan veya çıkarılanlar, üye kayıt defterinden silinir ve dernek malvarlığında hak iddia edemez."
+        }
+      ]
+    },
+    {
+      "id": "madde-11",
+      "label": "Madde 11",
+      "title": "Dernek Organları",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Derneğin organları aşağıda sıralanmıştır."
+        },
+        {
+          "type": "item",
+          "label": "A",
+          "text": "Genel Kurul,"
+        },
+        {
+          "type": "item",
+          "label": "B",
+          "text": "Yönetim Kurulu,"
+        },
+        {
+          "type": "item",
+          "label": "C",
+          "text": "Denetim Kurulu ve"
+        },
+        {
+          "type": "item",
+          "label": "Ç",
+          "text": "Etik Kurulu."
+        }
+      ]
+    },
+    {
+      "id": "madde-12",
+      "label": "Madde 12",
+      "title": "Dernek Genel Kurulunun Kuruluş Şekli, Toplanma Zamanı ve Çağrı ve Toplantı Usulü",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Genel Kurul, derneğin en yetkili karar organı olup; derneğe kayıtlı üyelerden oluşur. Genel Kurul;"
+        },
+        {
+          "type": "item",
+          "label": "12.1",
+          "text": "Bu tüzükte belli edilen zamanda olağan,"
+        },
+        {
+          "type": "item",
+          "label": "12.2",
+          "text": "Yönetim veya Denetim Kurulunun gerekli gördüğü hallerde veya dernek üyelerinden beşte birinin yazılı başvurusu üzerine, Yönetim Kurulunca olağanüstü toplantıya çağrılır. Yönetim Kurulu, Genel Kurulu toplantıya çağırmazsa; üyelerden birinin başvurusu üzerine sulh hâkimi, üç üyeyi Genel Kurulu toplantıya çağırmakla görevlendirir."
+        },
+        {
+          "type": "item",
+          "label": "12.3",
+          "text": "Olağan Genel Kurul, üç (3) yılda bir, Mayıs ayı içerisinde, Yönetim Kurulunca belirlenecek gün yer ve saatte toplanır. Dernek organları ile Genel Kurul toplantıları gerekli durumlarda çevirim içi veya hibrit yöntemlerle yapılabilir. Bu tür toplantılarda kimlik doğrulaması sağlanarak elektronik ortamda oy kullanımı mümkündür."
+        },
+        {
+          "type": "item",
+          "label": "12.4",
+          "text": "Çağrı Usulü: Yönetim Kurulu, dernek tüzüğüne göre Genel Kurula katılma hakkı bulunan üyelerin listesini düzenler. Genel Kurula katılma hakkı bulunan üyeler, en az on beş gün önceden, toplantının günü, saati, yeri ve gündemi en az bir gazetede veya derneğin internet sayfasında ilan edilmek, yazılı olarak bildirilmek, üyenin bildirdiği elektronik posta adresine ya da iletişim numarasına mesaj gönderilmek veya mahalli yayın araçları kullanılmak suretiyle toplantıya çağrılır. Bu çağrıda, çoğunluk sağlanamaması sebebiyle toplantı yapılamazsa, ikinci toplantının hangi gün, saat ve yerde yapılacağı da belirtilir. İlk toplantı ile ikinci toplantı arasındaki süre yedi günden az, altmış günden fazla olamaz."
+        },
+        {
+          "type": "p",
+          "text": "Toplantı, çoğunluk sağlanamaması sebebinin dışında başka bir nedenle geri bırakılırsa, bu durum geri bırakma sebepleri de belirtilmek suretiyle, ilk toplantı için yapılan çağrı usulüne uygun olarak üyelere duyurulur. İkinci toplantının geri bırakma tarihinden itibaren en geç altı ay içinde yapılması zorunludur. Üyeler ikinci toplantıya, birinci fıkrada belirtilen esaslara göre yeniden çağrılır."
+        },
+        {
+          "type": "item",
+          "label": "12.5",
+          "text": "Genel Kurul toplantısı bir defadan fazla geri bırakılamaz."
+        },
+        {
+          "type": "item",
+          "label": "12.6",
+          "text": "Toplantı Usulü: Genel Kurul, katılma hakkı bulunan üyelerin salt çoğunluğu ile toplanır; tüzük değişikliği ve derneğin feshi durumlarında ise üçte iki çoğunluk gereklidir. Çoğunluğun sağlanamaması halinde toplantı ertelenir ve ikinci toplantıda çoğunluk aranmaz. Ancak, bu toplantıya katılan üye sayısı, Yönetim ve Denetim Kurulları üye tam sayısının en az iki katı olmalıdır."
+        },
+        {
+          "type": "p",
+          "text": "Genel Kurula katılma hakkı bulunan üyelerin listesi toplantı yerinde hazır bulundurulur. Üyeler, resmi kimlik belgelerini Yönetim Kurulu üyeleri veya yetkilendirilmiş görevlilere ibraz ederek, listedeki adlarının karşısına imza atarak toplantıya katılırlar."
+        },
+        {
+          "type": "p",
+          "text": "Toplantı yeter sayısı sağlanmışsa durum bir tutanakla tespit edilir ve toplantı Yönetim Kurulu başkanı veya görevlendireceği Yönetim Kurulu üyelerinden biri tarafından açılır. Toplantı yeter sayısı sağlanamaması halinde de yönetim Kurulunca bir tutanak düzenlenir."
+        },
+        {
+          "type": "p",
+          "text": "Açılıştan sonra, toplantıyı yönetmek üzere bir başkan ve yeteri kadar başkan vekili ile yazman seçilerek divan heyeti oluşturulur."
+        },
+        {
+          "type": "p",
+          "text": "Dernek organlarının seçimi için yapılacak oylamalarda, üyelerin divan heyetine kimliklerini göstermeleri ve hazirun listesindeki isimlerinin karşılarını imzalamaları zorunludur. Toplantının yönetimi ve güvenliğinden divan başkanı sorumludur."
+        },
+        {
+          "type": "p",
+          "text": "Genel Kurulda, yalnızca gündemde yer alan maddeler görüşülür. Ancak toplantıda hazır bulunan üyelerin onda biri tarafından görüşülmesi yazılı olarak istenen konuların gündeme alınması zorunludur."
+        },
+        {
+          "type": "p",
+          "text": "Onursal üyeler Genel Kurul toplantılarına katılabilir ancak oy kullanamazlar. Tüzel kişi üyeler adına ise, Yönetim Kurulu Başkanı veya temsille görevlendirilen kişi oy kullanır. Genel Kurulda her üyenin bir (1) oy hakkı vardır; üye oyunu şahsen kullanmak zorundadır. Tüzel kişinin üye olması halinde, tüzel kişinin Yönetim Kurulu Başkanı veya temsille görevlendireceği kişi oy kullanır."
+        },
+        {
+          "type": "p",
+          "text": "Toplantıda görüşülen konular ve alınan kararlar bir tutanağa yazılır ve Divan Başkanı ile yazmanlar tarafından birlikte imzalanır. Toplantı sonunda, tutanak ve diğer belgeler Yönetim Kurulu başkanına teslim edilir. Yönetim Kurulu Başkanı bu belgelerin korunmasından ve yeni seçilen Yönetim Kuruluna yedi gün içinde teslim etmekten sorumludur."
+        }
+      ]
+    },
+    {
+      "id": "madde-13",
+      "label": "Madde 13",
+      "title": "Genel Kurulun Oy kullanma ve Karar Alma Usul ve Şekilleri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Genel Kurulda, aksi bir karar alınmadıkça oylamalar açık şekilde yapılır ve Genel Kurul Başkanı tarafından belirlenen yöntem uygulanır. Gizli oylama gerektiğinde, toplantı başkanı tarafından mühürlenmiş kağıtlar veya oy pusulaları üyeler tarafından doldurularak boş bir kaba atılır. Oy verme süreci tamamlandıktan sonra açık döküm yapılır ve sonuç belirlenir. Genel Kurul kararları, toplantıya katılan üyelerin salt çoğunluğu ile alır. Ancak, tüzük değişikliği ve derneğin feshi kararları için toplantıya katılan üyelerin üçte iki çoğunluğunun onayı gereklidir."
+        }
+      ]
+    },
+    {
+      "id": "madde-14",
+      "label": "Madde 14",
+      "title": "Genel Kurulun Görev ve Yetkileri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Aşağıda yazılı hususlar Genel Kurulca görüşülüp karara bağlanır."
+        },
+        {
+          "type": "item",
+          "label": "14.1",
+          "text": "Dernek organlarının seçilmesi,"
+        },
+        {
+          "type": "item",
+          "label": "14.2",
+          "text": "Dernek tüzüğünün değiştirilmesi,"
+        },
+        {
+          "type": "item",
+          "label": "14.3",
+          "text": "Yönetim ve Denetim Kurulu raporlarının, bilanço ve gelir gider hesaplarının görüşülmesi ve Yönetim Kurulunun ibrası,"
+        },
+        {
+          "type": "item",
+          "label": "14.4",
+          "text": "Yönetim Kurulunca hazırlanan bütçenin görüşülüp aynen veya değiştirilerek kabul edilmesi,"
+        },
+        {
+          "type": "item",
+          "label": "14.5",
+          "text": "Derneğin diğer organlarının denetlenmesi ve gerek görüldüğünde haklı sebeplerle onların görevden alınması,"
+        },
+        {
+          "type": "item",
+          "label": "14.6",
+          "text": "Üyeliğin reddi veya üyelikten çıkarma hakkında verilen Yönetim Kurulu kararlarına karşı yapılan itirazların incelenmesi ve karara bağlanması,"
+        },
+        {
+          "type": "item",
+          "label": "14.7",
+          "text": "Dernek için gerekli olan taşınmaz malların satın alınması veya mevcut taşınmaz malların satılması hususunda Yönetim Kuruluna yetki verilmesi,"
+        },
+        {
+          "type": "item",
+          "label": "14.8",
+          "text": "Yönetim Kurulunca dernek çalışmaları ile ilgili olarak hazırlanacak yönetmelikleri inceleyip aynen veya değiştirilerek onaylanması,"
+        },
+        {
+          "type": "item",
+          "label": "14.9",
+          "text": "Dernek Yönetim ve Denetim Kurullarının kamu görevlisi olmayan başkan ve üyelerine verilecek ücret ile her türlü ödenek, yolluk ve tazminatlar ile dernek hizmetleri için görevlendirilecek üyelere verilecek gündelik ve yolluk miktarlarının tespit edilmesi,"
+        },
+        {
+          "type": "item",
+          "label": "14.10",
+          "text": "Derneğin federasyona katılması ve ayrılmasının kararlaştırılması,"
+        },
+        {
+          "type": "item",
+          "label": "14.11",
+          "text": "Derneğin uluslararası düzeyde faaliyetlerde bulunması, yurt dışındaki dernek ve kuruluşlara üye olarak katılması veya ayrılması,"
+        },
+        {
+          "type": "item",
+          "label": "14.12",
+          "text": "Derneğin vakıf kurması,"
+        },
+        {
+          "type": "item",
+          "label": "14.13",
+          "text": "Derneğin feshedilmesi, tasfiye şekline ve mal varlıklarının hangi kuruluşa devredileceğine karar verilmesi,"
+        },
+        {
+          "type": "item",
+          "label": "14.14",
+          "text": "Yönetim Kurulunun diğer önerilerinin incelenip karara bağlanması,"
+        },
+        {
+          "type": "item",
+          "label": "14.15",
+          "text": "Yasalarda ve tüzükte Genel Kurulca yapılması öngörülen diğer görevlerin yerine getirilmesi."
+        }
+      ]
+    },
+    {
+      "id": "madde-15",
+      "label": "Madde 15",
+      "title": "Yönetim Kurulunun Teşkili, Görev ve Yetkileri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Yönetim Kurulu, beş asıl ve beş yedek üye olarak Genel Kurulca seçilir."
+        },
+        {
+          "type": "p",
+          "text": "Yönetim Kurulu üyelerine görevleri kapsamında hizmet sözleşmesi veya huzur hakkı kapsamında ödeme yapılabilir. Bu ödemeler dernek bütçesi ve piyasa koşulları gözetilerek belirlenir ve banka yolu ile gerçekleştirilir. Ödemeye ilişkin kararlar Genel Kurul tarafından alınır ve yazılı olarak kaydedilir, ilgili defterlere işlenir."
+        },
+        {
+          "type": "p",
+          "text": "Yönetim Kurulu, seçimden sonraki ilk toplantısında bir kararla görev bölüşümü yaparak Başkan, Başkan Yardımcısı, Sekreter, Sayman ve Üyeyi belirler."
+        },
+        {
+          "type": "p",
+          "text": "Yönetim Kurulu asil üyeliğinden istifa veya başka sebeplerden dolayı boşalma olduğu takdirde Genel Kurulda aldığı oy çokluğu sırasına göre yedek üyelerin göreve çağrılması mecburidir."
+        },
+        {
+          "type": "p",
+          "text": "Yönetim Kurulu aşağıdaki hususları yerine getirir:"
+        },
+        {
+          "type": "item",
+          "label": "15.1",
+          "text": "Derneği temsil etmek veya bu hususta Yönetim Kurulu başkan ve üyelerine yetki vermek,"
+        },
+        {
+          "type": "item",
+          "label": "15.2",
+          "text": "Gelir ve gider hesaplarına ilişkin işlemleri yapmak ve gelecek döneme ait bütçeyi hazırlayarak Genel Kurula sunmak, her faaliyet yılı sonunda derneğin işletme hesabı tablosu veya bilanço ve gelir tablosu ile Yönetim Kurulu çalışmalarını açıklayan raporunu düzenlemek, toplandığında Genel Kurula sunmak,"
+        },
+        {
+          "type": "item",
+          "label": "15.3",
+          "text": "Derneğin çalışmaları ile ilgili yönetmelikleri hazırlayarak Genel Kurul onayına sunmak"
+        },
+        {
+          "type": "item",
+          "label": "15.4",
+          "text": "Genel Kurulun verdiği yetki ile taşınmaz mal satın almak, derneğe ait taşınır ve taşınmaz malları satmak, bina ve tesis inşa ettirmek, kira sözleşmesi yapmak, dernek lehine rehin ipotek veya ayni haklar tesis ettirmek,"
+        },
+        {
+          "type": "item",
+          "label": "15.5",
+          "text": "Genel Kurulda alınan kararları uygulamak"
+        },
+        {
+          "type": "item",
+          "label": "15.6",
+          "text": "Bütçenin uygulanmasını sağlamak,"
+        },
+        {
+          "type": "item",
+          "label": "15.7",
+          "text": "Derneğe üye alınması veya üyelikten çıkarılma hususlarında karar vermek."
+        },
+        {
+          "type": "item",
+          "label": "15.8",
+          "text": "Derneğin amacını gerçekleştirmek için her çeşit kararı almak ve uygulamak,"
+        },
+        {
+          "type": "item",
+          "label": "15.9",
+          "text": "Mevzuatın kendisine verdiği diğer görevleri yapmak ve yetkileri kullanmak,"
+        }
+      ]
+    },
+    {
+      "id": "madde-16",
+      "label": "Madde 16",
+      "title": "Denetim Kurulunun Teşkili, Görev ve Yetkileri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Denetim Kurulu, üç asıl ve üç yedek üye olarak Genel Kurulca seçilir."
+        },
+        {
+          "type": "p",
+          "text": "Yönetim Kurulu üyelerine görevleri kapsamında hizmet sözleşmesi veya huzur hakkı kapsamında ödeme yapılabilir. Bu ödemeler dernek bütçesi ve piyasa koşulları gözetilerek belirlenir ve banka yolu ile gerçekleştirilir. Kararlar Yönetim Kurulu tarafından alınır ve yazılı olarak kaydedilir."
+        },
+        {
+          "type": "item",
+          "label": "16.1",
+          "text": "Denetim Kurulu asıl üyeliğinden istifa veya başka sebeplerden dolayı boşalma olduğu takdirde Genel Kurulda aldığı oy çokluğu sırasına göre yedek üyelerin göreve çağrılması mecburidir."
+        },
+        {
+          "type": "item",
+          "label": "16.2",
+          "text": "Denetim Kurulu, derneğin, tüzüğünde gösterilen amaç ve amacın gerçekleştirilmesi için sürdürebileceği belirtilen çalışma konuları doğrultusunda faaliyet gösterip göstermediğini, defter, hesap ve kayıtların mevzuata ve dernek tüzüğüne uygun olarak tutulup tutulmadığını, dernek tüzüğünde tespit edilen esas ve usullere göre ve bir (1) yılı geçmeyen aralıklarla denetler ve denetim sonuçlarını bir rapor halinde Yönetim Kuruluna ve toplandığında Genel Kurula sunar."
+        },
+        {
+          "type": "item",
+          "label": "16.3",
+          "text": "Denetim Kurulu, gerektiğinde Genel Kurulun toplantıya çağrılmasını isteyebilir."
+        }
+      ]
+    },
+    {
+      "id": "madde-17",
+      "label": "Madde 17",
+      "title": "Etik Kurulun Teşkili, Görev ve Yetkileri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Etik Kurulu, Genel Kurul tarafından üç yıl için seçilen biri başkan olmak üzere toplam üç (3) asil ve bir (1) yedek üyeden oluşur. Etik Kurul üyeliği için dernek üyesi olma koşulu vardır. Etik Kurul, dernek amaç ve faaliyetleri çerçevesinde şu faaliyetleri yürütür."
+        },
+        {
+          "type": "item",
+          "label": "17.1",
+          "text": "Etik Standartları Belirleme: Derneğin faaliyetlerinde etik ilkelere uygun hareket edilmesini sağlamak için politika ve davranış kuralları oluşturur."
+        },
+        {
+          "type": "item",
+          "label": "17.2",
+          "text": "Geri Bildirim ve Şikayetleri Değerlendirme: Üyelerden, çalışanlardan ve paydaşlardan gelen etik ihlalleriyle ilgili şikayetleri ve geri bildirimleri bağımsız bir mekanizma aracılığıyla inceler."
+        },
+        {
+          "type": "item",
+          "label": "17.3",
+          "text": "Soruşturma Yürütme: Hassas konulara ilişkin etik ihlalleriyle ilgili soruşturmalar yürütme yetkisine sahiptir. Hassas olmayan geri bildirimleri ise ilgili birimlere yönlendirebilir."
+        },
+        {
+          "type": "item",
+          "label": "17.4",
+          "text": "Raporlama ve Karar Mekanizmalarını Destekleme: Yürüttüğü çalışmaları düzenli olarak Yönetim Kuruluna raporlar."
+        },
+        {
+          "type": "item",
+          "label": "17.5",
+          "text": "Acil Durumlarda Müdahale: Önemli etik ihlallerinde Yönetim Kurulunun acilen toplanmasını ve gerekli kararların alınmasını talep edebilir."
+        }
+      ]
+    },
+    {
+      "id": "madde-18",
+      "label": "Madde 18",
+      "title": "Derneğin Gelir Kaynakları",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Derneğin gelir kaynakları aşağıda sıralanmıştır."
+        },
+        {
+          "type": "item",
+          "label": "18.1",
+          "text": "Üye Aidatı: Üyelerden alınacak giriş ödentisi ile aylık ve/veya yıllık olarak alınacak aidatı belirlemeye, artırmaya veya eksiltmeye Genel Kurul yetkilidir."
+        },
+        {
+          "type": "item",
+          "label": "18.2",
+          "text": "Bağış ve Fonlar: Gerçek ve tüzel kişilerden alınan bağışlar ile mevzuata uygun şekilde yurt içi ve yurt dışından toplanan bağış ve fonlar."
+        },
+        {
+          "type": "item",
+          "label": "18.3",
+          "text": "Etkinlik Gelirleri: Dernek tarafından düzenlenen sosyal ve kültürel etkinliklerden sağlanan gelirler."
+        },
+        {
+          "type": "item",
+          "label": "18.4",
+          "text": "Mal Varlıkları: Derneğin mal varlığından ve ticari faaliyetlerinden elde edilen gelirler."
+        },
+        {
+          "type": "item",
+          "label": "18.5",
+          "text": "Derneğin amacın gerçekleştirilmesi için gerek görülmesi halinde, 5072 sayılı Dernek ve Vakıfların Kamu Kurum ve Kuruluşları ile İlişkilerine Dair Kanun hükümleri saklı kalmak üzere, genel merkezleri ve/veya şubeleri yurt içi ve/veya yurt dışında olan kurum ve kuruluşlardan Derneğin amaçları doğrultusunda program ve proje yürütme amacı ile alınacak fonlar ve bağışlar,"
+        },
+        {
+          "type": "item",
+          "label": "18.6",
+          "text": "Diğer gelirler"
+        }
+      ]
+    },
+    {
+      "id": "madde-19",
+      "label": "Madde 19",
+      "title": "Derneğin Defter Tutma Esas ve Usulleri ve Tutulacak Defterler",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Dernek, Dernekler Yönetmeliği Madde 32'ye uygun şekilde aşağıda yazılı defterleri tutar:"
+        },
+        {
+          "type": "item",
+          "label": "19.1",
+          "text": "Karar Defteri: Yönetim Kurulu kararları tarih ve numara sırasıyla bu deftere yazılır ve kararların altı toplantıya katılan üyelerce imzalanır, defter işletme hesabı esasına göre tutulur."
+        },
+        {
+          "type": "item",
+          "label": "19.2",
+          "text": "Üye Kayıt Defteri: Derneğe üye olarak girenlerin kimlik bilgileri, derneğe giriş ve çıkış tarihleri bu deftere işlenir. Üyelerin ödedikleri giriş ve yıllık aidat miktarları bu deftere işlenir. Defter işletme hesabı esasına göre tutulur."
+        },
+        {
+          "type": "item",
+          "label": "19.3",
+          "text": "Evrak Kayıt Defteri: Gelen ve giden evraklar, tarih ve sıra numarası ile bu deftere kaydedilir. Gelen evrakın asılları ve giden evrakın kopyaları dosyalanır. Elektronik posta yoluyla gelen veya giden evraklar çıktısı alınmak suretiyle saklanır. Defter işletme hesabı esasına göre tutulur."
+        },
+        {
+          "type": "item",
+          "label": "19.4",
+          "text": "İşletme Hesabı Defteri: Dernek adına alınan gelirler ve yapılan giderler açık ve düzenli olarak bu deftere işlenir. Defter işletme hesabı esasına göre tutulur."
+        },
+        {
+          "type": "item",
+          "label": "19.5",
+          "text": "Bilanço esasına geçilmesi durumunda, Dernekler Yönetmeliği'nin Madde 32/b'de sayılan esaslar uygulanır."
+        }
+      ]
+    },
+    {
+      "id": "madde-20",
+      "label": "Madde 20",
+      "title": "Gelir ve Gider Belgeleri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Dernek gelirleri, (Dernekler Yönetmeliği Ek-17'de örneği bulunan) \"Alındı Belgesi\" ile tahsil edilir. Dernek gelirlerinin bankalar aracılığı ile tahsili halinde banka tarafından düzenlenen dekont veya hesap özeti gibi belgeler alındı belgesi yerine geçer."
+        },
+        {
+          "type": "p",
+          "text": "Dernek giderleri ise fatura, perakende satış fişi, serbest meslek makbuzu gibi harcama belgeleri ile yapılır. Ancak derneğin, Gelir Vergisi Kanunu'nun 94'üncü maddesi kapsamında bulunan ödemeleri için Vergi Usul Kanunu hükümlerine göre gider pusulası, bu kapsamda da bulunmayan ödemeleri için (Dernekler Yönetmeliği Ek-13'te örneği buluna) \"Gider Makbuzu\" veya \"Banka Dekontu\" gibi belgeler harcama belgesi olarak kullanılır."
+        },
+        {
+          "type": "p",
+          "text": "Dernek tarafından kişi, kurum veya kuruluşlara yapılacak bedelsiz mal ve hizmet teslimleri (Dernekler Yönetmeliği Ek-14'te örneği bulunan) \"Ayni Yardım Teslim Belgesi\" ile yapılır. Kişi, kurum veya kuruluşlar tarafından derneğe yapılacak bedelsiz mal ve hizmet teslimleri ise (Dernekler Yönetmeliği Ek-15'te örneği bulunan) \"Ayni Bağış Alındı Belgesi\" ile kabul edilir."
+        },
+        {
+          "type": "p",
+          "text": "Bu belgeler; Ek-13, Ek-14 ve Ek-15'te gösterilen biçim ve ebatta, müteselsil seri ve sıra numarası taşıyan, kendinden karbonlu elli asıl ve elli koçan yaprağından meydana gelen ciltler veya elektronik sistemler ve yazı makineleri aracılığıyla yazdırılacak form veya sürekli form şeklinde bastırılır. Form veya sürekli form şeklinde bastırılacak belgelerin, belirtilen nitelikte olması zorunludur."
+        },
+        {
+          "type": "h",
+          "text": "Alındı Belgeleri"
+        },
+        {
+          "type": "item",
+          "label": "a",
+          "text": "Dernek gelirlerinin tahsilinde kullanılacak \"Alındı Belgeleri\" (Dernekler Yönetmeliği Ek-17'de gösterilen biçim ve ebatta) Yönetim Kurulu kararıyla, matbaaya bastırılır."
+        },
+        {
+          "type": "item",
+          "label": "b",
+          "text": "Alındı belgelerinin bastırılması ve kontrolü, matbaadan teslim alınması, deftere kaydedilmesi, eski ve yeni saymanlar arasında devir teslimi ve alındı belgesi ile dernek adına gelir tahsil edecek kişi veya kişiler tarafından bu alındı belgelerinin kullanımına ve toplanılan gelirlerin teslimine ilişkin hususlarda Dernekler Yönetmeliğinin ilgili hükümlerine göre hareket edilir."
+        },
+        {
+          "type": "h",
+          "text": "Yetki Belgesi"
+        },
+        {
+          "type": "item",
+          "label": "a",
+          "text": "Yönetim Kurulu asıl üyeleri hariç, dernek adına gelir tahsil edecek kişi veya kişiler, yetki süresi de belirtilmek suretiyle, Yönetim Kurulu kararı ile tespit edilir. Gelir tahsil edecek kişilerin açık kimliği, imzası ve fotoğraflarını ihtiva eden (Dernekler Yönetmeliği Ek-19'da yer alan) \"Yetki Belgesi\" dernek tarafından iki nüsha olarak düzenlenerek, dernek Yönetim Kurulu başkanınca onaylanır. Yönetim Kurulu asıl üyeleri yetki belgesi olmadan gelir tahsil edebilir."
+        },
+        {
+          "type": "item",
+          "label": "b",
+          "text": "Yetki belgelerinin süresi Yönetim Kurulu tarafından üç yıl olarak belirlenir. Süresi biten yetki belgeleri birinci fıkraya göre yenilenir. Yetki belgesinin süresinin bitmesi veya adına yetki belgesi düzenlenen kişinin görevinden ayrılması, ölümü, işine veya görevine son verilmesi gibi hallerde, verilmiş olan yetki belgelerinin dernek Yönetim Kuruluna bir hafta içinde teslimi zorunludur. Ayrıca, gelir toplama yetkisi Yönetim Kurulu kararı ile her zaman iptal edilebilir.\""
+        },
+        {
+          "type": "h",
+          "text": "Gelir ve Gider Belgelerinin Saklama Süresi"
+        },
+        {
+          "type": "item",
+          "label": "a",
+          "text": "Defterler hariç olmak üzere, dernek tarafından kullanılan alındı belgeleri, harcama belgeleri ve diğer belgeler özel kanunlarda belirtilen süreler saklı kalmak üzere, kaydedildikleri defterlerdeki sayı ve tarih düzenine uygun olarak beş (5) yıl süreyle saklanır."
+        }
+      ]
+    },
+    {
+      "id": "madde-21",
+      "label": "Madde 21",
+      "title": "Beyanname Verilmesi",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Derneğin, bir önceki yıla ait faaliyetleri ile gelir ve gider işlemlerinin yıl sonu itibarıyla sonuçlarına ilişkin (Dernekler Yönetmeliği Ek-21'de bulunan) \"Dernek Beyannamesi\" dernek Yönetim Kurulu tarafından doldurarak, her takvim yılının ilk dört (4) ayı içinde dernek başkanı tarafından mahallin mülki idare amirliğine verilir."
+        }
+      ]
+    },
+    {
+      "id": "madde-22",
+      "label": "Madde 22",
+      "title": "Bildirim Yükümlülüğü",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Mülki amirliğe yapılacak bildirimler şu şekildedir."
+        },
+        {
+          "type": "h",
+          "text": "Genel Kurul Sonuç Bildirimi"
+        },
+        {
+          "type": "p",
+          "text": "Olağan veya olağanüstü Genel Kurul toplantılarını izleyen kırk beş gün içinde, Yönetim ve Denetim Kurulları ile diğer organlara seçilen asıl ve yedek üyeleri içeren ve Ek-3'te yer alan Genel Kurul Sonuç Bildirimi mülki idare amirliğine verilir. Genel Kurul toplantısında tüzük değişikliği yapılması halinde; Genel Kurul toplantı tutanağı, tüzüğün değişen maddelerinin eski ve yeni şekli, her sayfası Yönetim Kurulu üyelerinin salt çoğunluğunca imzalanmış dernek tüzüğünün son şekli, bu fıkrada belirtilen süre içinde mülki idare amirliğine verilir."
+        },
+        {
+          "type": "h",
+          "text": "Taşınmazların Bildirilmesi"
+        },
+        {
+          "type": "p",
+          "text": "Derneğin edindiği taşınmazlar tapuya tescilinden itibaren otuz (30) gün içinde (Dernekler Yönetmeliği Ek-26'da sunulan) \"Taşınmaz Mal Bildirimi\"ni doldurmak suretiyle mülki idare amirliğine bildirilir."
+        },
+        {
+          "type": "h",
+          "text": "Yurtdışından Yardım Alma Bildirimi"
+        },
+        {
+          "type": "p",
+          "text": "Dernek, Dernekler Kanunu'nun beşinci (5.) maddesi kapsamında faaliyet izni verilen yabancı dernekler ile yabancı vakıflar ve kâr amacı gütmeyen kuruluşlar, mülki idare amirliğine önceden bildirimde bulunmak Dernekler Yönetmeliği Ek-4/A'da belirtilen Yurtdışından Yardım Alma Bildirimini doldurup mülki idare amirliğine bildirimde bulunmak şartıyla yurt dışındaki kişi, kurum ve kuruluşlardan ayni ve nakdi yardım alabilir."
+        },
+        {
+          "type": "p",
+          "text": "Nakdi yardımların bankalar aracılığıyla alınması ve kullanılmadan önce bildirim şartının yerine getirilmesi zorunludur."
+        },
+        {
+          "type": "h",
+          "text": "Değişikliklerin Bildirilmesi"
+        },
+        {
+          "type": "p",
+          "text": "Derneğin yerleşim yerinde meydana gelen değişiklik (Dernekler Yönetmeliği Ek-24'te belirtilen) \"Yerleşim Yeri Değişiklik Bildirimi\"; Genel Kurul toplantısı dışında dernek organlarında meydana gelen değişiklikler (Dernekler Yönetmeliği Ek-25'te belirtilen) \"Dernek Organlarındaki Değişiklik Bildirimi\" doldurulmak suretiyle, değişikliği izleyen kırk beş gün içinde mülki idare amirliğine bildirilir."
+        },
+        {
+          "type": "p",
+          "text": "Dernek tüzüğünde yapılan değişiklikler de tüzük değişikliğinin yapıldığı Genel Kurul toplantısını izleyen otuz gün içinde, Genel Kurul sonuç bildirimi ekinde mülki idare amirliğine bildirilir."
+        }
+      ]
+    },
+    {
+      "id": "madde-23",
+      "label": "Madde 23",
+      "title": "Temsilcilik Açma",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Dernek, gerekli gördüğü yerlerde dernek faaliyetlerini yürütmek amacıyla Yönetim Kurulu kararıyla temsilcilik açabilir. Temsilciliğin adresi, Yönetim Kurulu kararıyla temsilci olarak görevlendirilen kişi veya kişiler tarafından o yerin mülkî idare amirliğine yazılı olarak bildirilir. Temsilcilik, dernek Genel Kurulunda temsil edilmez."
+        }
+      ]
+    },
+    {
+      "id": "madde-24",
+      "label": "Madde 24",
+      "title": "Derneğin İç Denetimi",
+      "blocks": [
+        {
+          "type": "item",
+          "label": "24.1",
+          "text": "Dernekte Genel Kurul, Yönetim Kurulu veya Denetim Kurulu tarafından iç denetim yapılabileceği gibi, Bağımsız Denetim Kuruluşlarına da denetim yaptırılabilir. Genel Kurul, Yönetim Kurulu veya Bağımsız Denetim Kuruluşlarınca denetim yapılmış olması, Denetim Kurulunun yükümlülüğünü ortadan kaldırmaz."
+        },
+        {
+          "type": "item",
+          "label": "24.2",
+          "text": "Denetim Kurulu tarafından en geç yılda bir defa derneğin denetimi gerçekleştirilir. Genel Kurul veya Yönetim Kurulu, gerek görülen hallerde denetim yapabilir veya Bağımsız Denetim Kuruluşlarına denetim yaptırabilir."
+        }
+      ]
+    },
+    {
+      "id": "madde-25",
+      "label": "Madde 25",
+      "title": "Derneğin Borçlanma Usulleri",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Dernek amacını gerçekleştirmek ve faaliyetlerini yürütebilmek için ihtiyaç duyulması halinde Yönetim Kurulu kararı ile borçlanma yapabilir. Bu borçlanma kredili mal ve hizmet alımı konularında olabileceği gibi nakit olarak da yapılabilir. Ancak bu borçlanma, derneğin gelir kaynakları ile karşılanamayacak miktarlarda ve derneği ödeme güçlüğüne düşürecek nitelikte yapılamaz."
+        }
+      ]
+    },
+    {
+      "id": "madde-26",
+      "label": "Madde 26",
+      "title": "Tüzüğün Ne Şekilde Değiştirileceği",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Tüzük değişikliği sadece Genel Kurul kararı ile yapılabilir."
+        },
+        {
+          "type": "item",
+          "label": "26.1",
+          "text": "Genel Kurulda tüzük değişikliği yapılabilmesi için Genel Kurula katılma hakkı bulunan üyelerin (üçte iki) 2/3 çoğunluğu aranır. Çoğunluğun sağlanamaması sebebiyle toplantının ertelenmesi durumunda ikinci toplantıda çoğunluk aranmaz. Ancak, bu toplantıya katılan üye sayısı, Yönetim ve Denetim Kurulları üye tam sayısının iki katından az olamaz."
+        },
+        {
+          "type": "item",
+          "label": "26.2",
+          "text": "Tüzük değişikliği için gerekli olan karar çoğunluğu toplantıya katılan ve oy kullanma hakkı bulunan üyelerin oylarının (üçte ikisi) 2/3'ü'dür. Genel Kurulda tüzük değişikliği oylaması açık olarak yapılır."
+        }
+      ]
+    },
+    {
+      "id": "madde-27",
+      "label": "Madde 27",
+      "title": "Derneğin Feshi ve Mal Varlığının Tasfiye Şekli",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Genel Kurul, her zaman derneğin feshine karar verebilir."
+        },
+        {
+          "type": "item",
+          "label": "27.1",
+          "text": "Genel Kurulda fesih konusunun görüşülebilmesi için Genel Kurula katılma hakkı bulunan üyelerin (üçte iki) 2/3 çoğunluğu aranır. Çoğunluğun sağlanamaması sebebiyle toplantının ertelenmesi durumunda ikinci toplantıda çoğunluk aranmaz. Ancak, bu toplantıya katılan üye sayısı, Yönetim ve Denetim Kurulları üye tam sayısının iki katından az olamaz."
+        },
+        {
+          "type": "item",
+          "label": "27.2",
+          "text": "Fesih kararının alınabilmesi için gerekli çoğunluk, toplantıya katılan ve oy kullanma hakkı bulunan üyelerin (üçte iki) 2/3'ü'dür. Genel Kurulda fesih kararı oylaması açık olarak yapılır."
+        },
+        {
+          "type": "h",
+          "text": "Tasfiye İşlemleri"
+        },
+        {
+          "type": "item",
+          "label": "27.3",
+          "text": "Genel Kurulca fesih kararı verildiğinde, derneğin para, mal ve haklarının tasfiyesi son yönetim Kurulu üyelerinden oluşan Tasfiye Kurulunca yapılır. Bu işlemlere, feshe ilişkin Genel Kurul kararının alındığı veya kendiliğinden sona erme halinin kesinleştiği tarihten itibaren başlanır. Tasfiye süresi içinde bütün işlemlerde dernek adında \"Tasfiye Halinde Afet Bilinci Eğitim ve Araştırma Derneği\" ibaresi kullanılır."
+        },
+        {
+          "type": "item",
+          "label": "27.4",
+          "text": "Tasfiye Kurulu, mevzuata uygun olarak derneğin para, mal ve haklarının tasfiyesi işlemlerini baştan sonuna kadar tamamlamakla görevli ve yetkilidir. Bu Kurul, önce derneğin hesaplarını inceler. İnceleme esnasında derneğe ait defterler, alındı belgeleri, harcama belgeleri, tapu ve banka kayıtları ile diğer belgelerinin tespiti yapılarak varlık ve yükümlülükleri bir tutanağa bağlanır. Tasfiye işlemleri sırasında derneğin alacaklılarına çağrıda bulunulur ve varsa malları paraya çevrilerek alacaklılara ödenir. Derneğin alacaklı olması durumunda alacaklar tahsil edilir. Alacakların tahsil edilmesi ve borçların ödenmesinden sonra kalan tüm para, mal ve hakları, Genel Kurulda belirlenen yere devredilir. Genel Kurulda, devredilecek yer belirtilmemişse derneğin bulunduğu ildeki amacına en yakın ve fesih edildiği tarihte en fazla üyeye sahip derneğe devredilir."
+        },
+        {
+          "type": "item",
+          "label": "27.5",
+          "text": "Tasfiyeye ilişkin tüm işlemler tasfiye tutanağında gösterilir ve tasfiye işlemleri, mülki idare amirliklerince haklı bir nedene dayanılarak verilen ek süreler hariç üç (3) ay içinde tamamlanır."
+        },
+        {
+          "type": "item",
+          "label": "27.6",
+          "text": "Derneğin para, mal ve haklarının tasfiye ve intikal işlemlerinin tamamlanmasını müteakip Tasfiye Kurulu tarafından durumun yedi (7) gün içinde bir yazı ile dernek merkezinin bulunduğu yerin mülki idare amirliğine bildirilmesi ve bu yazıya tasfiye tutanağının da eklenmesi zorunludur."
+        },
+        {
+          "type": "item",
+          "label": "27.7",
+          "text": "Derneğin defter ve belgelerini Tasfiye Kurulu sıfatıyla son Yönetim Kurulu üyeleri sağlamakla görevlidir. Bu görev, bir Yönetim Kurulu üyesine de verilebilir. Bu defter ve belgelerin saklanma süresi beş (5) yıldır."
+        }
+      ]
+    },
+    {
+      "id": "madde-28",
+      "label": "Madde 28",
+      "title": "Hüküm Eksikliği",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "Bu tüzükte belirtilmemiş hususlarda Dernekler Kanunu, Türk Medeni Kanunu ve bu Kanunlara atfen çıkarılmış olan Dernekler Yönetmeliği ve ilgili diğer mevzuatın dernekler hakkındaki hükümleri uygulanır."
+        }
+      ]
+    },
+    {
+      "id": "gecici-madde-1",
+      "label": "Geçici Madde 1",
+      "title": "",
+      "blocks": [
+        {
+          "type": "p",
+          "text": "İlk Genel Kurulda dernek organları oluşturulana kadar, derneği temsil edecek ve dernekle ilgili iş ve işlemleri yürütecek olan geçici Yönetim Kurulu üyeleri aşağıda belirtilmiştir."
+        },
+        {
+          "type": "table",
+          "head": [
+            "AD/SOYAD",
+            "Unvan"
+          ],
+          "rows": [
+            [
+              "Şefik Serkan Denli",
+              "Yönetim Kurulu Başkanı"
+            ],
+            [
+              "Murad Tiryakioğlu",
+              "Sayman"
+            ],
+            [
+              "Aslı Arslan",
+              "Yönetim Kurulu Üyesi"
+            ],
+            [
+              "Rıdvan Öner",
+              "Yönetim Kurulu Üyesi"
+            ],
+            [
+              "Aylin Şahin",
+              "Yönetim Kurulu Üyesi"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
 }

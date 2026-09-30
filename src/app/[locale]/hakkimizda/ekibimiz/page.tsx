@@ -12,7 +12,7 @@ import type { Board, TeamMember, TeamPageContent } from '@/types/content';
 // Hakkımızda › Ekibimiz
 const PATH = '/hakkimizda/ekibimiz';
 
-const BOARDS: Board[] = ['yonetim', 'denetim', 'etik'];
+const BOARDS: Board[] = ['yonetim', 'denetim', 'etik', 'uyeler'];
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/hakkimizda/ekibimiz'>): Promise<Metadata> {
   return pageMetadata(PATH, await resolveLocale(params));
@@ -26,7 +26,7 @@ export default async function OurTeamPage({ params }: PageProps<'/[locale]/hakki
     getCollection<TeamMember>('team-members', locale),
   ]);
 
-  // Kurullar sırayla; her kurulda önce asil, sonra yedek üyeler. Üyesi olmayan kurul gösterilmez.
+  // Kurullar sırayla, en sonda üyeler; her kurulda önce asil, sonra yedek üyeler. Boş grup gösterilmez.
   const boards = BOARDS.map((board) => ({
     board,
     label: page.boards[board],
