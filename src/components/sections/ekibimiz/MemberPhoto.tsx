@@ -10,28 +10,15 @@ interface MemberPhotoProps {
   className?: string;
 }
 
-/** "Murad Tiryakioğlu" → "MT" */
-function initials(name: string) {
-  const parts = name.trim().split(/\s+/);
-  return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toLocaleUpperCase('tr');
-}
-
 /**
- * Yuvarlak üye portresi. Fotoğraf yoksa bej zemin üstünde baş harfler (yer tutucu gibi
- * değil, bilinçli bir varsayılan). Fotoğraflar siyah-beyaz ve aynı kadrajda olmalı.
+ * Yuvarlak üye portresi. Fotoğraf yoksa boş bej yuvarlak durur (fotoğraf gelince dolar).
  */
 export function MemberPhoto({ name, photo, sizes, className }: MemberPhotoProps) {
   return (
     <div
       className={cn('relative aspect-square w-full overflow-hidden rounded-full bg-surface-muted', className)}
     >
-      {photo ? (
-        <Image src={photo} alt={name} fill sizes={sizes} className="object-cover" />
-      ) : (
-        <span aria-hidden className="absolute inset-0 grid place-items-center font-display text-4xl font-semibold text-muted">
-          {initials(name)}
-        </span>
-      )}
+      {photo && <Image src={photo} alt={name} fill sizes={sizes} className="object-cover" />}
     </div>
   );
 }

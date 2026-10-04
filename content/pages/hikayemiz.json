@@ -1,0 +1,67 @@
+{
+  "title": {
+    "tr": "Hikâyemiz",
+    "en": "Our Story"
+  },
+  "description": {
+    "tr": "2007'de bir üniversite topluluğu olarak başlayan hikâyemiz.",
+    "en": "Our story, from a university student club in 2007 to today."
+  },
+  "milestones": [
+    {
+      "year": "2007",
+      "title": {
+        "tr": "Akademi Arama Kurtarma Öğrenci Topluluğu",
+        "en": "Akademi Search and Rescue Student Club"
+      }
+    },
+    {
+      "year": "2011",
+      "title": {
+        "tr": "Van Depremi Dayanışma Tecrübesi",
+        "en": "Solidarity after the Van earthquake"
+      }
+    },
+    {
+      "year": "2013",
+      "title": {
+        "tr": "Sallanmadan Yaşama Projesi",
+        "en": "The Sallanmadan Yaşama (Living Without Shaking) project"
+      }
+    },
+    {
+      "year": "2013",
+      "title": {
+        "tr": "Afet Bilinci Derneği",
+        "en": "Afet Bilinci Derneği (Disaster Awareness Association)"
+      }
+    },
+    {
+      "year": "2016",
+      "title": {
+        "tr": "Afetlerle Kalkınma Platformu",
+        "en": "Development Through Disasters Platform"
+      }
+    },
+    {
+      "year": "2025",
+      "title": {
+        "tr": "Afet Bilinci Eğitim Araştırma Derneği",
+        "en": "Afet Bilinci Eğitim Araştırma Derneği (Disaster Awareness Education and Research Association)"
+      }
+    }
+  ],
+  "closing": {
+    "text": {
+      "tr": "Ve hikâye devam ediyor…",
+      "en": "And the story continues…"
+    },
+    "cta": {
+      "label": {
+        "tr": "Bu hikâyenin parçası olun",
+        "en": "Become part of the story"
+      },
+      "href": "/hakkimizda/uyelik-ve-gonulluluk"
+    }
+  }
+}

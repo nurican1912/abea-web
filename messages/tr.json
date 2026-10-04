@@ -62,7 +62,16 @@
     "headlinePlaceholder": "[Haber / röportaj başlığı]"
   },
   "Team": {
-    "close": "Kapat"
+    "close": "Kapat",
+    "bioComingSoon": "Özgeçmiş yakında eklenecek."
+  },
+  "Bylaws": {
+    "toc": "Maddeler ({count})",
+    "tocTitle": "Maddeler",
+    "tocLabel": "Tüzük maddeleri"
+  },
+  "Story": {
+    "photoSoon": "Fotoğraf eklenecek"
   },
   "Intro": {
     "skipHint": "Geçmek için dokunun"

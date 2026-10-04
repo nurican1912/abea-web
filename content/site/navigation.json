@@ -9,13 +9,6 @@
       "children": [
         {
           "label": {
-            "tr": "Yolculuğumuz",
-            "en": "Our Journey"
-          },
-          "href": "/hakkimizda/yolculugumuz"
-        },
-        {
-          "label": {
             "tr": "Ekibimiz",
             "en": "Our Team"
           },
@@ -64,6 +57,13 @@
           "href": "/hakkimizda/uyelik-ve-gonulluluk"
         }
       ]
+    },
+    {
+      "label": {
+        "tr": "Hikâyemiz",
+        "en": "Our Story"
+      },
+      "href": "/hikayemiz"
     },
     {
       "label": {
@@ -152,13 +152,6 @@
           "href": "/yayinlar/kutuphane"
         }
       ]
-    },
-    {
-      "label": {
-        "tr": "Hikâyeler",
-        "en": "Stories"
-      },
-      "href": "/hikayeler"
     },
     {
       "label": {

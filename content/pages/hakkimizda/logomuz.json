@@ -1,8 +1,225 @@
 {
-  "title": { "tr": "Logomuzun Hikâyesi", "en": "The Story of Our Logo" },
-  "description": {
-    "tr": "Logomuzun ardındaki fikir ve hikâye.",
-    "en": "The idea and the story behind our logo."
+  "title": {
+    "tr": "Logomuzun Hikâyesi",
+    "en": "The Story of Our Logo"
   },
-  "story": { "tr": "", "en": "" }
+  "description": {
+    "tr": "Logomuz, bir noktadan yayılan riskin bilinçle, hazırlıkla ve iş birliğiyle karşılandığı bir hikâye anlatıyor.",
+    "en": "Our logo tells the story of a risk that spreads from a single point and is met with awareness, preparedness and cooperation."
+  },
+  "sections": [
+    {
+      "id": "felsefe",
+      "part": "all",
+      "title": {
+        "tr": "Logomuzun Felsefesi",
+        "en": "The idea behind our logo"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "tr": "Logomuz, derneğimizin 2007'den bugüne uzanan yolculuğunu, amacını ve afetlerle ilgili yaklaşımını tek bir işarette topluyor. İlk bakışta küçük bir “d” harfi gibi görünüyorsa da yakından bakıldığında bir merkezden yayılan dalgalar ve bu dalgaları karşılayan sağlam, dikey bir yapı göze çarpıyor.",
+            "en": "Our logo brings our journey since 2007, our purpose and our approach to disasters together in a single mark. At first glance it looks like a small letter “d”, but look closer and you'll see waves spreading out from a centre, met by a solid, upright structure."
+          }
+        }
+      ]
+    },
+    {
+      "id": "nokta",
+      "part": "dot",
+      "title": {
+        "tr": "Merkezdeki nokta: Her şey bir noktadan başlar!",
+        "en": "The dot at the centre: everything starts from a single point"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "tr": "Logonun kalbindeki dolu nokta iki anlam taşıyor. Birincisi, riskin doğduğu anı temsil ediyor. İkincisi ve daha önemlisi, bireyi temsil ediyor.",
+            "en": "The solid dot at the heart of the logo has two meanings. The first is the moment a risk is born. The second, and more important, is the individual."
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "tr": "Farkındalık her zaman kişide başlar.",
+            "en": "Awareness always starts with a person."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "tr": "Derneğimizin hikâyesi de 2007'de Afyon Kocatepe Üniversitesi'nde bir grup gönüllü öğrencinin harekete geçmesiyle başladı.",
+            "en": "Our own story began the same way, in 2007, when a group of student volunteers at Afyon Kocatepe University decided to act."
+          }
+        }
+      ]
+    },
+    {
+      "id": "halkalar",
+      "part": "rings",
+      "title": {
+        "tr": "Yayılan halkalar: Bilinç büyüyerek çoğalır",
+        "en": "The spreading rings: awareness grows as it spreads"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "tr": "Noktayı çevreleyen iç içe halkalar, risklerin yayılan etkisini hatırlatır ve aynı zamanda bilginin ve bilincin çevreye aktarılmasını anlatıyor. Her halka bir sonraki düzeye geçişi simgeler: bireyden topluma, toplumdan kurumlara, kurumlardan ulusal ve sonrasında uluslararası platformlara…",
+            "en": "The rings around the dot are a reminder of how risks ripple outwards, and they also show knowledge and awareness being passed on. Each ring stands for the next step: from the individual to the community, from the community to institutions, and from institutions to national and then international platforms…"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "tr": "Tüzüğümüzün temelindeki bireysel, kurumsal ve toplumsal düzeyde davranış değişikliği hedefi bu halkalarda görünür hâle geliyor ve tek bir farkındalık adımı dalga dalga dirençli bir toplum kültürüne dönüşüyor.",
+            "en": "The goal at the core of our bylaws, changing behaviour at the individual, institutional and community level, becomes visible in these rings. A single step towards awareness spreads, wave after wave, into a culture of resilient communities."
+          }
+        }
+      ]
+    },
+    {
+      "id": "cizgiler",
+      "part": "lines",
+      "title": {
+        "tr": "Dikey çizgiler: Dirençli yapı",
+        "en": "The vertical lines: a resilient structure"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "tr": "Halkaların sağ yarısı, yukarıdan inen paralel dikey çizgilerle buluşuyor. Bu çizgiler hazırlığı, planlamayı ve kurumsal kapasiteyi, yani afetlerin etkisine dayanabilen toplumsal, ekonomik ve ekolojik yapıyı temsil ediyor.",
+            "en": "The right half of the rings meets parallel vertical lines coming down from above. These lines stand for preparedness, planning and institutional capacity: the social, economic and ecological structures that can withstand the impact of disasters."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "tr": "Dalgalar bu yapıya ulaştığında düzene giriyor! Hazırlıklı bir toplum riskleri öngörebilir, karşılayabilir ve yönetebilir. Kaostan düzene, kırılganlıktan dirençliliğe geçiş, eğrinin düz çizgiye dönüştüğü bu noktada ifade ediliyor.",
+            "en": "When the waves reach this structure, they fall into order! A prepared community can foresee risks, face them and manage them. The point where the curve turns into a straight line expresses the shift from chaos to order, and from fragility to resilience."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "tr": "Aşağı inip kıvrılan çizgiler ise köklerimizdeki arama kurtarma gönüllülüğünü ve birbirine bağlı, birbirini taşıyan insanları da hatırlatıyor.",
+            "en": "The lines that come down and curve round also recall our roots in search and rescue volunteering, and people who are connected to each other and hold each other up."
+          }
+        }
+      ]
+    },
+    {
+      "id": "d-harfi",
+      "part": "mark",
+      "title": {
+        "tr": "“d” harfi: dirençlilik, dayanışma, dönüşüm",
+        "en": "The letter “d”: resilience, solidarity, transformation"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "tr": "Halkalar ve çizgiler birleşerek küçük bir “d” harfi oluşturuyor. Bu harf derneğimizi tanımlayan kavramları taşıyor: dirençlilik, dayanışma, dönüşüm.",
+            "en": "Together, the rings and lines form a small letter “d”. It carries the ideas that define our association: dirençlilik, dayanışma and dönüşüm, which mean resilience, solidarity and transformation in Turkish."
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "tr": "Harfin küçük olması bilinçli bir tercih!",
+            "en": "Keeping the letter lowercase was a deliberate choice!"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "tr": "Tabandan gelen, gönüllülükle büyüyen, insana yakın ve erişilebilir bir yapıyı ifade ediyor…",
+            "en": "It stands for a grassroots organisation that grows through volunteering, stays close to people and is easy to reach…"
+          }
+        }
+      ]
+    },
+    {
+      "id": "renk",
+      "part": "all",
+      "title": {
+        "tr": "Renk: Güven ve berraklık",
+        "en": "Colour: trust and clarity"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "tr": "Logomuzun mavisi gökyüzünü, suyu ve iklimi, yani çalışma alanımızın doğrudan konusu olan doğayı hatırlatıyor. Mavi aynı zamanda güvenin, sakinliğin ve açıklığın rengi. Kriz anlarında paniğe değil soğukkanlılığa, belirsizliğe değil bilimsel ve kanıta dayalı bilgiye yaslanan duruşumuzu yansıtıyor.",
+            "en": "The blue of our logo recalls the sky, water and climate, in other words nature, which is at the centre of our work. Blue is also the colour of trust, calm and openness. It reflects how we act in a crisis: staying calm rather than giving in to panic, and relying on scientific, evidence-based knowledge rather than uncertainty."
+          }
+        }
+      ]
+    },
+    {
+      "id": "tipografi",
+      "part": "type",
+      "title": {
+        "tr": "Tipografi: Kavramdan yönteme",
+        "en": "Typography: from idea to method"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "tr": "Yazı karakterinin dik, sade ve güçlü formu okunabilirliği ve güvenilirliği öne çıkarıyor. Kelimeler bir hiyerarşi içinde dizildi:",
+            "en": "The upright, simple and strong typeface puts readability and reliability first. The words are arranged in a hierarchy:"
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "tr": "“Afet” en büyük puntoyla, ele aldığımız gerçeği olduğu gibi adlandırıyor.",
+            "en": "“Afet” (disaster), in the largest type, names the reality we deal with as it is."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "tr": "“Bilinci” bu gerçeğe verdiğimiz yanıtı gösteriyor.",
+            "en": "“Bilinci” (awareness) shows our response to that reality."
+          }
+        },
+        {
+          "type": "p",
+          "text": {
+            "tr": "“Eğitim” ve “Araştırma” ise bu yanıtı hayata geçirdiğimiz yöntemleri ifade ediyor.",
+            "en": "“Eğitim” (education) and “Araştırma” (research) are the methods we use to put that response into practice."
+          }
+        },
+        {
+          "type": "quote",
+          "text": {
+            "tr": "Okurken sorunla başlayıp çözüme doğru ilerliyoruz!",
+            "en": "Reading from top to bottom, we move from the problem towards the solution!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ozetle",
+      "part": "all",
+      "title": {
+        "tr": "Özetle",
+        "en": "In short"
+      },
+      "blocks": [
+        {
+          "type": "p",
+          "text": {
+            "tr": "Logomuz, bir noktadan yayılan riskin bilinçle, hazırlıkla ve iş birliğiyle karşılandığı bir hikâye anlatıyor. Bir avuç öğrencinin gönüllülüğüyle başlayan, çocuklardan iş dünyasına, yerelden ulusala ve uluslar ötesine uzanan bu yolculuk, her halkada biraz daha genişlemeye devam ediyor.",
+            "en": "Our logo tells the story of a risk that spreads from a single point and is met with awareness, preparedness and cooperation. It is a journey that began with a handful of student volunteers and has reached from children to the business world, and from local to national and international levels. With every ring, it keeps growing a little wider."
+          }
+        }
+      ]
+    }
+  ]
 }

@@ -96,19 +96,22 @@ interface SectionIntro {
   title: LocalizedText;
 }
 
-export type Board = 'yonetim' | 'denetim' | 'etik';
+/** `uyeler`: kurullarda görevi olmayan dernek üyeleri. */
+export type Board = 'yonetim' | 'denetim' | 'etik' | 'uyeler';
 
-/** Kurul üyesi (WEB.docx → Ekibimiz). */
+/** Kurul üyesi ya da dernek üyesi (WEB-son.docx → Ekibimiz). */
 export interface TeamMember {
   id: string;
   name: string;
   /** Akademik unvan (Doç. Dr.…) — isteğe bağlı. */
   title?: LocalizedText;
+  /** Şimdilik kurul görevi (ör. Yönetim Kurulu Yedek Üyesi); başkan, sayman gibi görevler netleşince yazılır. */
   role: LocalizedText;
   board: Board;
-  status: 'asil' | 'yedek';
+  /** Etik Kurulu ve üyelerde belirtilmedi. */
+  status?: 'asil' | 'yedek';
   bio?: LocalizedText;
-  /** Kare kırpılmış portre; yoksa baş harfler gösterilir. */
+  /** Kare kırpılmış portre; yoksa boş yuvarlak gösterilir. */
   photo?: string;
   links?: { label: LocalizedText; url: string }[];
 }
@@ -124,9 +127,68 @@ export interface Value {
   text: LocalizedText;
 }
 
+/** Hikâyemiz zaman çizelgesindeki bir dönüm noktası. Aynı yıla birden fazla girilebilir. */
+export interface Milestone {
+  year: string;
+  title: LocalizedText;
+  text?: LocalizedText;
+  /** Yoksa fotoğrafın yeri boş kutu olarak durur. */
+  photo?: string;
+  photoAlt?: LocalizedText;
+}
+
+export interface StoryPageContent extends PageContent {
+  milestones: Milestone[];
+  /** Zaman çizelgesinin sonundaki kapanış cümlesi ve çağrı. */
+  closing: { text: LocalizedText; cta: NavLink };
+}
+
+/** Logonun, okunan bölümde öne çıkan parçası (`all`: logonun tamamı). */
+export type LogoPart = 'all' | 'dot' | 'rings' | 'lines' | 'mark' | 'type';
+
+export interface LogoStoryBlock {
+  /** `quote`: bölümdeki vurgulu cümle */
+  type: 'p' | 'quote';
+  text: LocalizedText;
+}
+
+export interface LogoStoryPart {
+  id: string;
+  part: LogoPart;
+  title: LocalizedText;
+  blocks: LogoStoryBlock[];
+}
+
 export interface LogoPageContent extends PageContent {
-  /** Markdown. Boşsa "hazırlanıyor" gösterilir. */
-  story: LocalizedText;
+  sections: LogoStoryPart[];
+}
+
+/** Tüzük metninin bir parçası. Tüzük resmî belge olduğu için yalnızca Türkçedir. */
+export type BylawsBlock =
+  | { type: 'p'; text: string }
+  /** "Alındı Belgeleri" gibi madde içi ara başlık */
+  | { type: 'h'; text: string }
+  /** "12.4" ya da "a" gibi numaralı bent */
+  | { type: 'item'; label: string; text: string }
+  | { type: 'table'; head: string[]; rows: string[][] };
+
+export interface BylawsArticle {
+  /** Sayfa içi bağlantı: #madde-12 */
+  id: string;
+  label: string;
+  /** Geçici maddenin başlığı yok. */
+  title: string;
+  blocks: BylawsBlock[];
+}
+
+export interface BylawsPageContent extends PageContent {
+  approval: LocalizedText;
+  /** Türkçe sayfada boş; İngilizce sayfada "tüzük yalnızca Türkçedir" notu. */
+  languageNote: LocalizedText;
+  pdf: string;
+  pdfLabel: LocalizedText;
+  closing: string;
+  articles: BylawsArticle[];
 }
 
 export interface PublicationsPageContent extends PageContent {

@@ -1,3 +1,7 @@
+'use client';
+
+import { useLayoutEffect, useSyncExternalStore } from 'react';
+
 import { INTRO } from '@/config/intro';
 
 /*
@@ -36,6 +40,29 @@ try{
 }catch(e){}
 })();`;
 
+const subscribe = () => () => {};
+
+/**
+ * Betik yalnızca sunucudan gelen HTML'de bulunur; tarayıcı onu orada, sayfa
+ * çizilmeden çalıştırır. React sayfayı tarayıcıda yeniden kurduğunda (ör. dil
+ * değişiminde) betik oluşturulmaz: React'in tarayıcıda yarattığı <script>
+ * zaten çalışmaz ve "Encountered a script tag…" uyarısı verir. İşi ilk
+ * açılışta bittiği için yeniden çalışması da gerekmez.
+ */
 export function IntroBootScript() {
-  return <script dangerouslySetInnerHTML={{ __html: script }} />;
+  // Sunucuda ve ilk eşleştirmede (hydration) true, tarayıcıdaki her yeni kurulumda false.
+  const fromServer = useSyncExternalStore(
+    subscribe,
+    () => false,
+    () => true,
+  );
+
+  // Dil değişiminde React <html>'i yeniden kurar ve betiğin eklediği `js` sınıfı
+  // silinir; betik de yeniden çalışmaz. Sınıfı çizimden önce geri koy — yoksa
+  // `.js`'e bağlı hareketler (logo çizimi, Hikâyemiz girişleri) çalışmaz.
+  useLayoutEffect(() => {
+    document.documentElement.classList.add('js');
+  }, []);
+
+  return fromServer ? <script dangerouslySetInnerHTML={{ __html: script }} /> : null;
 }

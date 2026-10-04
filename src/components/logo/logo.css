@@ -32,6 +32,27 @@
 .js .logo-draw [data-part='word-clip'] { transform: scaleX(0); }
 .js .logo-draw [data-part='word'] { opacity: 0; }
 
+/* ---- Logomuzun Hikâyesi: okunan bölümün anlattığı parça öne çıkar ------- */
+
+/* Çizim animasyonu yalnızca çizgi ofsetini, noktanın ölçeğini ve kelimelerin
+   opaklığını sürer; burada yalnızca parçaların (ve kelime grubunun) opaklığı
+   değiştiği için ikisi çakışmaz. */
+.logo-focus :is([data-part='thin'], [data-part='thick'], [data-part='dot'], [data-part='wordmark']) {
+  transition: opacity 0.5s ease;
+}
+
+.logo-focus[data-focus='dot'] :is([data-part='thin'], [data-part='thick'], [data-part='wordmark']),
+.logo-focus[data-focus='rings'] :is([data-part='thick'], [data-part='wordmark']),
+.logo-focus[data-focus='lines'] :is([data-part='thin'], [data-part='dot'], [data-part='wordmark']),
+.logo-focus[data-focus='mark'] [data-part='wordmark'],
+.logo-focus[data-focus='type'] :is([data-part='thin'], [data-part='thick'], [data-part='dot']) {
+  opacity: 0.14;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-focus [data-part] { transition: none; }
+}
+
 /* ---- Açılış katmanı ------------------------------------------------------ */
 
 .logo-intro {

@@ -7,8 +7,8 @@
       "en": "Assoc. Prof."
     },
     "role": {
-      "tr": "Yönetim Kurulu Başkanı",
-      "en": "Chair of the Board"
+      "tr": "Yönetim Kurulu Üyesi",
+      "en": "Board Member"
     },
     "board": "yonetim",
     "status": "asil",
@@ -26,5 +26,245 @@
         "url": "http://tiryakioglu.org/"
       }
     ]
+  },
+  {
+    "id": "serkan-denli",
+    "name": "Ş. Serkan Denli",
+    "role": {
+      "tr": "Yönetim Kurulu Üyesi",
+      "en": "Board Member"
+    },
+    "board": "yonetim",
+    "status": "asil",
+    "photo": "/images/team/serkan-denli.jpg"
+  },
+  {
+    "id": "ceren-suntekin",
+    "name": "Ceren Suntekin",
+    "role": {
+      "tr": "Yönetim Kurulu Üyesi",
+      "en": "Board Member"
+    },
+    "board": "yonetim",
+    "status": "asil",
+    "photo": "/images/team/ceren-suntekin.jpg"
+  },
+  {
+    "id": "yilmaz-ulkutas",
+    "name": "Yılmaz Ülkütaş",
+    "role": {
+      "tr": "Yönetim Kurulu Üyesi",
+      "en": "Board Member"
+    },
+    "board": "yonetim",
+    "status": "asil"
+  },
+  {
+    "id": "gizem-ogutcu-ulas",
+    "name": "Gizem Öğütçü Ulaş",
+    "role": {
+      "tr": "Yönetim Kurulu Üyesi",
+      "en": "Board Member"
+    },
+    "board": "yonetim",
+    "status": "asil",
+    "photo": "/images/team/gizem-ogutcu-ulas.jpg"
+  },
+  {
+    "id": "ezgi-arslan-demirtas",
+    "name": "Ezgi Arslan Demirtaş",
+    "role": {
+      "tr": "Yönetim Kurulu Yedek Üyesi",
+      "en": "Alternate Board Member"
+    },
+    "board": "yonetim",
+    "status": "yedek",
+    "photo": "/images/team/ezgi-arslan-demirtas.jpg"
+  },
+  {
+    "id": "yeliz-erkoc-kok",
+    "name": "Yeliz Erkoç Kök",
+    "role": {
+      "tr": "Yönetim Kurulu Yedek Üyesi",
+      "en": "Alternate Board Member"
+    },
+    "board": "yonetim",
+    "status": "yedek",
+    "photo": "/images/team/yeliz-erkoc-kok.jpg"
+  },
+  {
+    "id": "serdar-gulbahar",
+    "name": "Serdar Gülbahar",
+    "role": {
+      "tr": "Yönetim Kurulu Yedek Üyesi",
+      "en": "Alternate Board Member"
+    },
+    "board": "yonetim",
+    "status": "yedek",
+    "photo": "/images/team/serdar-gulbahar.jpg"
+  },
+  {
+    "id": "orkun-dogan",
+    "name": "Orkun Doğan",
+    "role": {
+      "tr": "Yönetim Kurulu Yedek Üyesi",
+      "en": "Alternate Board Member"
+    },
+    "board": "yonetim",
+    "status": "yedek",
+    "photo": "/images/team/orkun-dogan.jpg"
+  },
+  {
+    "id": "dalya-hazar",
+    "name": "Dalya Hazar",
+    "role": {
+      "tr": "Yönetim Kurulu Yedek Üyesi",
+      "en": "Alternate Board Member"
+    },
+    "board": "yonetim",
+    "status": "yedek",
+    "photo": "/images/team/dalya-hazar.jpg"
+  },
+  {
+    "id": "hande-sogancilar",
+    "name": "Hande Soğancılar",
+    "role": {
+      "tr": "Denetim Kurulu Üyesi",
+      "en": "Audit Board Member"
+    },
+    "board": "denetim",
+    "status": "asil",
+    "photo": "/images/team/hande-sogancilar.jpg"
+  },
+  {
+    "id": "eda-emil-sever",
+    "name": "Eda Emil Sever",
+    "role": {
+      "tr": "Denetim Kurulu Üyesi",
+      "en": "Audit Board Member"
+    },
+    "board": "denetim",
+    "status": "asil",
+    "photo": "/images/team/eda-emil-sever.jpg"
+  },
+  {
+    "id": "ridvan-oner",
+    "name": "Rıdvan Öner",
+    "role": {
+      "tr": "Denetim Kurulu Üyesi",
+      "en": "Audit Board Member"
+    },
+    "board": "denetim",
+    "status": "asil",
+    "photo": "/images/team/ridvan-oner.jpg"
+  },
+  {
+    "id": "hakan-polat",
+    "name": "Hakan Polat",
+    "role": {
+      "tr": "Denetim Kurulu Yedek Üyesi",
+      "en": "Alternate Audit Board Member"
+    },
+    "board": "denetim",
+    "status": "yedek",
+    "photo": "/images/team/hakan-polat.jpg"
+  },
+  {
+    "id": "kezban-karaboga",
+    "name": "Kezban Karaboğa",
+    "role": {
+      "tr": "Denetim Kurulu Yedek Üyesi",
+      "en": "Alternate Audit Board Member"
+    },
+    "board": "denetim",
+    "status": "yedek",
+    "photo": "/images/team/kezban-karaboga.jpg"
+  },
+  {
+    "id": "kerim-ozcan",
+    "name": "Kerim Özcan",
+    "role": {
+      "tr": "Denetim Kurulu Yedek Üyesi",
+      "en": "Alternate Audit Board Member"
+    },
+    "board": "denetim",
+    "status": "yedek",
+    "photo": "/images/team/kerim-ozcan.jpg"
+  },
+  {
+    "id": "eda-tanoglu",
+    "name": "Eda Tanoğlu",
+    "role": {
+      "tr": "Etik Kurulu Üyesi",
+      "en": "Ethics Board Member"
+    },
+    "board": "etik",
+    "photo": "/images/team/eda-tanoglu.jpg"
+  },
+  {
+    "id": "saba-yagci",
+    "name": "Saba Yağcı",
+    "role": {
+      "tr": "Etik Kurulu Üyesi",
+      "en": "Ethics Board Member"
+    },
+    "board": "etik"
+  },
+  {
+    "id": "asli-albayrak",
+    "name": "Aslı Albayrak",
+    "role": {
+      "tr": "Etik Kurulu Üyesi",
+      "en": "Ethics Board Member"
+    },
+    "board": "etik",
+    "photo": "/images/team/asli-albayrak.jpg"
+  },
+  {
+    "id": "ceyla-altindis",
+    "name": "Ceyla Altındiş",
+    "role": {
+      "tr": "Etik Kurulu Yedek Üyesi",
+      "en": "Alternate Ethics Board Member"
+    },
+    "board": "etik",
+    "status": "yedek",
+    "photo": "/images/team/ceyla-altindis.jpg"
+  },
+  {
+    "id": "saba-yildiz",
+    "name": "Saba Yıldız",
+    "role": {
+      "tr": "Dernek Üyesi",
+      "en": "Member"
+    },
+    "board": "uyeler"
+  },
+  {
+    "id": "asli-saban",
+    "name": "Aslı Saban",
+    "role": {
+      "tr": "Dernek Üyesi",
+      "en": "Member"
+    },
+    "board": "uyeler"
+  },
+  {
+    "id": "r-gizem-senoglu",
+    "name": "R. Gizem Şenoğlu",
+    "role": {
+      "tr": "Dernek Üyesi",
+      "en": "Member"
+    },
+    "board": "uyeler"
+  },
+  {
+    "id": "huseyin-atli",
+    "name": "Hüseyin Atlı",
+    "role": {
+      "tr": "Dernek Üyesi",
+      "en": "Member"
+    },
+    "board": "uyeler"
   }
 ]

@@ -135,10 +135,14 @@ export function TeamAccordion({ members }: TeamAccordionProps) {
                     className="mx-auto max-w-48 md:mx-0"
                   />
                   <div>
-                    <p className="text-[0.9375rem] text-muted">{open.title}</p>
+                    {open.title && <p className="text-[0.9375rem] text-muted">{open.title}</p>}
                     <h3 className="font-display text-3xl leading-tight font-semibold sm:text-4xl">{open.name}</h3>
                     <p className="mt-1 font-semibold text-primary">{open.role}</p>
-                    {open.bio && <p className="mt-5 max-w-[65ch] text-ink/80">{open.bio}</p>}
+                    {open.bio ? (
+                      <p className="mt-5 max-w-[65ch] text-ink/80">{open.bio}</p>
+                    ) : (
+                      <p className="mt-5 text-muted">{t('bioComingSoon')}</p>
+                    )}
                     {open.links && open.links.length > 0 && (
                       <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
                         {open.links.map((link) => (

@@ -6,25 +6,18 @@ Cevaplanan soru "Cevap" satırı doldurularak işaretlenir: `[x]`.
 
 ## Açık sorular
 
-### 2. [ ] "Hikâyemiz" tarzı kaydırmalı zaman çizelgesi nereye?
+### 3. [ ] Hikâyemiz: her yıl için metin ve fotoğraf
 
-Hayata Destek'in [hikayemiz.hayatadestek.org](https://hikayemiz.hayatadestek.org/) sayfasındaki gibi yıl yıl ilerleyen bir sayfa. Kaydırırken yıl ekranın kenarında sabit durur, her yılda fotoğraf ve metin yer alır.
+Zaman çizelgesi WEB-son.docx'teki 6 dönüm noktasıyla kuruldu; her birinin altında fotoğraf yeri boş duruyor:
 
-- A) **Hakkımızda › Yolculuğumuz** *(önerimiz: menüdeki adla birebir örtüşüyor)*
-- B) **Hikâyeler**
-
-Cevap:
-
-### 3. [ ] Zaman çizelgesi için içerik
-
-Gönderdiğiniz arka plan metnindeki dönüm noktaları şunlar:
-
-- 2007: Akademi Arama Kurtarma Topluluğu
+- 2007: Akademi Arama Kurtarma Öğrenci Topluluğu
+- 2011: Van Depremi Dayanışma Tecrübesi
+- 2013: Sallanmadan Yaşama Projesi
 - 2013: Afet Bilinci Derneği
-- 2013: "Geleceğimiz Sadece Salıncakta Sallansın" projesi
-- 2025: yeniden yapılanma
+- 2016: Afetlerle Kalkınma Platformu
+- 2025: Afet Bilinci Eğitim Araştırma Derneği
 
-Eklemek istediğiniz başka yıllar var mı? Her yıl için fotoğraf paylaşabilir misiniz?
+Her yıl için 1–3 cümlelik kısa bir metin ve bir fotoğraf (yatay, en az 1600 px genişlik) paylaşabilir misiniz? Eklemek istediğiniz başka yıllar var mı?
 
 Cevap:
 
@@ -55,21 +48,27 @@ Cevap:
 
 Cevap:
 
-### 9. [ ] Çalışmalarımız menüsü: 4 mü, 6 mı?
+### 9. [ ] Çalışmalarımız: hangi başlıklar kalacak?
 
-Topbar görselinde Çalışmalarımız altında 4 başlık vardı. WEB.docx'teki çalışma alanlarından ikisi daha menüye eklendi; **şu an 6 başlık var:**
+Sitede şu an 6 başlık var (menü, ana sayfa kartları ve alan sayfaları bunlarla):
 
 1. Afet Risk Azaltma Farkındalık Çalışmaları
 2. İş Dünyası Afet Farkındalık Çalışmaları
 3. Okul Öncesi Afet Farkındalık Çalışmaları
 4. Kurumsal Afet Gönüllülüğü Çalışmaları
-5. **Araştırma, Politika ve Savunuculuk** *(yeni)*
-6. **Acil Durum Hazırlığı ve İyileşme** *(yeni)*
+5. Araştırma, Politika ve Savunuculuk
+6. Acil Durum Hazırlığı ve İyileşme
 
-- A) **6 başlık kalsın**
-- B) **İlk 4'e dönülsün** (topbar görselindeki gibi)
+WEB-son.docx'te ise menüdeki ilk 4 başlık silinmiş; "Çalışmalar" tablosunda alt konularıyla şu 6 alan var:
 
-Ana sayfadaki 6 çalışma kartı bu başlıkların aynısını taşıyor (sondaki "Çalışmaları" kelimesi olmadan) ve her biri kendi sayfasına gidiyor. 4'e dönülürse kartlar da 4'e iner.
+1. **İş Dünyası ve Kurumsal Dayanıklılık:** KOBİ dayanıklılığı, iş sürekliliği ve kurumsal hazırlık, tedarik zinciri ve risk bilgili yatırım, kurumsal afet gönüllülüğü
+2. **Okul Güvenliği ve Afet Eğitimi:** okul öncesi, okullar ve öğretmenler, gençlik ve üniversiteler
+3. **İklim ve Afet Riskleri:** risk ve kırılganlık; iklim, afet ve göç; erken uyarı ve erken eylem; kapsayıcı afet risk azaltma
+4. **Yerel ve Toplumsal Dayanıklılık:** belediyeler, mahalle ve toplum temelli çalışmalar, toplumsal farkındalık ve dijital içerik, toplum gönüllülüğü
+5. **Araştırma, Politika ve Savunuculuk:** araştırmalar ve veri, risk algısı, bilim–politika–toplum arayüzü, savunuculuk
+6. **Acil Durum Hazırlığı ve İyileşme:** acil durum planları, tatbikatlar, daha iyiye inşa
+
+Menüde, ana sayfa kartlarında ve alan sayfalarında hangi başlıklar kullanılsın? Yeni 6 alana geçilirse alt konular her alanın sayfasında listelenir.
 
 Cevap:
 
@@ -82,14 +81,32 @@ Cevap:
 
 Cevap:
 
-### 11. [ ] Ekibimiz sayfası — kurul üyelerinin bilgileri
+### 11. [ ] Ekibimiz sayfası: görevler, biyografiler, fotoğraflar
 
-Tasarım seçildi (bkz. Cevaplananlar #11b). Şimdilik yalnızca Murad Tiryakioğlu girildi. Her kurul üyesi için:
+WEB-son.docx'teki 24 kişi eklendi (Yönetim, Denetim ve Etik Kurulu ile Üyeler). Altlarında şimdilik yalnızca kurul üyelikleri yazıyor.
 
-- **Fotoğraf:** aynı stilde (siyah-beyaz, aynı kadraj, düz arka plan), en az 800×800 px, **kırpılmamış özgün hâli**
-- **Görev:** Başkan, Başkan Yardımcısı, Sayman, Genel Sekreter, Üye…
-- **Kısa biyografi** (3–4 cümle) ve isteğe bağlı bağlantı (LinkedIn / kişisel site) — kişilerin onayıyla
-- Murad Tiryakioğlu'nun biyografisi internetteki kaynaklardan (İletişim Yayınları, STGM) derlendi; kendisinin onayı alınmalı. Görevi "Yönetim Kurulu Başkanı" olarak yazıldı, doğru mu?
+- **Görevler:** Başkan, Başkan Yardımcısı, Sayman, Genel Sekreter kimler? Tüzükteki geçici listede başkan Ş. Serkan Denli, sayman Murad Tiryakioğlu görünüyor.
+- **Etik Kurulu:** 4 kişiden hangileri asil, hangileri yedek? (Tüzüğe göre 3 asil + 3 yedek.)
+- **Biyografiler:** Her kişi için 3–4 cümle ve isteğe bağlı bağlantı (LinkedIn / kişisel site), kişilerin onayıyla. Şimdilik yalnızca Murad Tiryakioğlu'nunki var (internetten derlendi, onayı alınmalı); diğerlerinde "Özgeçmiş yakında eklenecek." yazıyor.
+- **Fotoğraflar:** 12 kişinin fotoğrafı var, 12 kişinin yok. Gelenler küçük (260 px); bir kısmı renkli, bir kısmı siyah-beyaz. Ezgi Arslan Demirtaş'ınki zaten yuvarlak kesilmiş, Hüseyin Atlı'nınki gece çekilmiş bir boy fotoğrafı. Mümkünse hepsinin en az 800×800 px, kırpılmamış hâli; tek tip olması için hepsi siyah-beyaza çevrilebilir mi?
+
+Cevap:
+
+### 15. [ ] Resmî ad: "ve" var mı?
+
+Tüzükte ad **"Afet Bilinci Eğitim ve Araştırma Derneği"** yazıyor. Sitede, logoda ve Hikâyemiz'in 2025 maddesinde ise **"Afet Bilinci Eğitim Araştırma Derneği"**. Sitede hangisi kullanılsın?
+
+Cevap:
+
+### 16. [ ] "Sallanmadan Yaşama" ile "Salıncak" aynı proje mi?
+
+Hikâyemiz'deki 2013 maddesi **"Sallanmadan Yaşama Projesi"**; ana sayfadaki öne çıkan proje ise **"Geleceğimiz Sadece Salıncakta Sallansın"** (2013). Aynı proje mi? Ana sayfadaki ad düzeltilsin mi?
+
+Cevap:
+
+### 17. [ ] Paydaşlarımız alt başlıkları
+
+WEB-son.docx'te Paydaşlarımız altında yalnızca **Kurumsal İş Birlikleri ve Paydaşlıklar** ile **Medya İş Birlikleri ve Paydaşlıklar** var. Sitede bunlara ek olarak **Fon Sağlayıcılar** da var (Paydaşlarımız.pdf'ten). Kalsın mı?
 
 Cevap:
 
@@ -100,6 +117,10 @@ Cevap:
 ### 1. [x] Topbar'daki logo
 
 Cevap: **Sembol + yazı** (tam logo). Açılış animasyonunda da logo yazısıyla birlikte köşeye kayıyor.
+
+### 2. [x] "Hikâyemiz" tarzı kaydırmalı zaman çizelgesi nereye?
+
+Cevap: **Üst menüde ayrı bir başlık: Hikâyemiz** (Hakkımızda'dan hemen sonra). Menü: Hakkımızda · Hikâyemiz · Çalışmalarımız · Yayınlar · Paydaşlarımız. Hakkımızda altındaki **Yolculuğumuz** kaldırıldı; "Hikâyeler" başlığı Hikâyemiz oldu.
 
 ### 4. [x] Hakkımızda menüsüne "Biz Kimiz" eklensin mi?
 

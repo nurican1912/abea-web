@@ -62,7 +62,16 @@
     "headlinePlaceholder": "[Article / interview headline]"
   },
   "Team": {
-    "close": "Close"
+    "close": "Close",
+    "bioComingSoon": "Bio coming soon."
+  },
+  "Bylaws": {
+    "toc": "Articles ({count})",
+    "tocTitle": "Articles",
+    "tocLabel": "Articles of the bylaws"
+  },
+  "Story": {
+    "photoSoon": "Photo coming soon"
   },
   "Intro": {
     "skipHint": "Tap to skip"
