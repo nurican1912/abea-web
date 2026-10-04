@@ -50,5 +50,18 @@
         "en": "Afet Bilinci Eğitim Araştırma Derneği (Disaster Awareness Education and Research Association)"
       }
     }
-  ]
+  ],
+  "closing": {
+    "text": {
+      "tr": "Ve hikâye devam ediyor…",
+      "en": "And the story continues…"
+    },
+    "cta": {
+      "label": {
+        "tr": "Bu hikâyenin parçası olun",
+        "en": "Become part of the story"
+      },
+      "href": "/hakkimizda/uyelik-ve-gonulluluk"
+    }
+  }
 }

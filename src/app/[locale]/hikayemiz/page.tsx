@@ -21,7 +21,7 @@ export default async function OurStoryPage({ params }: PageProps<'/[locale]/hika
   return (
     <>
       <PageHeader title={page.title} description={page.description} />
-      <StoryTimeline milestones={page.milestones} />
+      <StoryTimeline milestones={page.milestones} closing={page.closing} />
     </>
   );
 }

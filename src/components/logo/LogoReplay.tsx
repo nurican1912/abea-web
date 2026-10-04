@@ -4,7 +4,6 @@ import { RotateCcw } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useCallback, useEffect, useRef } from 'react';
 
-import { outlineButton } from '@/components/ui/styles';
 import { INTRO } from '@/config/intro';
 import { cn } from '@/lib/cn';
 import type { LogoPart } from '@/types/content';
@@ -73,13 +72,18 @@ export function LogoReplay({ label, focus = 'all', logoClassName = 'w-[min(560px
       <div ref={wrapRef} data-focus={focus} className={cn('logo-draw logo-focus text-brand', logoClassName)}>
         <AbeaLogo variant="full" animated idPrefix="abea-replay" label={label} className="h-auto w-full overflow-visible" />
       </div>
+      {/* Yalnızca simge: yuvarlak, ince çerçeveli; üzerine gelince turkuaz çerçeve ve ok geriye döner. */}
       <button
         type="button"
         onClick={() => void play()}
-        className={outlineButton}
+        aria-label={t('replay')}
+        title={t('replay')}
+        className="group inline-flex size-11 shrink-0 items-center justify-center rounded-full border border-line bg-surface text-primary transition-colors hover:border-brand"
       >
-        <RotateCcw aria-hidden className="size-4" />
-        {t('replay')}
+        <RotateCcw
+          aria-hidden
+          className="size-[1.125rem] transition-transform duration-500 ease-out group-hover:-rotate-180 group-active:-rotate-[360deg] motion-reduce:transition-none"
+        />
       </button>
     </div>
   );

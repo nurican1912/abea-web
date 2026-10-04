@@ -139,6 +139,8 @@ export interface Milestone {
 
 export interface StoryPageContent extends PageContent {
   milestones: Milestone[];
+  /** Zaman çizelgesinin sonundaki kapanış cümlesi ve çağrı. */
+  closing: { text: LocalizedText; cta: NavLink };
 }
 
 /** Logonun, okunan bölümde öne çıkan parçası (`all`: logonun tamamı). */

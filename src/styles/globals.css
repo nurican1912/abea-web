@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import "../components/logo/logo.css";
 @import "../components/work-areas/work-areas.css";
+@import "../components/sections/hikayemiz/story.css";
 
 /*
  * Tasarım değişkenleri — renkler ve yazı tipleri yalnızca burada tanımlanır.

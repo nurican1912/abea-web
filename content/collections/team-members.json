@@ -89,7 +89,8 @@
       "en": "Alternate Board Member"
     },
     "board": "yonetim",
-    "status": "yedek"
+    "status": "yedek",
+    "photo": "/images/team/yeliz-erkoc-kok.jpg"
   },
   {
     "id": "serdar-gulbahar",
@@ -110,7 +111,8 @@
       "en": "Alternate Board Member"
     },
     "board": "yonetim",
-    "status": "yedek"
+    "status": "yedek",
+    "photo": "/images/team/orkun-dogan.jpg"
   },
   {
     "id": "dalya-hazar",
@@ -164,7 +166,8 @@
       "en": "Alternate Audit Board Member"
     },
     "board": "denetim",
-    "status": "yedek"
+    "status": "yedek",
+    "photo": "/images/team/hakan-polat.jpg"
   },
   {
     "id": "kezban-karaboga",
@@ -174,7 +177,8 @@
       "en": "Alternate Audit Board Member"
     },
     "board": "denetim",
-    "status": "yedek"
+    "status": "yedek",
+    "photo": "/images/team/kezban-karaboga.jpg"
   },
   {
     "id": "kerim-ozcan",
@@ -184,7 +188,8 @@
       "en": "Alternate Audit Board Member"
     },
     "board": "denetim",
-    "status": "yedek"
+    "status": "yedek",
+    "photo": "/images/team/kerim-ozcan.jpg"
   },
   {
     "id": "eda-tanoglu",
@@ -193,7 +198,8 @@
       "tr": "Etik Kurulu Üyesi",
       "en": "Ethics Board Member"
     },
-    "board": "etik"
+    "board": "etik",
+    "photo": "/images/team/eda-tanoglu.jpg"
   },
   {
     "id": "saba-yagci",
@@ -211,16 +217,19 @@
       "tr": "Etik Kurulu Üyesi",
       "en": "Ethics Board Member"
     },
-    "board": "etik"
+    "board": "etik",
+    "photo": "/images/team/asli-albayrak.jpg"
   },
   {
     "id": "ceyla-altindis",
     "name": "Ceyla Altındiş",
     "role": {
-      "tr": "Etik Kurulu Üyesi",
-      "en": "Ethics Board Member"
+      "tr": "Etik Kurulu Yedek Üyesi",
+      "en": "Alternate Ethics Board Member"
     },
-    "board": "etik"
+    "board": "etik",
+    "status": "yedek",
+    "photo": "/images/team/ceyla-altindis.jpg"
   },
   {
     "id": "saba-yildiz",
@@ -229,8 +238,7 @@
       "tr": "Dernek Üyesi",
       "en": "Member"
     },
-    "board": "uyeler",
-    "photo": "/images/team/saba-yildiz.jpg"
+    "board": "uyeler"
   },
   {
     "id": "asli-saban",
@@ -257,7 +265,6 @@
       "tr": "Dernek Üyesi",
       "en": "Member"
     },
-    "board": "uyeler",
-    "photo": "/images/team/huseyin-atli.jpg"
+    "board": "uyeler"
   }
 ]

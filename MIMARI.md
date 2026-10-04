@@ -152,7 +152,7 @@ big-site-1/
     │   ├── sections/                 # sayfaya özel bölümler, sayfa adıyla gruplanır
     │   │   ├── home/                 # HomeHero, ...
     │   │   ├── ekibimiz/             # TeamAccordion, MemberPhoto
-    │   │   ├── hikayemiz/            # StoryTimeline (yıl yıl kaydırmalı zaman çizelgesi)
+    │   │   ├── hikayemiz/            # StoryTimeline, StoryTree, story.css ("ağaç": ortada gövde, sağlı sollu dallar)
     │   │   ├── logomuz/              # LogoStorySection (okunan bölüme göre logonun parçası öne çıkar)
     │   │   ├── tuzugumuz/            # BylawsText, BylawsToc
     │   │   └── ...
