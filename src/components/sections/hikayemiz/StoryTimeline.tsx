@@ -24,7 +24,7 @@ function Rings({ className }: { className: string }) {
 }
 
 /**
- * Hikâyemiz — koyu lacivert sahnede "ağaç" zaman çizelgesi (bkz. StoryTree),
+ * Hikâyemiz — koyu lacivert sahnede iki yanlı zaman çizelgesi (bkz. StoryTree),
  * sonunda logo ve katılım çağrısı.
  */
 export async function StoryTimeline({ milestones, closing }: StoryTimelineProps) {
@@ -39,7 +39,7 @@ export async function StoryTimeline({ milestones, closing }: StoryTimelineProps)
         <StoryTree milestones={milestones} photoSoon={t('photoSoon')} />
 
         {/* Gövdenin ucu: logo — hikâye bugüne bağlanır. */}
-        <div className="flex flex-col items-start pt-10 pl-12 lg:items-center lg:pt-16 lg:pl-0 lg:text-center">
+        <div className="flex flex-col items-start pt-14 pl-9 lg:items-center lg:pt-24 lg:pl-0 lg:text-center">
           <AbeaLogo variant="mark" idPrefix="abea-story" className="h-24 w-auto text-brand lg:h-32" />
           <p className="mt-6 font-display text-[clamp(1.75rem,3.5vw,2.75rem)] leading-tight font-semibold text-balance">
             {closing.text}

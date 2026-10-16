@@ -4,14 +4,18 @@ import { ArrowUpRight, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Fragment, useEffect, useId, useRef, useState, useSyncExternalStore } from 'react';
 
+import { LinkedInIcon } from '@/components/ui/LinkedInIcon';
 import { cn } from '@/lib/cn';
-import type { Localized, TeamMember } from '@/types/content';
+import type { Localized, PersonProfile } from '@/types/content';
 
-import { MemberPhoto } from './MemberPhoto';
+import { PersonPhoto } from './PersonPhoto';
 
-interface TeamAccordionProps {
-  members: Localized<TeamMember>[];
+interface PersonAccordionProps {
+  people: Localized<PersonProfile>[];
 }
+
+/** LinkedIn bağlantıları yazı yerine logoyla gösterilir. */
+const LINKEDIN = /^https?:\/\/([a-z0-9-]+\.)*linkedin\.com\//i;
 
 /*
  * Satırdaki kişi sayısı — aşağıdaki `grid-cols-*` sınıflarıyla AYNI kırılımlar.
@@ -36,11 +40,12 @@ function useColumns() {
 }
 
 /**
- * Tasarım 1 — yuvarlak portreler; ad ve görev her zaman görünür. Portreye
- * tıklayınca o satırın altında, satır genişliğinde bir bilgi paneli açılır
- * (Ogilvy'deki gibi). Tek seferde bir panel açık kalır; Esc kapatır.
+ * Kişi kartları — Ekibimiz ve Danışma Kurulumuz ortak kullanır. Yuvarlak
+ * portreler; ad ve altındaki satır (görev ya da kurum) her zaman görünür.
+ * Portreye tıklayınca o satırın altında, satır genişliğinde bir bilgi paneli
+ * açılır (Ogilvy'deki gibi). Tek seferde bir panel açık kalır; Esc kapatır.
  */
-export function TeamAccordion({ members }: TeamAccordionProps) {
+export function PersonAccordion({ people }: PersonAccordionProps) {
   const t = useTranslations('Team');
   const uid = useId();
   const columns = useColumns();
@@ -71,8 +76,8 @@ export function TeamAccordion({ members }: TeamAccordionProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [openId]);
 
-  const rows = Array.from({ length: Math.ceil(members.length / columns) }, (_, i) =>
-    members.slice(i * columns, i * columns + columns),
+  const rows = Array.from({ length: Math.ceil(people.length / columns) }, (_, i) =>
+    people.slice(i * columns, i * columns + columns),
   );
 
   return (
@@ -95,7 +100,7 @@ export function TeamAccordion({ members }: TeamAccordionProps) {
                     onClick={() => setOpenId(expanded ? null : member.id)}
                     className="group flex w-full flex-col items-center text-center"
                   >
-                    <MemberPhoto
+                    <PersonPhoto
                       name={member.name}
                       photo={member.photo}
                       sizes="(min-width: 1024px) 11rem, 40vw"
@@ -106,7 +111,7 @@ export function TeamAccordion({ members }: TeamAccordionProps) {
                       )}
                     />
                     <span className="mt-5 font-display text-xl leading-tight font-semibold">{member.name}</span>
-                    <span className="mt-1 text-[0.9375rem] text-ink/75">{member.role}</span>
+                    {member.role && <span className="mt-1 text-[0.9375rem] text-balance text-ink/75">{member.role}</span>}
                   </button>
                 </li>
               );
@@ -128,7 +133,7 @@ export function TeamAccordion({ members }: TeamAccordionProps) {
                     className="absolute -top-[7px] size-3 -translate-x-1/2 rotate-45 border-t border-l border-line bg-surface"
                     style={{ left: `${((openIndex + 0.5) / columns) * 100}%` }}
                   />
-                  <MemberPhoto
+                  <PersonPhoto
                     name={open.name}
                     photo={open.photo}
                     sizes="12rem"
@@ -137,25 +142,44 @@ export function TeamAccordion({ members }: TeamAccordionProps) {
                   <div>
                     {open.title && <p className="text-[0.9375rem] text-muted">{open.title}</p>}
                     <h3 className="font-display text-3xl leading-tight font-semibold sm:text-4xl">{open.name}</h3>
-                    <p className="mt-1 font-semibold text-primary">{open.role}</p>
+                    {open.role && <p className="mt-1 font-semibold text-balance text-primary">{open.role}</p>}
                     {open.bio ? (
-                      <p className="mt-5 max-w-[65ch] text-ink/80">{open.bio}</p>
+                      // Özgeçmişte paragraflar boş satırla ayrılır.
+                      <div className="mt-5 max-w-[65ch] space-y-4 text-ink/80">
+                        {open.bio.split(/\n{2,}/).map((paragraph) => (
+                          <p key={paragraph}>{paragraph}</p>
+                        ))}
+                      </div>
                     ) : (
                       <p className="mt-5 text-muted">{t('bioComingSoon')}</p>
                     )}
                     {open.links && open.links.length > 0 && (
-                      <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                      <ul className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
                         {open.links.map((link) => (
                           <li key={link.url}>
-                            <a
-                              href={link.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex min-h-11 items-center gap-1.5 font-semibold underline decoration-brand decoration-2 underline-offset-4 hover:decoration-ink"
-                            >
-                              {link.label}
-                              <ArrowUpRight aria-hidden className="size-4" />
-                            </a>
+                            {LINKEDIN.test(link.url) ? (
+                              // Yalnızca logo: yuvarlak, ince çerçeveli; "Tekrar oynat" simgesiyle aynı dil.
+                              <a
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={t('linkedin', { name: open.name })}
+                                title="LinkedIn"
+                                className="inline-flex size-11 items-center justify-center rounded-full border border-line bg-surface text-primary transition-colors hover:border-brand"
+                              >
+                                <LinkedInIcon className="size-5" />
+                              </a>
+                            ) : (
+                              <a
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex min-h-11 items-center gap-1.5 font-semibold underline decoration-brand decoration-2 underline-offset-4 hover:decoration-ink"
+                              >
+                                {link.label}
+                                <ArrowUpRight aria-hidden className="size-4" />
+                              </a>
+                            )}
                           </li>
                         ))}
                       </ul>

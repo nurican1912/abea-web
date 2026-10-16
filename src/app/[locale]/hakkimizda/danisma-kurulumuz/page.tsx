@@ -1,11 +1,14 @@
 import type { Metadata } from 'next';
 
-import { PlaceholderPage } from '@/components/layout/PlaceholderPage';
+import { PersonAccordion } from '@/components/people/PersonAccordion';
+import { Container } from '@/components/ui/Container';
+import { PageHeader } from '@/components/ui/PageHeader';
 import { resolveLocale } from '@/i18n/locale';
-import { getPage } from '@/lib/content';
+import { getCollection, getPage, getParents } from '@/lib/content';
 import { pageMetadata } from '@/lib/seo';
+import type { Advisor } from '@/types/content';
 
-// Danışma Kurulumuz
+// Hakkımızda › Danışma Kurulumuz
 const PATH = '/hakkimizda/danisma-kurulumuz';
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/hakkimizda/danisma-kurulumuz'>): Promise<Metadata> {
@@ -14,7 +17,28 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/hakkimiz
 
 export default async function AdvisoryBoardPage({ params }: PageProps<'/[locale]/hakkimizda/danisma-kurulumuz'>) {
   const locale = await resolveLocale(params);
-  const page = await getPage(PATH, locale);
+  const [page, parents, advisors] = await Promise.all([
+    getPage(PATH, locale),
+    getParents(PATH, locale),
+    getCollection<Advisor>('advisory-board', locale),
+  ]);
 
-  return <PlaceholderPage path={PATH} locale={locale} page={page} />;
+  // Ekibimiz'deki kartların aynısı: adın altında görev yerine kurum; LinkedIn varsa panelde logosu.
+  // Sıra içerik dosyasındaki sıradır (ada göre alfabetik).
+  const people = advisors.map(({ institution, linkedin, ...advisor }) => ({
+    ...advisor,
+    role: institution,
+    links: linkedin ? [{ label: 'LinkedIn', url: linkedin }] : undefined,
+  }));
+
+  return (
+    <>
+      <PageHeader title={page.title} description={page.description} parents={parents} />
+      <div className="bg-surface-soft">
+        <Container className="py-12 sm:py-16">
+          <PersonAccordion people={people} />
+        </Container>
+      </div>
+    </>
+  );
 }

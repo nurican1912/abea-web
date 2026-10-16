@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { cn } from '@/lib/cn';
 
-interface MemberPhotoProps {
+interface PersonPhotoProps {
   name: string;
   photo?: string;
   /** next/image için yaklaşık görüntülenme genişliği. */
@@ -11,9 +11,9 @@ interface MemberPhotoProps {
 }
 
 /**
- * Yuvarlak üye portresi. Fotoğraf yoksa boş bej yuvarlak durur (fotoğraf gelince dolar).
+ * Yuvarlak portre. Fotoğraf yoksa boş bej yuvarlak durur (fotoğraf gelince dolar).
  */
-export function MemberPhoto({ name, photo, sizes, className }: MemberPhotoProps) {
+export function PersonPhoto({ name, photo, sizes, className }: PersonPhotoProps) {
   return (
     <div
       className={cn('relative aspect-square w-full overflow-hidden rounded-full bg-surface-muted', className)}

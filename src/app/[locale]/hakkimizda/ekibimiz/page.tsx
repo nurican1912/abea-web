@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-import { TeamAccordion } from '@/components/sections/ekibimiz/TeamAccordion';
+import { PersonAccordion } from '@/components/people/PersonAccordion';
 import { Container } from '@/components/ui/Container';
 import { PageHeader } from '@/components/ui/PageHeader';
 import { sectionTitle } from '@/components/ui/styles';
@@ -48,7 +48,7 @@ export default async function OurTeamPage({ params }: PageProps<'/[locale]/hakki
                 {group.label}
               </h2>
               <div className="mt-8">
-                <TeamAccordion members={group.members} />
+                <PersonAccordion people={group.members} />
               </div>
             </section>
           ))}

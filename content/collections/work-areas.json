@@ -1,39 +1,107 @@
 [
   {
     "id": "01",
-    "icon": "community",
+    "icon": "skyscraper",
     "title": {
-      "tr": "Afet Risk Azaltma Farkındalık",
-      "en": "Disaster Risk Reduction Awareness"
+      "tr": "İş Dünyası ve Kurumsal Dayanıklılık",
+      "en": "Business and Corporate Resilience"
     },
-    "href": "/calismalarimiz/afet-risk-azaltma"
+    "href": "/calismalarimiz/is-dunyasi-ve-kurumsal-dayaniklilik",
+    "topics": [
+      {
+        "tr": "KOBİ Dayanıklılığı",
+        "en": "SME resilience"
+      },
+      {
+        "tr": "İş Sürekliliği ve Kurumsal Hazırlık",
+        "en": "Business continuity and corporate preparedness"
+      },
+      {
+        "tr": "Tedarik Zinciri ve Risk Bilgili Yatırım",
+        "en": "Supply chains and risk-informed investment"
+      },
+      {
+        "tr": "Kurumsal Afet Gönüllülüğü",
+        "en": "Corporate disaster volunteering"
+      }
+    ]
   },
   {
     "id": "02",
-    "icon": "skyscraper",
+    "icon": "school",
     "title": {
-      "tr": "İş Dünyası Afet Farkındalık",
-      "en": "Disaster Awareness for Businesses"
+      "tr": "Okul Güvenliği ve Afet Eğitimi",
+      "en": "School Safety and Disaster Education"
     },
-    "href": "/calismalarimiz/is-dunyasi"
+    "href": "/calismalarimiz/okul-guvenligi-ve-afet-egitimi",
+    "topics": [
+      {
+        "tr": "Okul Öncesi",
+        "en": "Early childhood"
+      },
+      {
+        "tr": "Okullar ve Öğretmenler",
+        "en": "Schools and teachers"
+      },
+      {
+        "tr": "Gençlik ve Üniversiteler",
+        "en": "Youth and universities"
+      }
+    ]
   },
   {
     "id": "03",
-    "icon": "school",
+    "icon": "climate",
     "title": {
-      "tr": "Okul Öncesi Afet Farkındalık",
-      "en": "Disaster Awareness in Early Childhood"
+      "tr": "İklim ve Afet Riskleri",
+      "en": "Climate and Disaster Risks"
     },
-    "href": "/calismalarimiz/okul-oncesi"
+    "href": "/calismalarimiz/iklim-ve-afet-riskleri",
+    "topics": [
+      {
+        "tr": "Risk ve Kırılganlık",
+        "en": "Risk and vulnerability"
+      },
+      {
+        "tr": "İklim, Afet ve Göç",
+        "en": "Climate, disasters and migration"
+      },
+      {
+        "tr": "Erken Uyarı ve Erken Eylem",
+        "en": "Early warning and early action"
+      },
+      {
+        "tr": "Kapsayıcı Afet Risk Azaltma",
+        "en": "Inclusive disaster risk reduction"
+      }
+    ]
   },
   {
     "id": "04",
-    "icon": "volunteering",
+    "icon": "community",
     "title": {
-      "tr": "Kurumsal Afet Gönüllülüğü",
-      "en": "Corporate Disaster Volunteering"
+      "tr": "Yerel ve Toplumsal Dayanıklılık",
+      "en": "Local and Community Resilience"
     },
-    "href": "/calismalarimiz/kurumsal-gonulluluk"
+    "href": "/calismalarimiz/yerel-ve-toplumsal-dayaniklilik",
+    "topics": [
+      {
+        "tr": "Belediyeler",
+        "en": "Municipalities"
+      },
+      {
+        "tr": "Mahalle ve Toplum Temelli Çalışmalar",
+        "en": "Neighbourhood and community-based work"
+      },
+      {
+        "tr": "Toplumsal Farkındalık ve Dijital İçerik",
+        "en": "Public awareness and digital content"
+      },
+      {
+        "tr": "Toplum Gönüllülüğü",
+        "en": "Community volunteering"
+      }
+    ]
   },
   {
     "id": "05",
@@ -42,7 +110,25 @@
       "tr": "Araştırma, Politika ve Savunuculuk",
       "en": "Research, Policy and Advocacy"
     },
-    "href": "/calismalarimiz/arastirma-politika-savunuculuk"
+    "href": "/calismalarimiz/arastirma-politika-savunuculuk",
+    "topics": [
+      {
+        "tr": "Araştırmalar ve Veri",
+        "en": "Research and data"
+      },
+      {
+        "tr": "Risk Algısı",
+        "en": "Risk perception"
+      },
+      {
+        "tr": "Bilim–Politika–Toplum Arayüzü",
+        "en": "The science–policy–society interface"
+      },
+      {
+        "tr": "Savunuculuk",
+        "en": "Advocacy"
+      }
+    ]
   },
   {
     "id": "06",
@@ -51,6 +137,20 @@
       "tr": "Acil Durum Hazırlığı ve İyileşme",
       "en": "Emergency Preparedness and Recovery"
     },
-    "href": "/calismalarimiz/acil-durum-hazirligi"
+    "href": "/calismalarimiz/acil-durum-hazirligi",
+    "topics": [
+      {
+        "tr": "Acil Durum Planları",
+        "en": "Emergency plans"
+      },
+      {
+        "tr": "Tatbikatlar",
+        "en": "Drills"
+      },
+      {
+        "tr": "Daha İyiye İnşa",
+        "en": "Building back better"
+      }
+    ]
   }
 ]

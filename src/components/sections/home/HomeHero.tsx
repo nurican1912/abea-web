@@ -1,11 +1,10 @@
-import { ArrowDown } from 'lucide-react';
-
 import { AbeaLogo } from '@/components/logo/AbeaLogo';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Container } from '@/components/ui/Container';
 import type { NavLinkView } from '@/lib/content';
 
 import { ABOUT_ID } from './AboutSection';
+import { ScrollCue } from './ScrollCue';
 
 interface HomeHeroProps {
   title: string;
@@ -16,7 +15,7 @@ interface HomeHeroProps {
 
 /**
  * Ana sayfanın ilk ekranı: slogan + tanıtım + "Hakkımızda →".
- * Altta ortada küçük bir aşağı ok, hemen sonraki bölüme (Biz kimiz) kaydırır.
+ * Altta ortada aşağı ok, hemen sonraki bölüme (Biz kimiz) kaydırır.
  */
 export function HomeHero({ title, lead, aboutLink, scrollHint }: HomeHeroProps) {
   return (
@@ -39,14 +38,7 @@ export function HomeHero({ title, lead, aboutLink, scrollHint }: HomeHeroProps) 
         </ButtonLink>
       </Container>
 
-      {/* Aşağı ok — "devamı var" ipucu; hareket azaltma tercihinde durur. */}
-      <a
-        href={`#${ABOUT_ID}`}
-        aria-label={scrollHint}
-        className="absolute bottom-4 left-1/2 inline-flex size-11 -translate-x-1/2 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-ink hover:text-ink"
-      >
-        <ArrowDown aria-hidden className="size-5 motion-safe:animate-nudge" />
-      </a>
+      <ScrollCue href={`#${ABOUT_ID}`} label={scrollHint} />
     </section>
   );
 }

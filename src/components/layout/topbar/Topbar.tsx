@@ -2,30 +2,19 @@
 
 import { Menu, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import { useCallback, useState, useSyncExternalStore } from 'react';
+import { useCallback, useState } from 'react';
 
 import { Container } from '@/components/ui/Container';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { cn } from '@/lib/cn';
 import type { NavigationView } from '@/lib/content';
+import { useScrolled } from '@/lib/use-scrolled';
 
 import { DesktopNav } from './DesktopNav';
 import { LanguageSwitch } from './LanguageSwitch';
 import { MOBILE_MENU_ID, MobileMenu } from './MobileMenu';
 import { TopbarLogo } from './TopbarLogo';
 import { useMenuState } from './use-menu-state';
-
-/** Sayfa biraz kaydırılınca topbar'ın altına ince bir gölge düşer. */
-function useScrolled(threshold = 8) {
-  return useSyncExternalStore(
-    (onChange) => {
-      window.addEventListener('scroll', onChange, { passive: true });
-      return () => window.removeEventListener('scroll', onChange);
-    },
-    () => window.scrollY > threshold,
-    () => false,
-  );
-}
 
 /**
  * Sitenin üst çubuğu.
@@ -40,6 +29,7 @@ export function Topbar({ navigation }: { navigation: NavigationView }) {
   const menu = useMenuState();
   const [mobileOpen, setMobileOpen] = useState(false);
   const closeMobile = useCallback(() => setMobileOpen(false), []);
+  // Sayfa biraz kaydırılınca topbar'ın altına ince bir gölge düşer.
   const scrolled = useScrolled();
 
   return (

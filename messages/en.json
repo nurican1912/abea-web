@@ -63,7 +63,8 @@
   },
   "Team": {
     "close": "Close",
-    "bioComingSoon": "Bio coming soon."
+    "bioComingSoon": "Bio coming soon.",
+    "linkedin": "{name} on LinkedIn (opens in a new tab)"
   },
   "Bylaws": {
     "toc": "Articles ({count})",
@@ -72,6 +73,13 @@
   },
   "Story": {
     "photoSoon": "Photo coming soon"
+  },
+  "WorkArea": {
+    "topicsEyebrow": "In this area",
+    "topicsTitle": "What do we work on?",
+    "soon": "More about our work in this area is coming soon.",
+    "othersTitle": "Our other areas of work",
+    "cardLink": "Explore our work"
   },
   "Intro": {
     "skipHint": "Tap to skip"
