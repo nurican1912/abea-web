@@ -63,7 +63,8 @@
   },
   "Team": {
     "close": "Kapat",
-    "bioComingSoon": "Özgeçmiş yakında eklenecek."
+    "bioComingSoon": "Özgeçmiş yakında eklenecek.",
+    "linkedin": "{name} – LinkedIn profili (yeni sekmede açılır)"
   },
   "Bylaws": {
     "toc": "Maddeler ({count})",
@@ -72,6 +73,13 @@
   },
   "Story": {
     "photoSoon": "Fotoğraf eklenecek"
+  },
+  "WorkArea": {
+    "topicsEyebrow": "Bu alanda",
+    "topicsTitle": "Neler üzerinde çalışıyoruz?",
+    "soon": "Bu alandaki çalışmalarımızın ayrıntıları yakında eklenecek.",
+    "othersTitle": "Diğer çalışma alanlarımız",
+    "cardLink": "Çalışmaları inceleyin"
   },
   "Intro": {
     "skipHint": "Geçmek için dokunun"

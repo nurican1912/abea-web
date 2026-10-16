@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 
-import { PlaceholderPage } from '@/components/layout/PlaceholderPage';
+import { WorkAreaPage } from '@/components/sections/calismalarimiz/WorkAreaPage';
 import { resolveLocale } from '@/i18n/locale';
-import { getPage } from '@/lib/content';
 import { pageMetadata } from '@/lib/seo';
 
 // Çalışmalarımız › Acil Durum Hazırlığı ve İyileşme
@@ -13,8 +12,5 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/calismal
 }
 
 export default async function EmergencyPreparednessPage({ params }: PageProps<'/[locale]/calismalarimiz/acil-durum-hazirligi'>) {
-  const locale = await resolveLocale(params);
-  const page = await getPage(PATH, locale);
-
-  return <PlaceholderPage path={PATH} locale={locale} page={page} />;
+  return <WorkAreaPage path={PATH} locale={await resolveLocale(params)} />;
 }

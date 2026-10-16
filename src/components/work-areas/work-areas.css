@@ -2,12 +2,12 @@
  * Çalışma alanı kartları — üzerine gelince (ya da klavye odağında):
  *   1) kart renklenir
  *   2) ikonun nesnesi logo gibi baştan çizilir
- *   3) episantr belirir, şok halkası yayılır (logo açılışındaki gibi)
+ *   3) episantr (okulda güneş) belirir, şok halkası yayılır (logo açılışındaki gibi)
  *   4) dalgalar episantrdan dışa doğru büyüyerek sırayla gelir
  * Hareket azaltma tercihinde ve dokunmatik ekranda yalnızca renk değişir (dokunmatikte basınca).
  */
 
-/* pathLength=1: "1 2" deseniyle çizgi normalde tam görünür */
+/* "1 2" deseniyle çizgi normalde tam görünür (pathLength ve çizim hızı: WorkAreaIcon.tsx) */
 .area-icon__draw {
   stroke-dasharray: 1 2;
   stroke-dashoffset: 0;
@@ -34,13 +34,50 @@
   animation: area-pop 0.45s cubic-bezier(0.2, 0.9, 0.25, 1.25) 0.3s both;
 }
 
+/* Halkada başlangıç karesi önceden uygulanmaz (forwards): beklerken noktanın yerinde görünmesin. */
 .area-card:is(:hover, :focus-visible) .area-icon__ripple {
-  animation: area-ripple 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s both;
+  animation: area-ripple 1s cubic-bezier(0.4, 0, 0.2, 1) 0.4s forwards;
 }
 
 .area-card:is(:hover, :focus-visible) .area-icon__wave {
   animation: area-wave 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
   animation-delay: calc(0.5s + var(--i) * 0.16s);
+}
+
+/*
+ * Kendiliğinden oynayan çizim — alan sayfasının başındaki büyük ikon.
+ * Kart üzerine gelmeyi beklemez; sayfa açılınca bir kez, biraz daha yavaş oynar.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .area-icon--auto .area-icon__draw {
+    animation: area-draw 1.6s cubic-bezier(0.33, 0, 0.12, 1) 0.25s both;
+  }
+
+  .area-icon--auto .area-icon__dot {
+    animation: area-pop 0.45s cubic-bezier(0.2, 0.9, 0.25, 1.25) 0.9s both;
+  }
+
+  .area-icon--auto .area-icon__ripple {
+    animation: area-ripple 1s cubic-bezier(0.4, 0, 0.2, 1) 1s forwards;
+  }
+
+  .area-icon--auto .area-icon__wave {
+    animation: area-wave 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(1.2s + var(--i) * 0.2s);
+  }
+}
+
+/* Alan sayfasındaki alt konu kartları sırayla, hafifçe yükselerek belirir. */
+@media (prefers-reduced-motion: no-preference) {
+  .area-topic {
+    animation: area-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(0.35s + var(--i) * 0.09s);
+  }
+}
+
+@keyframes area-rise {
+  from { opacity: 0; transform: translateY(0.75rem); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes area-draw {

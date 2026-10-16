@@ -74,31 +74,31 @@
       "children": [
         {
           "label": {
-            "tr": "Afet Risk Azaltma Farkındalık Çalışmaları",
-            "en": "Disaster Risk Reduction Awareness"
+            "tr": "İş Dünyası ve Kurumsal Dayanıklılık",
+            "en": "Business and Corporate Resilience"
           },
-          "href": "/calismalarimiz/afet-risk-azaltma"
+          "href": "/calismalarimiz/is-dunyasi-ve-kurumsal-dayaniklilik"
         },
         {
           "label": {
-            "tr": "İş Dünyası Afet Farkındalık Çalışmaları",
-            "en": "Disaster Awareness for Businesses"
+            "tr": "Okul Güvenliği ve Afet Eğitimi",
+            "en": "School Safety and Disaster Education"
           },
-          "href": "/calismalarimiz/is-dunyasi"
+          "href": "/calismalarimiz/okul-guvenligi-ve-afet-egitimi"
         },
         {
           "label": {
-            "tr": "Okul Öncesi Afet Farkındalık Çalışmaları",
-            "en": "Disaster Awareness in Early Childhood"
+            "tr": "İklim ve Afet Riskleri",
+            "en": "Climate and Disaster Risks"
           },
-          "href": "/calismalarimiz/okul-oncesi"
+          "href": "/calismalarimiz/iklim-ve-afet-riskleri"
         },
         {
           "label": {
-            "tr": "Kurumsal Afet Gönüllülüğü Çalışmaları",
-            "en": "Corporate Disaster Volunteering"
+            "tr": "Yerel ve Toplumsal Dayanıklılık",
+            "en": "Local and Community Resilience"
           },
-          "href": "/calismalarimiz/kurumsal-gonulluluk"
+          "href": "/calismalarimiz/yerel-ve-toplumsal-dayaniklilik"
         },
         {
           "label": {

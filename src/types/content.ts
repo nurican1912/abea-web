@@ -99,21 +99,40 @@ interface SectionIntro {
 /** `uyeler`: kurullarda görevi olmayan dernek üyeleri. */
 export type Board = 'yonetim' | 'denetim' | 'etik' | 'uyeler';
 
-/** Kurul üyesi ya da dernek üyesi (WEB-son.docx → Ekibimiz). */
-export interface TeamMember {
+/** Açılır kişi kartının (PersonAccordion) gösterdiği alanlar — Ekibimiz ve Danışma Kurulumuz ortak kullanır. */
+export interface PersonProfile {
   id: string;
   name: string;
   /** Akademik unvan (Doç. Dr.…) — isteğe bağlı. */
   title?: LocalizedText;
-  /** Şimdilik kurul görevi (ör. Yönetim Kurulu Yedek Üyesi); başkan, sayman gibi görevler netleşince yazılır. */
+  /** Adın altındaki satır: ekipte kurul görevi, danışma kurulunda kurum. Boş olabilir. */
   role: LocalizedText;
-  board: Board;
-  /** Etik Kurulu ve üyelerde belirtilmedi. */
-  status?: 'asil' | 'yedek';
+  /** Paragraflar boş satırla ayrılır. Yoksa "yakında eklenecek" gösterilir. */
   bio?: LocalizedText;
   /** Kare kırpılmış portre; yoksa boş yuvarlak gösterilir. */
   photo?: string;
+  /** LinkedIn bağlantıları logoyla, diğerleri yazıyla gösterilir. */
   links?: { label: LocalizedText; url: string }[];
+}
+
+/** Kurul üyesi ya da dernek üyesi (WEB-son.docx → Ekibimiz). */
+export interface TeamMember extends PersonProfile {
+  /** Şimdilik kurul görevi `role`'de (ör. Yönetim Kurulu Yedek Üyesi); başkan, sayman gibi görevler netleşince yazılır. */
+  board: Board;
+  /** Etik Kurulu ve üyelerde belirtilmedi. */
+  status?: 'asil' | 'yedek';
+}
+
+/** Danışma kurulu üyesi (Danışma Kurulu Özgeçmişler.docx). */
+export interface Advisor {
+  id: string;
+  name: string;
+  /** Kurum ya da görev; birden fazlaysa " · " ile ayrılır. Yazılmamışsa boş. */
+  institution: LocalizedText;
+  /** Paragraflar boş satırla ayrılır. */
+  bio: LocalizedText;
+  photo?: string;
+  linkedin?: string;
 }
 
 export interface TeamPageContent extends PageContent {
@@ -247,18 +266,17 @@ export interface MembershipPageContent extends PageContent {
 /* Koleksiyonlar (content/collections/) — ileride CMS koleksiyonu / DB tablosu */
 /* -------------------------------------------------------------------------- */
 
-export type WorkAreaIconName = 'community' | 'skyscraper' | 'school' | 'volunteering' | 'research' | 'shield';
+export type WorkAreaIconName = 'skyscraper' | 'school' | 'climate' | 'community' | 'research' | 'shield';
 
-/**
- * Çalışma alanı = Çalışmalarımız alt sayfası. Başlık menüdeki adın sondaki
- * "Çalışmaları" kelimesi atılmış hâlidir (o kelime kartın bağlantısında ortak).
- */
+/** Çalışma alanı = Çalışmalarımız alt sayfası (WEB-son.docx → Çalışmalar). Adı menüdekiyle aynıdır. */
 export interface WorkArea {
   id: string;
   icon: WorkAreaIconName;
   title: LocalizedText;
   /** Kartın ("Çalışmaları inceleyin") gideceği Çalışmalarımız alt sayfası. */
   href: AppPathname;
+  /** Alanın alt konuları — alan sayfasında listelenir. */
+  topics: LocalizedText[];
 }
 
 export type PublicationType = 'bilgi-notu' | 'politika-notu' | 'rapor';

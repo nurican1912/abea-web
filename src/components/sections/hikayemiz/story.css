@@ -1,10 +1,12 @@
 /*
- * Hikâyemiz — "ağaç" zaman çizelgesi
- * ----------------------------------
- * Ortadaki gövde kaydırdıkça turkuazla dolar; her dönüm noktası göründüğünde
- * düğümü belirir, dalı gövdeden dışa doğru çizilir, içeriği kendi tarafından
- * kayarak gelir. Gizli başlangıç durumu yalnızca `.js` varken uygulanır:
- * JS çalışmıyorsa (ya da hareket azaltma tercihinde) her şey görünür durur.
+ * Hikâyemiz zaman çizelgesi
+ * -------------------------
+ * Ortadaki gövde kaydırdıkça turkuazla dolar. Her dönüm noktası göründüğünde
+ * yıl gövdenin üstünde belirir (ardından etrafından bir halka yayılır), kutu
+ * kendi tarafından, başlık öbür taraftan gövdeye doğru kayarak gelir; fotoğraf
+ * hafif yakınlaşmış hâlden yerine oturur. Gizli başlangıç durumu yalnızca
+ * `.js` varken uygulanır: JS çalışmıyorsa (ya da hareket azaltma tercihinde)
+ * her şey görünür durur.
  */
 
 /* Gövdenin dolan kısmı — oran StoryTree'de kaydırmaya göre yazılır. */
@@ -13,56 +15,87 @@
   transform-origin: top;
 }
 
-.story-body {
+.story-year {
+  position: relative;
+  box-shadow: 0 10px 30px -8px rgb(40 173 229 / 0.65);
+  transition:
+    opacity 0.4s ease,
+    transform 0.6s cubic-bezier(0.2, 0.9, 0.25, 1.3);
+}
+
+/* Yıl belirince etrafından yayılan halka */
+.story-year::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--color-brand);
+  border-radius: inherit;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.story-dot {
+  transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.25, 1.3);
+}
+
+.story-card,
+.story-title {
   transition:
     opacity 0.8s ease,
     transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
-.story-node__mark {
-  transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.25, 1.3);
+.story-title {
+  transition-delay: 0.15s;
 }
 
-.story-node__ripple {
-  transform-box: fill-box;
-  transform-origin: center;
-  opacity: 0;
-}
-
-.story-branch path {
-  stroke-dasharray: 1 2;
-  stroke-dashoffset: 0;
-  transition: stroke-dashoffset 0.7s cubic-bezier(0.33, 0, 0.12, 1) 0.15s;
+.story-photo {
+  transition: transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .js .story-item:not([data-visible]) .story-body {
+  .js .story-item:not([data-visible]) .story-year {
     opacity: 0;
-    transform: translateX(2.5rem);
+    transform: scale(0.4);
   }
 
-  .js .story-item:not([data-visible]) .story-node__mark { transform: scale(0); }
-  .js .story-item:not([data-visible]) .story-branch path { stroke-dashoffset: 1; }
+  .js .story-item:not([data-visible]) .story-dot { transform: scale(0); }
 
-  .story-item[data-visible] .story-node__ripple {
-    animation: story-ripple 1.3s cubic-bezier(0.4, 0, 0.2, 1) 0.25s both;
+  .js .story-item:not([data-visible]) .story-card {
+    opacity: 0;
+    transform: translateY(2.5rem);
   }
 
-  /* Geniş ekranda soldaki maddeler soldan gelir. */
+  .js .story-item:not([data-visible]) .story-title {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  .js .story-item:not([data-visible]) .story-photo { transform: scale(1.12); }
+
+  .story-item[data-visible] .story-year::after {
+    animation: story-ripple 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.35s both;
+  }
+
+  /* Geniş ekranda kutu kendi tarafından, başlık öbür taraftan gövdeye doğru gelir. */
   @media (min-width: 64rem) {
-    .js .story-item[data-side='left']:not([data-visible]) .story-body { transform: translateX(-3.5rem); }
-    .js .story-item[data-side='right']:not([data-visible]) .story-body { transform: translateX(3.5rem); }
+    .js .story-item[data-side='left']:not([data-visible]) .story-card { transform: translateX(-4rem); }
+    .js .story-item[data-side='left']:not([data-visible]) .story-title { transform: translateX(3rem); }
+    .js .story-item[data-side='right']:not([data-visible]) .story-card { transform: translateX(4rem); }
+    .js .story-item[data-side='right']:not([data-visible]) .story-title { transform: translateX(-3rem); }
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .story-trunk__fill { transform: none; }
-  .story-body,
-  .story-node__mark,
-  .story-branch path { transition: none; }
+  .story-year,
+  .story-dot,
+  .story-card,
+  .story-title,
+  .story-photo { transition: none; }
 }
 
 @keyframes story-ripple {
-  from { opacity: 0.7; transform: scale(1); }
-  to { opacity: 0; transform: scale(3.2); }
+  from { opacity: 0.8; transform: scale(1); }
+  to { opacity: 0; transform: scale(1.35, 1.9); }
 }

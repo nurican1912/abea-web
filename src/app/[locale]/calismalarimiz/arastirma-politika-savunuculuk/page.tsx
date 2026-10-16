@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
 
-import { PlaceholderPage } from '@/components/layout/PlaceholderPage';
+import { WorkAreaPage } from '@/components/sections/calismalarimiz/WorkAreaPage';
 import { resolveLocale } from '@/i18n/locale';
-import { getPage } from '@/lib/content';
 import { pageMetadata } from '@/lib/seo';
 
 // Çalışmalarımız › Araştırma, Politika ve Savunuculuk
@@ -12,9 +11,6 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/calismal
   return pageMetadata(PATH, await resolveLocale(params));
 }
 
-export default async function ResearchPolicyPage({ params }: PageProps<'/[locale]/calismalarimiz/arastirma-politika-savunuculuk'>) {
-  const locale = await resolveLocale(params);
-  const page = await getPage(PATH, locale);
-
-  return <PlaceholderPage path={PATH} locale={locale} page={page} />;
+export default async function ResearchPolicyAdvocacyPage({ params }: PageProps<'/[locale]/calismalarimiz/arastirma-politika-savunuculuk'>) {
+  return <WorkAreaPage path={PATH} locale={await resolveLocale(params)} />;
 }

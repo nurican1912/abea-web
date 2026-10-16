@@ -16,24 +16,11 @@ interface StoryTreeProps {
 /** Gövde, ekranın bu oranındaki hizaya kadar dolar. */
 const FILL_LINE = 0.6;
 
-/** Düğüm: logodaki nokta ve halkalar — ağacın yaş halkaları gibi. */
-function Node() {
-  return (
-    <svg viewBox="0 0 48 48" aria-hidden className="story-node__mark size-full overflow-visible">
-      <circle className="story-node__ripple" cx="24" cy="24" r="9" fill="none" stroke="currentColor" strokeWidth="2" />
-      <circle cx="24" cy="24" r="23" className="fill-primary" />
-      <circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" strokeWidth="2.5" />
-      <circle cx="24" cy="24" r="14" fill="none" stroke="currentColor" strokeWidth="2.5" />
-      <circle cx="24" cy="24" r="7" fill="currentColor" />
-    </svg>
-  );
-}
-
 /**
- * Hikâyemiz zaman çizelgesi — ortada gövde, dönüm noktaları sırayla soldan
- * ve sağdan dal gibi çıkar (telefonda gövde solda, hepsi sağda). Hareketler
- * `story.css`'te; bu bileşen yalnızca "göründü" işaretini ve gövdenin dolma
- * oranını yazar.
+ * Hikâyemiz zaman çizelgesi — ortada gövde, yıl gövdenin üstünde; bir yanda
+ * başlık, öbür yanda fotoğraf ve açıklamanın olduğu kutu. Yanlar sırayla
+ * değişir (telefonda gövde solda, hepsi alt alta). Hareketler `story.css`'te;
+ * bu bileşen yalnızca "göründü" işaretini ve gövdenin dolma oranını yazar.
  */
 export function StoryTree({ milestones, photoSoon }: StoryTreeProps) {
   const listRef = useRef<HTMLDivElement>(null);
@@ -81,77 +68,70 @@ export function StoryTree({ milestones, photoSoon }: StoryTreeProps) {
   return (
     <div ref={listRef} className="relative">
       {/* Gövde: soluk çizgi + kaydırdıkça dolan turkuaz çizgi */}
-      <span aria-hidden className="absolute top-0 bottom-0 left-[11px] w-[3px] rounded-full bg-white/15 lg:left-1/2 lg:-translate-x-1/2">
+      <span aria-hidden className="absolute top-0 bottom-0 left-[7px] w-[3px] rounded-full bg-white/15 lg:left-1/2 lg:-translate-x-1/2">
         <span className="story-trunk__fill absolute inset-0 rounded-full bg-brand" />
       </span>
 
-      <ol>
-
-      {milestones.map((item, i) => {
-        const left = i % 2 === 0;
-        return (
-          <li
-            key={`${item.year}-${item.title}`}
-            data-side={left ? 'left' : 'right'}
-            className={cn(
-              'story-item relative pb-16 pl-12 last:pb-4 lg:w-1/2 lg:pb-0 lg:pl-0',
-              left ? 'lg:pr-24' : 'lg:ml-auto lg:pl-24',
-              // Dallar birbirinin boşluğuna girer: sağdaki, soldakinin ortasından başlar.
-              i > 0 && 'lg:-mt-40',
-            )}
-          >
-            {/* Düğüm — gövdenin üstünde */}
-            <span
-              className={cn(
-                'absolute top-3 left-0 size-[26px] text-brand lg:top-8 lg:size-12',
-                left ? 'lg:right-0 lg:left-auto lg:translate-x-1/2' : 'lg:left-0 lg:-translate-x-1/2',
-              )}
+      <ol className="flex flex-col gap-16 lg:gap-28">
+        {milestones.map((item, i) => {
+          const cardLeft = i % 2 === 0;
+          return (
+            <li
+              key={`${item.year}-${item.title}`}
+              data-side={cardLeft ? 'left' : 'right'}
+              className="story-item relative pl-9 lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-40 lg:pl-0"
             >
-              <Node />
-            </span>
+              {/* Telefonda yılın hizasında gövdenin üstündeki nokta */}
+              <span
+                aria-hidden
+                className="story-dot absolute top-[0.7rem] left-0 size-[17px] rounded-full border-[3px] border-primary bg-brand lg:hidden"
+              />
 
-            {/* Dal — gövdeden içeriğe doğru kıvrılarak çıkar (yalnızca geniş ekranda) */}
-            <svg
-              viewBox="0 0 64 40"
-              aria-hidden
-              className={cn(
-                'story-branch absolute top-[18px] hidden h-10 w-16 text-brand lg:block',
-                left ? 'right-5 -scale-x-100' : 'left-5',
-              )}
-            >
-              <path d="M0 38 C 26 38, 30 3, 64 3" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" pathLength={1} />
-            </svg>
-
-            <article className={cn('story-body', left && 'lg:text-right')}>
-              <p className="font-display text-[clamp(4rem,9vw,7.5rem)] leading-[0.9] font-semibold text-brand tabular-nums">
-                {item.year}
+              {/* Yıl — geniş ekranda gövdenin tam ortasında */}
+              <p className="lg:absolute lg:top-1/2 lg:left-1/2 lg:z-10 lg:-translate-x-1/2 lg:-translate-y-1/2">
+                <span className="story-year inline-flex rounded-full bg-brand px-5 py-1.5 font-display text-xl leading-tight font-semibold text-ink tabular-nums lg:px-7 lg:py-3 lg:text-3xl">
+                  {item.year}
+                </span>
               </p>
-              <h2 className="mt-3 font-display text-[clamp(1.625rem,2.6vw,2.25rem)] leading-[1.15] font-semibold text-balance">
+
+              <h2
+                className={cn(
+                  'story-title mt-4 max-w-[18ch] font-display text-[clamp(1.75rem,3vw,2.75rem)] leading-[1.1] font-semibold text-balance lg:row-start-1 lg:mt-0',
+                  cardLeft ? 'lg:col-start-2' : 'lg:col-start-1 lg:ml-auto lg:text-right',
+                )}
+              >
                 {item.title}
               </h2>
-              {item.text && <p className={cn('mt-4 max-w-[52ch] text-lg text-white/75', left && 'lg:ml-auto')}>{item.text}</p>}
 
-              <div className={cn('relative mt-6 aspect-[3/2] max-w-xl overflow-hidden rounded-xl', left && 'lg:ml-auto')}>
-                {item.photo ? (
-                  <Image
-                    src={item.photo}
-                    alt={item.photoAlt ?? item.title}
-                    fill
-                    sizes="(min-width: 1024px) 36rem, 85vw"
-                    className="object-cover"
-                  />
-                ) : (
-                  // Fotoğraf gelene kadar yeri boş durur.
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-white/25 bg-white/5 text-sm text-white/60">
-                    <ImageIcon aria-hidden className="size-7" />
-                    {photoSoon}
-                  </div>
+              {/* Kutu: üstte fotoğraf, altta açıklama */}
+              <div
+                className={cn(
+                  'story-card mt-5 max-w-xl rounded-2xl bg-surface p-3 text-ink shadow-[0_24px_60px_-20px_rgb(0_0_0/0.45)] sm:p-4 lg:row-start-1 lg:mt-0',
+                  cardLeft ? 'lg:col-start-1 lg:ml-auto' : 'lg:col-start-2',
                 )}
+              >
+                <div className="relative aspect-[3/2] overflow-hidden rounded-xl">
+                  {item.photo ? (
+                    <Image
+                      src={item.photo}
+                      alt={item.photoAlt ?? item.title}
+                      fill
+                      sizes="(min-width: 1024px) 36rem, 90vw"
+                      className="story-photo object-cover"
+                    />
+                  ) : (
+                    // Fotoğraf gelene kadar yeri boş durur.
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-line bg-surface-soft text-sm text-muted">
+                      <ImageIcon aria-hidden className="size-7" />
+                      {photoSoon}
+                    </div>
+                  )}
+                </div>
+                {item.text && <p className="px-2 pt-4 pb-2 text-ink/80 sm:px-3 sm:pt-5">{item.text}</p>}
               </div>
-            </article>
-          </li>
-        );
-      })}
+            </li>
+          );
+        })}
       </ol>
     </div>
   );

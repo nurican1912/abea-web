@@ -27,10 +27,10 @@ export const routing = defineRouting({
     '/hikayemiz': { tr: '/hikayemiz', en: '/our-story' },
 
     '/calismalarimiz': { tr: '/calismalarimiz', en: '/our-work' },
-    '/calismalarimiz/afet-risk-azaltma': { tr: '/calismalarimiz/afet-risk-azaltma', en: '/our-work/disaster-risk-reduction' },
-    '/calismalarimiz/is-dunyasi': { tr: '/calismalarimiz/is-dunyasi', en: '/our-work/business' },
-    '/calismalarimiz/okul-oncesi': { tr: '/calismalarimiz/okul-oncesi', en: '/our-work/early-childhood' },
-    '/calismalarimiz/kurumsal-gonulluluk': { tr: '/calismalarimiz/kurumsal-gonulluluk', en: '/our-work/corporate-volunteering' },
+    '/calismalarimiz/is-dunyasi-ve-kurumsal-dayaniklilik': { tr: '/calismalarimiz/is-dunyasi-ve-kurumsal-dayaniklilik', en: '/our-work/business-resilience' },
+    '/calismalarimiz/okul-guvenligi-ve-afet-egitimi': { tr: '/calismalarimiz/okul-guvenligi-ve-afet-egitimi', en: '/our-work/school-safety' },
+    '/calismalarimiz/iklim-ve-afet-riskleri': { tr: '/calismalarimiz/iklim-ve-afet-riskleri', en: '/our-work/climate-and-disaster-risks' },
+    '/calismalarimiz/yerel-ve-toplumsal-dayaniklilik': { tr: '/calismalarimiz/yerel-ve-toplumsal-dayaniklilik', en: '/our-work/community-resilience' },
     '/calismalarimiz/arastirma-politika-savunuculuk': { tr: '/calismalarimiz/arastirma-politika-savunuculuk', en: '/our-work/research-policy-advocacy' },
     '/calismalarimiz/acil-durum-hazirligi': { tr: '/calismalarimiz/acil-durum-hazirligi', en: '/our-work/emergency-preparedness' },
 

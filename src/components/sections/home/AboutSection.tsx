@@ -15,7 +15,7 @@ export const ABOUT_ID = 'biz-kimiz';
 /** 2 · Biz kimiz: kısa hikâye + üç gerçek rakam. Bağlantı, metni okuduktan sonra gelir. */
 export function AboutSection({ content }: AboutSectionProps) {
   return (
-    <section id={ABOUT_ID} aria-labelledby="about-title" className="border-t border-line bg-surface py-16 sm:py-20">
+    <section id={ABOUT_ID} aria-labelledby="about-title" className="bg-surface py-16 sm:py-20">
       <Container className="grid gap-12 lg:grid-cols-[3fr_2fr] lg:gap-16">
         <div>
           <SectionHeading id="about-title" eyebrow={content.eyebrow} title={content.title} />

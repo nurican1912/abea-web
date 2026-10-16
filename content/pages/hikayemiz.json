@@ -13,6 +13,15 @@
       "title": {
         "tr": "Akademi Arama Kurtarma Öğrenci Topluluğu",
         "en": "Akademi Search and Rescue Student Club"
+      },
+      "text": {
+        "tr": "Afet Bilinci Derneği'nin kurumsal kökenleri, 2007-2013 yılları arasında Afyon Kocatepe Üniversitesi bünyesinde faaliyet gösteren Akademi Arama & Kurtarma Kulübü'nün çalışma, tecrübe ve yeteneklerine dayanıyor.",
+        "en": "Our institutional roots lie in the work, experience and skills of the Akademi Search and Rescue Club, which was active at Afyon Kocatepe University between 2007 and 2013."
+      },
+      "photo": "/images/hikayemiz/2007-akademi-arama-kurtarma.jpg",
+      "photoAlt": {
+        "tr": "Akademi Arama & Kurtarma Kulübü pankartı asılı otobüsün önünde turuncu giysili gönüllüler",
+        "en": "Volunteers in orange in front of a bus carrying the Akademi Search and Rescue Club banner"
       }
     },
     {
@@ -20,6 +29,15 @@
       "title": {
         "tr": "Van Depremi Dayanışma Tecrübesi",
         "en": "Solidarity after the Van earthquake"
+      },
+      "text": {
+        "tr": "Öğrenci kulübü olarak 2011 Simav Depremi'nden sonra hayatın normalleştirilmesi çalışmalarına katkı sağladık. 2011 Van Depremi için de 50 gönüllü ile yaklaşık 7 tonluk ayni yardımı organize ederek Van'a ilettik.",
+        "en": "As a student club, we helped life return to normal after the 2011 Simav earthquake. After the 2011 Van earthquake, 50 volunteers organised around 7 tonnes of in-kind aid and delivered it to Van."
+      },
+      "photo": "/images/hikayemiz/2011-van-depremi.jpg",
+      "photoAlt": {
+        "tr": "Van'a gönderilen yardım kamyonunun önünde turuncu tulumlu kulüp gönüllüleri",
+        "en": "Club volunteers in orange overalls in front of the aid truck bound for Van"
       }
     },
     {
@@ -27,6 +45,15 @@
       "title": {
         "tr": "Sallanmadan Yaşama Projesi",
         "en": "The Sallanmadan Yaşama (Living Without Shaking) project"
+      },
+      "text": {
+        "tr": "Her şey bir hayalin peşine düşmekle başladı. Afet bilincine sahip nesiller yetiştirmenin, çok küçük yaşlarda doğal afetler ve korunma yöntemleri hakkında farkındalık oluşturmanın hayalini kurduk ve “Geleceğimiz Sadece Salıncakta Sallansın” projesini hayata geçirdik.",
+        "en": "It all began with chasing a dream. We dreamed of raising generations with disaster awareness, and of teaching children about natural hazards and how to stay safe from a very young age. So we launched the “Geleceğimiz Sadece Salıncakta Sallansın” project (roughly, “may the only thing that shakes our future be a swing”)."
+      },
+      "photo": "/images/hikayemiz/2013-salincak-sehri.jpg",
+      "photoAlt": {
+        "tr": "Projede yapılan renkli maket şehir: binalar, yollar, ağaçlar ve bir salıncak",
+        "en": "A colourful model town built during the project, with buildings, roads, trees and a swing"
       }
     },
     {
@@ -34,6 +61,15 @@
       "title": {
         "tr": "Afet Bilinci Derneği",
         "en": "Afet Bilinci Derneği (Disaster Awareness Association)"
+      },
+      "text": {
+        "tr": "2013 yılında “Afet Bilinci Derneği” olarak kurumsal bir yapılanma sürecine giren ekip, “gelecek hayalleri enkaz altında kalmasın” diye çalışmalarını sürdürmekte, bilinçlendirme ve farkındalık oluşturmaya yönelik proje temelli çalışmalar sürdürmektedir.",
+        "en": "In 2013 the team began organising formally as Afet Bilinci Derneği. It has kept working so that “dreams of the future are not left under the rubble”, running project-based work to inform people and raise awareness."
+      },
+      "photo": "/images/hikayemiz/2013-afet-bilinci-dernegi.jpg",
+      "photoAlt": {
+        "tr": "Afet Bilinci Derneği'nin 2013'teki logosu: gülen bir yüz oluşturan mor “a” ve sarı “b” harfleri",
+        "en": "Afet Bilinci Derneği's 2013 logo: a purple “a” and a yellow “b” forming a smiling face"
       }
     },
     {
@@ -41,6 +77,15 @@
       "title": {
         "tr": "Afetlerle Kalkınma Platformu",
         "en": "Development Through Disasters Platform"
+      },
+      "text": {
+        "tr": "Afetlerle Kalkınma Platformu, afetlerin iktisadi ve toplumsal kalkınma konusundaki etkilerine ilişkin bir gündem oluşturmak amacıyla kurulmuştur.",
+        "en": "The Development Through Disasters Platform was set up to build an agenda around the effects of disasters on economic and social development."
+      },
+      "photo": "/images/hikayemiz/2016-afetlerle-kalkinma-platformu.jpg",
+      "photoAlt": {
+        "tr": "Afetlerle Kalkınma Platformu logosu",
+        "en": "Logo of the Development Through Disasters Platform"
       }
     },
     {

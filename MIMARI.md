@@ -116,10 +116,12 @@ big-site-1/
     │       │
     │       ├── calismalarimiz/
     │       │   ├── page.tsx
-    │       │   ├── afet-risk-azaltma/page.tsx
-    │       │   ├── is-dunyasi/page.tsx
-    │       │   ├── okul-oncesi/page.tsx
-    │       │   └── kurumsal-gonulluluk/page.tsx
+    │       │   ├── is-dunyasi-ve-kurumsal-dayaniklilik/page.tsx
+    │       │   ├── okul-guvenligi-ve-afet-egitimi/page.tsx
+    │       │   ├── iklim-ve-afet-riskleri/page.tsx
+    │       │   ├── yerel-ve-toplumsal-dayaniklilik/page.tsx
+    │       │   ├── arastirma-politika-savunuculuk/page.tsx
+    │       │   └── acil-durum-hazirligi/page.tsx
     │       │
     │       ├── yayinlar/
     │       │   ├── page.tsx
@@ -147,11 +149,13 @@ big-site-1/
     │   │   ├── topbar/               # Topbar, TopbarLogo, DesktopNav, MenuPanel, MobileMenu,
     │   │   │                         # LanguageSwitch, AccountButton, use-menu-state.ts
     │   │   └── PlaceholderPage.tsx   # içeriği gelmemiş sayfaların ortak şablonu
+    │   ├── people/                   # PersonAccordion, PersonPhoto — Ekibimiz ve Danışma Kurulumuz'un
+    │   │                             # ortak açılır kişi kartları (LinkedIn bağlantısı logoyla)
     │   ├── logo/                     # AbeaLogo, LogoIntro, LogoReplay, IntroBootScript,
     │   │                             # logo-geometry.ts, logo-animation.ts, logo.css
     │   ├── sections/                 # sayfaya özel bölümler, sayfa adıyla gruplanır
     │   │   ├── home/                 # HomeHero, ...
-    │   │   ├── ekibimiz/             # TeamAccordion, MemberPhoto
+    │   │   ├── calismalarimiz/       # WorkAreaPage (alan sayfalarının ortak şablonu)
     │   │   ├── hikayemiz/            # StoryTimeline, StoryTree, story.css ("ağaç": ortada gövde, sağlı sollu dallar)
     │   │   ├── logomuz/              # LogoStorySection (okunan bölüme göre logonun parçası öne çıkar)
     │   │   ├── tuzugumuz/            # BylawsText, BylawsToc
@@ -211,10 +215,12 @@ Hocaya sorulacak açık konular `SORULAR.md` dosyasında tutulur.
 | › Logomuzun Hikâyesi | `logomuz/` | `…/logomuz` | `…/our-logo` |
 | › Üyelik & Gönüllülük | `uyelik-ve-gonulluluk/` | `…/uyelik-ve-gonulluluk` | `…/join-us` |
 | **Çalışmalarımız** | `calismalarimiz/` | `/tr/calismalarimiz` | `/en/our-work` |
-| › Afet Risk Azaltma Farkındalık Çalışmaları | `afet-risk-azaltma/` | | `…/disaster-risk-reduction` |
-| › İş Dünyası Afet Farkındalık Çalışmaları | `is-dunyasi/` | | `…/business` |
-| › Okul Öncesi Afet Farkındalık Çalışmaları | `okul-oncesi/` | | `…/early-childhood` |
-| › Kurumsal Afet Gönüllülüğü Çalışmaları | `kurumsal-gonulluluk/` | | `…/corporate-volunteering` |
+| › İş Dünyası ve Kurumsal Dayanıklılık | `is-dunyasi-ve-kurumsal-dayaniklilik/` | | `…/business-resilience` |
+| › Okul Güvenliği ve Afet Eğitimi | `okul-guvenligi-ve-afet-egitimi/` | | `…/school-safety` |
+| › İklim ve Afet Riskleri | `iklim-ve-afet-riskleri/` | | `…/climate-and-disaster-risks` |
+| › Yerel ve Toplumsal Dayanıklılık | `yerel-ve-toplumsal-dayaniklilik/` | | `…/community-resilience` |
+| › Araştırma, Politika ve Savunuculuk | `arastirma-politika-savunuculuk/` | | `…/research-policy-advocacy` |
+| › Acil Durum Hazırlığı ve İyileşme | `acil-durum-hazirligi/` | | `…/emergency-preparedness` |
 | **Yayınlar** | `yayinlar/` | `/tr/yayinlar` | `/en/publications` |
 | › Bilgi Notları | `bilgi-notlari/` | | `…/briefs` |
 | › Politika Notları | `politika-notlari/` | | `…/policy-briefs` |
@@ -265,7 +271,7 @@ json-source.ts   payload-source.ts     api-source.ts
 | Koleksiyon | Temel alanlar |
 |---|---|
 | `team-members` | name, role*, board (`yonetim`/`denetim`/`etik`), status (`asil`/`yedek`), photo, order |
-| `advisory-board` | name, organization, photo, order |
+| `advisory-board` | name, institution*, bio*, photo, linkedin (sıra: dosyadaki sıra, ada göre alfabetik) |
 | `values` | number, title*, body* |
 | `policies` | group*, title*, summary*, file |
 | `work-areas` | slug, title*, summary*, topics*, image |
@@ -455,7 +461,7 @@ Sırasıyla:
 - Yayınlar, Paydaşlar, Üyelik & Gönüllülük. PDF taslakları hazır.
 - Tüzüğümüz (WEB-son.docx / Dernek Tüzük.docx): madde madde metin + `public/belgeler/afet-bilinci-tuzuk.pdf` (imzasız, içerikten üretildi)
 - Hikâyemiz: 6 dönüm noktası; metin ve fotoğraflar bekleniyor
-- Çalışmalarımız (hangi başlıkların kalacağı hocaya soruldu)
+- Çalışmalarımız: WEB-son.docx'teki 6 alan; her alan sayfası ortak şablonla (`sections/calismalarimiz/WorkAreaPage`) ikonunu, alt konularını ve diğer alanları gösterir. Alt konular `work-areas.json`'da.
 
 ### Adım 3 — Cilalama
 
